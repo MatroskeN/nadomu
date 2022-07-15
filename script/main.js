@@ -1,11 +1,8 @@
 const swiper = new Swiper('.serviceSlider', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
     slidesPerView: 3,
-    spaceBetween: 0,
 
-    // Navigation arrows
     navigation: {
         nextEl: '.button-next',
         prevEl: '.button-prev',
@@ -13,11 +10,9 @@ const swiper = new Swiper('.serviceSlider', {
 });
 
 const swiper1 = new Swiper('.specialistsSlider', {
-    // Optional parameters
     direction: 'horizontal',
     loop: true,
     slidesPerView: 4,
-    spaceBetween: 0,
 
     // Navigation arrows
     navigation: {
@@ -25,3 +20,28 @@ const swiper1 = new Swiper('.specialistsSlider', {
         prevEl: '.spec-prev',
     },
 });
+
+const swiper2 = new Swiper('.reviewSlider', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 2,
+    spaceBetween: 25,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.review-next',
+        prevEl: '.review-prev',
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: 'true'
+    }
+});
+
+let faqs = document.querySelectorAll('.faqItem');
+
+faqs.forEach( element => {
+    element.querySelector('.open').onclick = function () {
+        element.classList.toggle('active');
+    }
+})

@@ -593,6 +593,8 @@ main .specialists {
   width: 100%;
   margin: 0 auto 151px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 main .specialists .specialTitle {
   font-family: "Gilroy", serif;
@@ -724,15 +726,497 @@ main .specialists .round {
   top: -101px;
   z-index: 0;
 }
+main .specialists .moreSpec {
+  margin: 60px auto 0;
+  background: #3F85EF;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+main .reviews {
+  background: linear-gradient(270deg, #EDF4FE 53.47%, #FFFFFF 95.83%);
+  border-radius: 0 40px 40px 0;
+  max-width: 1305px;
+  width: 100%;
+  margin: 0 auto 288px;
+  display: flex;
+  flex-direction: column;
+  padding: 95px 0 158px;
+  position: relative;
+}
+main .reviews .circle {
+  position: absolute;
+  left: 225px;
+  top: -65px;
+  z-index: 0;
+}
+main .reviews .syringe {
+  position: absolute;
+  top: -34px;
+  right: 0;
+}
+main .reviews .rect, main .reviews .reviewTitle {
+  margin-left: 70px;
+}
+main .reviews .reviewTitle {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  margin-top: 29px;
+  color: #151E29;
+  margin-bottom: 78px;
+}
+main .reviews .reviewTitle span {
+  color: #3F85EF;
+}
+main .reviews .reviewSlider {
+  max-width: 1025px;
+  width: 100%;
+  margin: 0 auto;
+}
+main .reviews .reviewSlider .item {
+  border: 2px solid #87B1CA;
+  border-radius: 15px;
+  padding: 29px 41px;
+  max-width: 414px;
+}
+main .reviews .reviewSlider .item .itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+main .reviews .reviewSlider .item .itemHeader .title {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #151E29;
+}
+main .reviews .reviewSlider .item .description {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #283848;
+  margin-bottom: 7px;
+}
+main .reviews .reviewSlider .item .more {
+  margin-bottom: 23px;
+}
+main .reviews .reviewSlider .item .more a {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #3F85EF;
+}
+main .reviews .reviewSlider .item .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .reviews .reviewSlider .item .info .person p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  color: #3F85EF;
+}
+main .reviews .reviewSlider .item .info .person p span {
+  color: #59B4FB;
+}
+main .reviews .reviewSlider .item .info .person a {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 20px;
+  text-decoration-line: underline;
+  color: #87B1CA;
+  margin-top: 4px;
+}
+main .reviews .reviewSlider .item .info .service .serviceTitle {
+  margin-bottom: 14px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #59B4FB;
+}
+main .reviews .reviewSlider .item .info .service .icons svg:first-child {
+  margin-right: 15px;
+}
+main .reviews .navigation {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(50%);
+  display: flex;
+  justify-content: space-between;
+  max-width: 1185px;
+  width: 100%;
+  z-index: 10;
+}
+main .reviews .navigation .arrow {
+  cursor: pointer;
+  border: 2px solid #59B4FB;
+  border-radius: 50px;
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .reviews .navigation .review-prev svg {
+  transform: rotateZ(180deg);
+}
+main .reviews .swiper-pagination {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px auto 0;
+}
+main .reviews .swiper-pagination .swiper-pagination-bullet {
+  border: 2px solid #3F85EF;
+  background: transparent;
+  width: 10px;
+  height: 10px;
+  transition: all 0.4s;
+}
+main .reviews .swiper-pagination .swiper-pagination-bullet-active {
+  width: 15px;
+  height: 15px;
+  background: #3F85EF;
+  border: none;
+}
+main .reviews .send {
+  max-width: 1025px;
+  width: 100%;
+  background: #3F85EF;
+  border-radius: 25px;
+  padding: 30px 0 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+  bottom: -138px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+main .reviews .send .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .reviews .send .content .title {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  max-width: 458px;
+}
+main .reviews .send .content .pick {
+  margin-left: 69px;
+  background: #FFFFFF;
+  border-radius: 45px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3F85EF;
+}
+main .reviews .send .footnote {
+  margin-top: 16px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+}
+main .faq {
+  max-width: 1233px;
+  width: 100%;
+  margin: 0 auto 150px;
+  position: relative;
+}
+main .faq .faqTitle {
+  margin: 29px 0 172px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #151E29;
+}
+main .faq .faqTitle span {
+  color: #3F85EF;
+}
+main .faq .faqBlock {
+  background: rgba(241, 247, 255, 0.4);
+  box-shadow: 0px 20px 35px rgba(21, 30, 41, 0.1);
+  border-radius: 25px;
+  padding: 71px 80px;
+  position: relative;
+}
+main .faq .faqBlock .bandAid {
+  position: absolute;
+  top: 113px;
+  right: -81px;
+  z-index: 0;
+}
+main .faq .faqBlock .circle {
+  position: absolute;
+  top: -93px;
+  left: -158px;
+  z-index: 0;
+}
+main .faq .faqBlock .faqItem {
+  padding-bottom: 25px;
+  border-bottom: 2px solid #E8EAF1;
+  margin-bottom: 34px;
+  position: relative;
+  z-index: 1;
+}
+main .faq .faqBlock .faqItem:last-of-type {
+  margin-bottom: unset;
+}
+main .faq .faqBlock .faqItem .faqHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .faq .faqBlock .faqItem .faqHeader .title {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #151E29;
+}
+main .faq .faqBlock .faqItem .faqHeader .open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #EDF4FE;
+  box-shadow: 0px 0px 35px rgba(241, 247, 255, 0.4);
+  border-radius: 50px;
+  cursor: pointer;
+}
+main .faq .faqBlock .faqItem .faqHeader .open svg {
+  transition: all 0.4s;
+}
+main .faq .faqBlock .faqItem .answer {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #283848;
+  margin-top: 10px;
+  display: none;
+}
+main .faq .faqBlock .active .answer {
+  display: block;
+}
+main .faq .faqBlock .active .faqHeader .open svg path:first-child {
+  opacity: 0;
+}
+main .faq .consult {
+  background: #E6F7F6;
+  border-radius: 15px;
+  width: 395px;
+  height: 190px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+main .faq .consult .picConsult {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+main .faq .consult .phone {
+  background: #3F85EF;
+  box-shadow: 35px 20px 40px rgba(21, 30, 41, 0.1);
+  border-radius: 50px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 17px 29px;
+}
+main .faq .consult p {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #151E29;
+  max-width: 164px;
+  margin-left: 29px;
+  font-size: 14px;
+}
+main .faq .consult p span {
+  font-size: 16px;
+  color: #3F85EF;
+}
+main .faq .send {
+  max-width: 1025px;
+  width: 100%;
+  margin: 100px auto 0;
+  background: #3F85EF;
+  border-radius: 25px;
+  padding: 30px 0 44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+main .faq .send .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .faq .send .content .title {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  color: #FFFFFF;
+  max-width: 458px;
+  margin-right: 34px;
+}
+main .faq .send .content .title p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 23px;
+}
+main .faq .send .content .pick {
+  margin-left: 69px;
+  background: #FFFFFF;
+  border-radius: 45px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #3F85EF;
+}
+main .useful {
+  max-width: 1233px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+main .useful .usefulTitle {
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 24px;
+  color: #151E29;
+  margin-top: 29px;
+}
+main .useful .usefulTitle span {
+  color: #3F85EF;
+}
+main .useful .articles {
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-between;
+}
+main .useful .articles .item {
+  background: #FFFFFF;
+  box-shadow: 0px 10px 25px rgba(21, 30, 41, 0.1);
+  border-radius: 20px;
+  width: 395px;
+  height: 565px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+main .useful .articles .item .title {
+  margin-top: 32px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #151E29;
+  margin-left: 31px;
+}
+main .useful .articles .item .subtitle {
+  margin-top: 22px;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #283848;
+  margin-left: 31px;
+}
+main .useful .articles .item .read {
+  margin: 22px 0 0 31px;
+  background: linear-gradient(84.59deg, #3F85EF 2.25%, #59B4FB 97.14%);
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
+main .useful .allArticles {
+  background: #3F85EF;
+  margin: 97px auto 0;
+  font-family: "Gilroy", serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #FFFFFF;
+}
 
 footer {
   width: 100vw;
+  position: relative;
+}
+footer .footerCircle {
+  position: absolute;
+  top: -159px;
+  right: 0;
+  z-index: 0;
 }
 footer .footerWrapper {
   margin-top: 159px;
   padding: 68px 0 62px;
   background: #EDF4FE;
   border-radius: 25px 25px 0px 0px;
+  position: relative;
+  z-index: 1;
 }
 footer .footerWrapper .content {
   max-width: 1190px;
