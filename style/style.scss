@@ -339,6 +339,9 @@ main {
       .servicePic-responsive{
         display: none;
       }
+      .servicePic-mobile{
+        display: none;
+      }
       .slider{
         margin-top: 25px;
         max-width: 605px;
@@ -451,9 +454,14 @@ main {
       display: none;
     }
     .items{
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
+      .desktop{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+      .perksSlider{
+        display: none;
+      }
       width: 100%;
       position: relative;
       z-index: 1;
@@ -583,9 +591,17 @@ main {
         max-width: 920px;
         width: 100%;
         margin: 93px auto 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+        .desktop{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .howSlider,.howPagination{
+          display: none;
+        }
+
         .item{
           display: flex;
           flex-direction: column;

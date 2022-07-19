@@ -1,18 +1,25 @@
 const swiper = new Swiper('.serviceSlider', {
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 3,
 
     navigation: {
         nextEl: '.button-next',
         prevEl: '.button-prev',
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+        },
+        767: {
+            slidesPerView: 3,
+        }
+    }
 });
 
 const swiper1 = new Swiper('.specialistsSlider', {
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 4,
 
     // Navigation arrows
     navigation: {
@@ -22,6 +29,9 @@ const swiper1 = new Swiper('.specialistsSlider', {
 
     breakpoints: {
         320: {
+            slidesPerView: 1,
+        },
+        767: {
             slidesPerView: 2,
             spaceBetween: 23,
         },
@@ -77,6 +87,26 @@ const swiper3 = new Swiper('.usefulSlider', {
             spaceBetween: 25,
         }
     }
+});
+
+const swiper4 = new Swiper('.howSlider', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+        el: '.how-pagination',
+        clickable: 'true'
+    },
+});
+
+const swiper5 = new Swiper('.perksSlider', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    pagination: {
+        el: '.perks-pagination',
+        clickable: 'true'
+    },
 });
 
 let faqs = document.querySelectorAll('.faqItem');

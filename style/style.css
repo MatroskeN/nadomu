@@ -314,6 +314,9 @@ main .about .gallery {
 main .about .gallery .servicePic-responsive {
   display: none;
 }
+main .about .gallery .servicePic-mobile {
+  display: none;
+}
 main .about .gallery .slider {
   margin-top: 25px;
   max-width: 605px;
@@ -420,13 +423,18 @@ main .perks .back-responsive {
   display: none;
 }
 main .perks .items {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
   width: 100%;
   position: relative;
   z-index: 1;
   margin-top: 27px;
+}
+main .perks .items .desktop {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+main .perks .items .perksSlider {
+  display: none;
 }
 main .perks .items .item {
   background: #FFFFFF;
@@ -553,9 +561,14 @@ main .how .wrapper .items {
   max-width: 920px;
   width: 100%;
   margin: 93px auto 0;
+}
+main .how .wrapper .items .desktop {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+main .how .wrapper .items .howSlider, main .how .wrapper .items .howPagination {
+  display: none;
 }
 main .how .wrapper .items .item {
   display: flex;

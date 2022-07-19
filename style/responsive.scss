@@ -395,3 +395,393 @@
     }
   }
 }
+
+@media(max-width: 767px){
+  header{
+    .headerWrapper{
+      padding: 0 24px;
+      a{
+        img{
+          width: 195px;
+        }
+      }
+      .headerControls{
+        .geo,.signIn{
+          display: none;
+        }
+      }
+    }
+  }
+  main{
+    .banner{
+      margin-bottom: 80px;
+      .nurse-responsive{
+        display: none;
+      }
+      .content{
+        padding: 48px 24px 0 24px;
+        h1{
+          font-size: 32px;
+          line-height: 35px;
+          max-width: 265px;
+        }
+        .description{
+          margin-bottom: 24px;
+        }
+        .specialist{
+          max-width: 100%;
+          width: auto;
+          padding: 0 39px;
+          select{
+            width: -webkit-fill-available;
+          }
+        }
+      }
+      .kit{
+        display: none;
+      }
+      .tabs{
+        .nurses{
+          display: none;
+        }
+      }
+    }
+    .about{
+      padding: 0 24px;
+      margin-bottom: 80px;
+      .info{
+        .title{
+          font-size: 28px;
+          line-height: 24px;
+          margin-bottom: 38px;
+        }
+        .subtitle{
+          font-size: 18px;
+          line-height: 27px;
+          margin-bottom: 24px;
+          max-width: 312px;
+        }
+        .tab{
+          padding: 20px 17px 28px;
+          flex-direction: column;
+          img{
+            width: 76px;
+            margin-bottom: 15px;
+          }
+          p{
+            margin: 0;
+            text-align: justify;
+          }
+        }
+      }
+      .gallery{
+        margin-top: 30px;
+        .servicePic-responsive{
+          display: none;
+        }
+        .servicePic-mobile{
+          display: block;
+        }
+        .slider{
+          .swiper{
+            max-width: 200px;
+          }
+        }
+      }
+    }
+    .perks{
+      margin-bottom: 0;
+      .rectTitle{
+        font-size: 28px;
+        line-height: 24px;
+      }
+      .back-responsive{
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .items{
+        margin-top: 320px;
+        .desktop{
+          display: none;
+        }
+        .perksSlider{
+          display: block;
+          .item{
+            padding: 27px 15px;
+            max-width: 100%;
+            width: auto;
+            margin: 0 17px;
+            height: 259px;
+            align-items: flex-start;
+            .text{
+              .title{
+                max-width: 147px;
+              }
+              .subtitle{
+                max-width: 194px;
+              }
+            }
+          }
+        }
+      }
+      .send{
+        margin: 63px 24px 0;
+        .content{
+          padding: 0 39px;
+          .title{
+            font-size: 20px;
+            line-height: 27px;
+            max-width: 156px;
+          }
+          img{
+            width: 78px;
+          }
+          .pick{
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+      }
+    }
+    .how{
+      .wrapper{
+        padding: 0 24px;
+        margin-bottom: 132px;
+        .howTitle{
+          font-size: 28px;
+          line-height: 24px;
+        }
+        .items{
+          max-width: 100%;
+          margin-top: 68px;
+          .desktop{
+            display: none;
+          }
+          .howSlider,.how-pagination{
+            display: block;
+          }
+          .howSlider{
+            .item{
+              .number{
+                top: 0;
+                right: 59px;
+              }
+              .step{
+                margin-top: 30px;
+              }
+              .title{
+                max-width: 155px;
+              }
+              .description{
+                max-width: 168px;
+              }
+            }
+          }
+          .how-pagination{
+            position: relative;
+            margin-top: 38px;
+            .swiper-pagination-bullet{
+              width: 10px;
+              height: 10px;
+              transition: all 0.4s;
+              border: 2px solid #3F85EF;
+              margin-right: 15px;
+              &:last-of-type{
+                margin-right: unset;
+              }
+            }
+            .swiper-pagination-bullet-active{
+              width: 15px;
+              height: 15px;
+              background: #3F85EF;
+            }
+          }
+        }
+      }
+    }
+    .specialists{
+      padding: 0 24px;
+      margin-bottom: 132px;
+      .round{
+        display: none;
+      }
+      .specialTitle{
+        font-size: 28px;
+        line-height: 24px;
+      }
+      .cards{
+        .item{
+          margin: 0 auto;
+        }
+      }
+    }
+    .reviews{
+      padding-top: 67px;
+      .navigation{
+        transform: translate(-50%, 50%);
+        left: 50%;
+        top: unset;
+        bottom: 177px;
+        max-width: 260px;
+      }
+      .circle{
+        display: none;
+      }
+      .syringe{
+        top: -54px;
+        right: -61px;
+        width: 200px;
+      }
+      .rect{
+        margin-left: 24px;
+      }
+      .reviewTitle{
+        font-size: 28px;
+        line-height: 33px;
+        margin-left: 24px;
+        margin-bottom: 38px;
+        max-width: 195px;
+      }
+      .send{
+        margin: 63px 24px 0;
+        max-width: 100%;
+        width: -webkit-fill-available;
+        left: unset;
+        transform: none;
+        .content{
+          padding: 0 39px;
+          .title{
+            font-size: 20px;
+            line-height: 27px;
+            max-width: 156px;
+          }
+          img{
+            width: 78px;
+          }
+          .pick{
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+      }
+      .reviewSlider{
+        .item{
+          padding: 29px 30px;
+          max-width: 100%;
+          width: auto;
+          margin: 0 29px;
+          .itemHeader{
+            flex-direction: column;
+            align-items: flex-start;
+            .title{
+              font-size: 18px;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+    .faq{
+      .faqTitle{
+        font-size: 28px;
+        line-height: 33px;
+      }
+      .consult{
+        max-width: 100%;
+        width: -webkit-fill-available;
+        margin: 0 24px;
+        right: unset;
+        img{
+          width: 141px;
+        }
+      }
+      .faqBlock{
+        .bandAid{
+          width: 70px;
+          left: unset;
+          right: 10px;
+          top: -50px;
+        }
+      }
+      .send{
+        margin: 63px 24px 0;
+        .mobContent{
+          padding: 0 39px;
+          .top{
+            .title{
+              font-size: 20px;
+              line-height: 27px;
+            }
+            img{
+              height: 91px;
+            }
+          }
+          .bottom{
+            flex-direction: column;
+            margin-top: 29px;
+            .pick{
+              margin-bottom: 24px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .useful{
+      .usefulTitle{
+        font-size: 28px;
+        line-height: 24px;
+      }
+      .articles{
+        margin-top: 40px;
+        .item{
+          width: 100%;
+        }
+      }
+    }
+  }
+  footer{
+    .footerWrapper{
+      .content{
+        .info{
+          flex-direction: column;
+          align-items: center;
+        }
+        .menu{
+          flex-direction: column;
+          align-items: center;
+          justify-content: unset;
+          margin-bottom: 45px;
+          .row{
+            margin: 0;
+            align-items: center;
+            .item{
+              text-align: center;
+            }
+          }
+        }
+        .contacts{
+          .contactsTitle{
+            text-align: center;
+            font-size: 22px;
+            line-height: 24px;
+          }
+          .contactContent{
+            flex-flow: column;
+            align-items: center;
+            .box{
+              width: auto;
+            }
+          }
+          .item{
+            a{
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

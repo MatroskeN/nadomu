@@ -363,5 +363,352 @@
     width: 68%;
   }
 }
+@media (max-width: 767px) {
+  header .headerWrapper {
+    padding: 0 24px;
+  }
+  header .headerWrapper a img {
+    width: 195px;
+  }
+  header .headerWrapper .headerControls .geo, header .headerWrapper .headerControls .signIn {
+    display: none;
+  }
+
+  main .banner {
+    margin-bottom: 80px;
+  }
+  main .banner .nurse-responsive {
+    display: none;
+  }
+  main .banner .content {
+    padding: 48px 24px 0 24px;
+  }
+  main .banner .content h1 {
+    font-size: 32px;
+    line-height: 35px;
+    max-width: 265px;
+  }
+  main .banner .content .description {
+    margin-bottom: 24px;
+  }
+  main .banner .content .specialist {
+    max-width: 100%;
+    width: auto;
+    padding: 0 39px;
+  }
+  main .banner .content .specialist select {
+    width: -webkit-fill-available;
+  }
+  main .banner .kit {
+    display: none;
+  }
+  main .banner .tabs .nurses {
+    display: none;
+  }
+  main .about {
+    padding: 0 24px;
+    margin-bottom: 80px;
+  }
+  main .about .info .title {
+    font-size: 28px;
+    line-height: 24px;
+    margin-bottom: 38px;
+  }
+  main .about .info .subtitle {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 24px;
+    max-width: 312px;
+  }
+  main .about .info .tab {
+    padding: 20px 17px 28px;
+    flex-direction: column;
+  }
+  main .about .info .tab img {
+    width: 76px;
+    margin-bottom: 15px;
+  }
+  main .about .info .tab p {
+    margin: 0;
+    text-align: justify;
+  }
+  main .about .gallery {
+    margin-top: 30px;
+  }
+  main .about .gallery .servicePic-responsive {
+    display: none;
+  }
+  main .about .gallery .servicePic-mobile {
+    display: block;
+  }
+  main .about .gallery .slider .swiper {
+    max-width: 200px;
+  }
+  main .perks {
+    margin-bottom: 0;
+  }
+  main .perks .rectTitle {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  main .perks .back-responsive {
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  main .perks .items {
+    margin-top: 320px;
+  }
+  main .perks .items .desktop {
+    display: none;
+  }
+  main .perks .items .perksSlider {
+    display: block;
+  }
+  main .perks .items .perksSlider .item {
+    padding: 27px 15px;
+    max-width: 100%;
+    width: auto;
+    margin: 0 17px;
+    height: 259px;
+    align-items: flex-start;
+  }
+  main .perks .items .perksSlider .item .text .title {
+    max-width: 147px;
+  }
+  main .perks .items .perksSlider .item .text .subtitle {
+    max-width: 194px;
+  }
+  main .perks .send {
+    margin: 63px 24px 0;
+  }
+  main .perks .send .content {
+    padding: 0 39px;
+  }
+  main .perks .send .content .title {
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 156px;
+  }
+  main .perks .send .content img {
+    width: 78px;
+  }
+  main .perks .send .content .pick {
+    margin-top: 20px;
+    width: 100%;
+  }
+  main .how .wrapper {
+    padding: 0 24px;
+    margin-bottom: 132px;
+  }
+  main .how .wrapper .howTitle {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  main .how .wrapper .items {
+    max-width: 100%;
+    margin-top: 68px;
+  }
+  main .how .wrapper .items .desktop {
+    display: none;
+  }
+  main .how .wrapper .items .howSlider, main .how .wrapper .items .how-pagination {
+    display: block;
+  }
+  main .how .wrapper .items .howSlider .item .number {
+    top: 0;
+    right: 59px;
+  }
+  main .how .wrapper .items .howSlider .item .step {
+    margin-top: 30px;
+  }
+  main .how .wrapper .items .howSlider .item .title {
+    max-width: 155px;
+  }
+  main .how .wrapper .items .howSlider .item .description {
+    max-width: 168px;
+  }
+  main .how .wrapper .items .how-pagination {
+    position: relative;
+    margin-top: 38px;
+  }
+  main .how .wrapper .items .how-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    transition: all 0.4s;
+    border: 2px solid #3F85EF;
+    margin-right: 15px;
+  }
+  main .how .wrapper .items .how-pagination .swiper-pagination-bullet:last-of-type {
+    margin-right: unset;
+  }
+  main .how .wrapper .items .how-pagination .swiper-pagination-bullet-active {
+    width: 15px;
+    height: 15px;
+    background: #3F85EF;
+  }
+  main .specialists {
+    padding: 0 24px;
+    margin-bottom: 132px;
+  }
+  main .specialists .round {
+    display: none;
+  }
+  main .specialists .specialTitle {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  main .specialists .cards .item {
+    margin: 0 auto;
+  }
+  main .reviews {
+    padding-top: 67px;
+  }
+  main .reviews .navigation {
+    transform: translate(-50%, 50%);
+    left: 50%;
+    top: unset;
+    bottom: 177px;
+    max-width: 260px;
+  }
+  main .reviews .circle {
+    display: none;
+  }
+  main .reviews .syringe {
+    top: -54px;
+    right: -61px;
+    width: 200px;
+  }
+  main .reviews .rect {
+    margin-left: 24px;
+  }
+  main .reviews .reviewTitle {
+    font-size: 28px;
+    line-height: 33px;
+    margin-left: 24px;
+    margin-bottom: 38px;
+    max-width: 195px;
+  }
+  main .reviews .send {
+    margin: 63px 24px 0;
+    max-width: 100%;
+    width: -webkit-fill-available;
+    left: unset;
+    transform: none;
+  }
+  main .reviews .send .content {
+    padding: 0 39px;
+  }
+  main .reviews .send .content .title {
+    font-size: 20px;
+    line-height: 27px;
+    max-width: 156px;
+  }
+  main .reviews .send .content img {
+    width: 78px;
+  }
+  main .reviews .send .content .pick {
+    margin-top: 20px;
+    width: 100%;
+  }
+  main .reviews .reviewSlider .item {
+    padding: 29px 30px;
+    max-width: 100%;
+    width: auto;
+    margin: 0 29px;
+  }
+  main .reviews .reviewSlider .item .itemHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .reviews .reviewSlider .item .itemHeader .title {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  main .faq .faqTitle {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  main .faq .consult {
+    max-width: 100%;
+    width: -webkit-fill-available;
+    margin: 0 24px;
+    right: unset;
+  }
+  main .faq .consult img {
+    width: 141px;
+  }
+  main .faq .faqBlock .bandAid {
+    width: 70px;
+    left: unset;
+    right: 10px;
+    top: -50px;
+  }
+  main .faq .send {
+    margin: 63px 24px 0;
+  }
+  main .faq .send .mobContent {
+    padding: 0 39px;
+  }
+  main .faq .send .mobContent .top .title {
+    font-size: 20px;
+    line-height: 27px;
+  }
+  main .faq .send .mobContent .top img {
+    height: 91px;
+  }
+  main .faq .send .mobContent .bottom {
+    flex-direction: column;
+    margin-top: 29px;
+  }
+  main .faq .send .mobContent .bottom .pick {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  main .useful .usefulTitle {
+    font-size: 28px;
+    line-height: 24px;
+  }
+  main .useful .articles {
+    margin-top: 40px;
+  }
+  main .useful .articles .item {
+    width: 100%;
+  }
+
+  footer .footerWrapper .content .info {
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footerWrapper .content .menu {
+    flex-direction: column;
+    align-items: center;
+    justify-content: unset;
+    margin-bottom: 45px;
+  }
+  footer .footerWrapper .content .menu .row {
+    margin: 0;
+    align-items: center;
+  }
+  footer .footerWrapper .content .menu .row .item {
+    text-align: center;
+  }
+  footer .footerWrapper .content .contacts .contactsTitle {
+    text-align: center;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  footer .footerWrapper .content .contacts .contactContent {
+    flex-flow: column;
+    align-items: center;
+  }
+  footer .footerWrapper .content .contacts .contactContent .box {
+    width: auto;
+  }
+  footer .footerWrapper .content .contacts .item a {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
 
 /*# sourceMappingURL=responsive.css.map */

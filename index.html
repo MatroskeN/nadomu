@@ -116,6 +116,7 @@
         <div class="gallery">
             <img src="images/service.png" alt="service" class="servicePic">
             <img src="images/service-responsive.png" alt="service" class="servicePic-responsive">
+            <img src="images/service-mobile.png" alt="service" class="servicePic-mobile">
             <div class="slider">
                 <div class="sliderTitle">
                     В список наших услуг входят:
@@ -185,45 +186,99 @@
         <img src="images/perks.png" alt="perks" class="back">
         <img src="images/perks-responsive.png" alt="perks" class="back-responsive">
         <div class="items">
-            <div class="item">
-                <div class="pic">
-                    <img src="images/home.svg" alt="home">
-                </div>
-                <div class="text">
-                    <div class="title">
-                        Оказание услуги на дому
+            <div class="desktop">
+                <div class="item">
+                    <div class="pic">
+                        <img src="images/home.svg" alt="home">
                     </div>
-                    <div class="subtitle">
-                        Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                    <div class="text">
+                        <div class="title">
+                            Оказание услуги на дому
+                        </div>
+                        <div class="subtitle">
+                            Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="images/certificate.svg" alt="home">
+                    </div>
+                    <div class="text">
+                        <div class="title">
+                            Сертифицированные специалисты
+                        </div>
+                        <div class="subtitle">
+                            Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="images/percent.svg" alt="home">
+                    </div>
+                    <div class="text">
+                        <div class="title">
+                            Выгодные предложения
+                        </div>
+                        <div class="subtitle">
+                            Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="images/certificate.svg" alt="home">
-                </div>
-                <div class="text">
-                    <div class="title">
-                        Сертифицированные специалисты
+            <div class="swiper perksSlider">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="pic">
+                                <img src="images/home.svg" alt="home">
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    Оказание услуги на дому
+                                </div>
+                                <div class="subtitle">
+                                    Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="subtitle">
-                        Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="pic">
+                                <img src="images/certificate.svg" alt="home">
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    Сертифицированные специалисты
+                                </div>
+                                <div class="subtitle">
+                                    Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="pic">
+                                <img src="images/percent.svg" alt="home">
+                            </div>
+                            <div class="text">
+                                <div class="title">
+                                    Выгодные предложения
+                                </div>
+                                <div class="subtitle">
+                                    Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="pic">
-                    <img src="images/percent.svg" alt="home">
-                </div>
-                <div class="text">
-                    <div class="title">
-                        Выгодные предложения
-                    </div>
-                    <div class="subtitle">
-                        Мы подбираем наиболее подходящих для вас специалистов по вашему расположению, необходимой услуге, времени, когда вам удобно и другим параметрам.
-                    </div>
-                </div>
-            </div>
+            <div class="swiper-pagination perks-pagination"></div>
         </div>
         <div class="send">
             <div class="content">
@@ -248,39 +303,87 @@
                 <span>Как</span> это <span>работает?</span>
             </div>
             <div class="items">
-                <div class="item">
-                    <img src="images/01.png" alt="number" class="number">
-                    <img src="images/step1.png" alt="step" class="step">
-                    <div class="title">
-                        Заполняете заявку
+                <div class="desktop">
+                    <div class="item">
+                        <img src="images/01.png" alt="number" class="number">
+                        <img src="images/step1.png" alt="step" class="step">
+                        <div class="title">
+                            Заполняете заявку
+                        </div>
+                        <div class="description">
+                            Заполняете форму подбора специалиста или выбираете нужного специалиста вручную
+                        </div>
                     </div>
-                    <div class="description">
-                        Заполняете форму подбора специалиста или выбираете нужного специалиста вручную
+                    <div class="item">
+                        <img src="images/02.png" alt="number" class="number">
+                        <img src="images/step2.png" alt="step" class="step">
+                        <div class="title">
+                            Рассматриваете отклики
+                        </div>
+                        <div class="description">
+                            Обрабатываете полученные ответы от специалистов
+                            и выбираете лучшее предложение
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/03.png" alt="number" class="number">
+                        <img src="images/step3.png" alt="step" class="step">
+                        <div class="title">
+                            Получаете услугу!
+                        </div>
+                        <div class="description">
+                            Договариваетесь
+                            со специалистом
+                            и подстверждаете встречу
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="images/02.png" alt="number" class="number">
-                    <img src="images/step2.png" alt="step" class="step">
-                    <div class="title">
-                        Рассматриваете отклики
+                <div class="swiper howSlider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/01.png" alt="number" class="number">
+                                <img src="images/step1.png" alt="step" class="step">
+                                <div class="title">
+                                    Заполняете заявку
+                                </div>
+                                <div class="description">
+                                    Заполняете форму подбора специалиста или выбираете нужного специалиста вручную
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/02.png" alt="number" class="number">
+                                <img src="images/step2.png" alt="step" class="step">
+                                <div class="title">
+                                    Рассматриваете отклики
+                                </div>
+                                <div class="description">
+                                    Обрабатываете полученные ответы от специалистов
+                                    и выбираете лучшее предложение
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/03.png" alt="number" class="number">
+                                <img src="images/step3.png" alt="step" class="step">
+                                <div class="title">
+                                    Получаете услугу!
+                                </div>
+                                <div class="description">
+                                    Договариваетесь
+                                    со специалистом
+                                    и подстверждаете встречу
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="description">
-                        Обрабатываете полученные ответы от специалистов
-                        и выбираете лучшее предложение
-                    </div>
-                </div><div class="item">
-                <img src="images/03.png" alt="number" class="number">
-                <img src="images/step3.png" alt="step" class="step">
-                <div class="title">
-                    Получаете услугу!
                 </div>
-                <div class="description">
-                    Договариваетесь
-                    со специалистом
-                    и подстверждаете встречу
-                </div>
-            </div>
-
+                <div class="swiper-pagination how-pagination"></div>
             </div>
         </div>
     </div>
