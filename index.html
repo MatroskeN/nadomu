@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Nadomu</title>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/responsive.css">
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
@@ -38,6 +39,13 @@
             <button class="signIn">
                 Войти
             </button>
+            <div class="burger">
+                <svg width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5 11.5H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30.5 2H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M30.5 21H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
         </div>
     </div>
 </header>
@@ -62,18 +70,22 @@
             </div>
         </div>
         <img src="images/nurse.png" alt="nurse" class="nurse">
+        <img src="images/nurse_responsive.png" alt="nurse" class="nurse-responsive">
         <img src="images/ellipse.png" alt="ellipse" class="ellipse">
-        <div class="nurses">
-            <img src="images/nurses.png" alt="nurses">
-            <div class="text">
-                <p>более</p> <span>50</span>
-                <p>квалифицированных <br> медсестер </p>
+        <div class="tabs">
+            <div class="nurses">
+                <img src="images/nurses.png" alt="nurses">
+                <div class="text">
+                    <p>
+                        более <br> <span>50</span> <br> квалифицированных <br> медсестер
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="catalog">
-            <img src="images/catalog.png" alt="catalog">
-            <div class="text">
-                <p>Для самостоятельного <br> выбора воспользуйтесь <br> нашим <strong>каталогом</strong></p>
+            <div class="catalog">
+                <img src="images/catalog.png" alt="catalog">
+                <div class="text">
+                    <p>Для самостоятельного <br> выбора воспользуйтесь <br> нашим <strong>каталогом</strong></p>
+                </div>
             </div>
         </div>
         <img src="images/box.png" alt="box" class="kit">
@@ -102,7 +114,8 @@
             </div>
         </div>
         <div class="gallery">
-            <img src="images/service.png" alt="service">
+            <img src="images/service.png" alt="service" class="servicePic">
+            <img src="images/service-responsive.png" alt="service" class="servicePic-responsive">
             <div class="slider">
                 <div class="sliderTitle">
                     В список наших услуг входят:
@@ -170,6 +183,7 @@
             <span>Преимущества</span> сервиса
         </div>
         <img src="images/perks.png" alt="perks" class="back">
+        <img src="images/perks-responsive.png" alt="perks" class="back-responsive">
         <div class="items">
             <div class="item">
                 <div class="pic">
@@ -220,9 +234,9 @@
                 <button class="pick">
                     Подобрать специалиста
                 </button>
-            </div>
-            <div class="footnote">
-                А вы уже сможете выбрать наиболее выгодное и подходящее для вас предложение.
+                <div class="footnote">
+                    А вы уже сможете выбрать наиболее выгодное и подходящее для вас предложение.
+                </div>
             </div>
         </div>
     </div>
@@ -692,7 +706,7 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-pagination review-pagination"></div>
         <div class="send">
             <div class="content">
                 <div class="title">
@@ -702,9 +716,9 @@
                 <button class="pick">
                     Каталог специалистов
                 </button>
-            </div>
-            <div class="footnote">
-                Перейдите в каталог наших специалистови выберите нужного специалиста самостоятельно
+                <div class="footnote">
+                    Перейдите в каталог наших специалистови выберите нужного специалиста самостоятельно
+                </div>
             </div>
         </div>
     </div>
@@ -820,6 +834,20 @@
                     Зарегистрироваться
                 </button>
             </div>
+            <div class="mobContent">
+                <div class="top">
+                    <div class="title">Вы — медицинский специалист?</div>
+                    <img src="images/scope.png" alt="necklace">
+                </div>
+                <div class="bottom">
+                    <button class="pick">
+                        Зарегистрироваться
+                    </button>
+                    <div class="subtitle">
+                        Подключайтесь к нашей системе и зарабатывайте вместе с нами!
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="useful">
@@ -828,43 +856,54 @@
             <span>Полезная</span> информация
         </div>
         <div class="articles">
-            <div class="item">
-                <img src="images/article1.png" alt="article">
-                <div class="title">
-                    Инструкция: Как наложить гипс самостоятельно?
+            <div class="swiper usefulSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <img src="images/article1.png" alt="article">
+                            <div class="title">
+                                Инструкция: Как наложить гипс самостоятельно?
+                            </div>
+                            <div class="subtitle">
+                                Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
+                            </div>
+                            <button class="read">
+                                Читать статью
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <img src="images/article2.png" alt="article">
+                            <div class="title">
+                                Почему не стоит ставить уколы самостоятельно?
+                            </div>
+                            <div class="subtitle">
+                                Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
+                            </div>
+                            <button class="read">
+                                Читать статью
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <img src="images/article3.png" alt="article">
+                            <div class="title">
+                                Инструкция: Как наложить гипс самостоятельно?
+                            </div>
+                            <div class="subtitle">
+                                Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
+                            </div>
+                            <button class="read">
+                                Читать статью
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="subtitle">
-                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
-                </div>
-                <button class="read">
-                    Читать статью
-                </button>
-            </div>
-            <div class="item">
-                <img src="images/article2.png" alt="article">
-                <div class="title">
-                    Почему не стоит ставить уколы самостоятельно?
-                </div>
-                <div class="subtitle">
-                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
-                </div>
-                <button class="read">
-                    Читать статью
-                </button>
-            </div>
-            <div class="item">
-                <img src="images/article3.png" alt="article">
-                <div class="title">
-                    Инструкция: Как наложить гипс самостоятельно?
-                </div>
-                <div class="subtitle">
-                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga bloppis lartad i kina.
-                </div>
-                <button class="read">
-                    Читать статью
-                </button>
             </div>
         </div>
+        <div class="swiper-pagination useful-pagination"></div>
         <button class="allArticles">
             Все статьи
         </button>
@@ -877,8 +916,10 @@
         <div class="content">
             <div class="info">
                 <img src="images/logo-footer.svg" alt="logo" class="logo">
-                <p>ИП Маненкова К.К.</p>
-                <p>ОГРНИП 322774600097820</p>
+                <div class="data">
+                    <p>ИП Маненкова К.К.</p>
+                    <p>ОГРНИП 322774600097820</p>
+                </div>
                 <div class="copyright">
                     <p>© 2022, надому.рф</p>
                 </div>
@@ -929,25 +970,30 @@
                 <div class="contactsTitle">
                     Контакты
                 </div>
-                <div class="item">
-                    <img src="images/phone.svg" alt="phone">
-                    <a class="phone" href="tel:+70000000000">+7 000 000-00-00</a>
-                </div>
-                <div class="item">
-                    <img src="images/mail.svg" alt="mail">
-                    <a href="mailto:support@nadomu.ru">support@nadomu.ru</a>
-                </div>
-                <div class="item">
-                    <img src="images/location.svg" alt="location">
-                    <a href="#">Москва, ул. Ленина 53</a>
-                </div>
-                <div class="socials">
-                    <a href="#">
-                        <img src="images/instagram.svg" alt="instagram">
-                    </a>
-                    <a href="#">
-                        <img src="images/telegram.svg" alt="telegram">
-                    </a>
+                <div class="contactContent">
+                    <div class="box">
+                        <div class="item">
+                            <img src="images/phone.svg" alt="phone">
+                            <a class="phone" href="tel:+70000000000">+7 000 000-00-00</a>
+                        </div>
+                        <div class="item">
+                            <img src="images/mail.svg" alt="mail">
+                            <a href="mailto:support@nadomu.ru">support@nadomu.ru</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/location.svg" alt="location">
+                        <a href="#">Москва, ул. Ленина 53</a>
+                    </div>
+                    <br>
+                    <div class="socials">
+                        <a href="#">
+                            <img src="images/instagram.svg" alt="instagram">
+                        </a>
+                        <a href="#">
+                            <img src="images/telegram.svg" alt="telegram">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

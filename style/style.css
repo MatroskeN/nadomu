@@ -102,6 +102,9 @@ header .headerWrapper .headerControls .signIn {
   line-height: 20px;
   color: #FFFFFF;
 }
+header .headerWrapper .headerControls .burger {
+  display: none;
+}
 
 main {
   margin-top: 103px;
@@ -178,6 +181,9 @@ main .banner .nurse {
   z-index: 0;
   top: 8px;
   right: 371px;
+}
+main .banner .nurse-responsive {
+  display: none;
 }
 main .banner .ellipse {
   position: absolute;
@@ -305,6 +311,9 @@ main .about .gallery {
   flex-direction: column;
   align-items: center;
 }
+main .about .gallery .servicePic-responsive {
+  display: none;
+}
 main .about .gallery .slider {
   margin-top: 25px;
   max-width: 605px;
@@ -407,6 +416,9 @@ main .perks .back {
   top: 110px;
   z-index: 0;
 }
+main .perks .back-responsive {
+  display: none;
+}
 main .perks .items {
   display: flex;
   flex-direction: column;
@@ -475,6 +487,7 @@ main .perks .send {
 }
 main .perks .send .content {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -919,6 +932,7 @@ main .reviews .send {
 }
 main .reviews .send .content {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -1096,6 +1110,7 @@ main .faq .send {
 }
 main .faq .send .content {
   display: flex;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
 }
@@ -1124,6 +1139,9 @@ main .faq .send .content .pick {
   font-size: 14px;
   line-height: 20px;
   color: #3F85EF;
+}
+main .faq .send .mobContent {
+  display: none;
 }
 main .useful {
   max-width: 1233px;

@@ -1,0 +1,397 @@
+@media(max-width: 1250px){
+  header{
+    .headerWrapper{
+      max-width: 100%;
+      padding: 0 44px;
+      .headerMenu{
+        display: none;
+      }
+      .headerControls{
+        .signIn{
+          display: none;
+        }
+        .burger{
+          display: flex;
+          margin-left: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  main{
+    .banner{
+      padding: 0;
+      border-radius: 25px;
+      max-width: 680px;
+      background-size: cover;
+      .content{
+        padding: 118px 50px 0 50px;
+        h1{
+          font-size: 40px;
+          line-height: 45px;
+          max-width: 328px;
+        }
+        .description{
+          max-width: 252px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .specialist{
+          height: 227px;
+          flex-direction: column;
+          max-width: 580px;
+          select{
+            width: 440px;
+            margin-bottom: 25px;
+            margin-right: unset;
+          }
+        }
+      }
+      .kit{
+        right: unset;
+        bottom: 247px;
+      }
+      .ellipse{
+        display: none;
+      }
+      .nurse{
+        display: none;
+      }
+      .nurse-responsive{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -45px;
+        z-index: 0;
+      }
+      .tabs{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 50px 50px;
+        .nurses,.catalog{
+          position: relative;
+          top: unset;
+          right: unset;
+        }
+        .nurses{
+          .text{
+            p{
+              span{
+                font-size: 36px;
+                line-height: 42px;
+              }
+            }
+            br{
+              &:first-of-type{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about{
+      flex-direction: column;
+      padding: 0 44px;
+      max-width: 100%;
+      width: auto;
+      .info{
+        .title{
+          margin-bottom: 40px;
+        }
+        .description{
+          max-width: 100%;
+          margin-bottom: 33px;
+        }
+        .tab{
+          width: fit-content;
+        }
+      }
+      .gallery{
+        .servicePic-responsive{
+          display: flex;
+        }
+        .servicePic{
+          display: none;
+        }
+        .slider{
+          max-width: 580px;
+          margin-left: unset;
+        }
+      }
+    }
+    .perks{
+      max-width: 100%;
+      width: auto;
+      height: 1263px;
+      display: flex;
+      flex-direction: column;
+      .back{
+        display: none;
+      }
+      .items{
+        margin-top: auto;
+      }
+      .send{
+        max-width: 100%;
+        width: auto;
+        margin: 63px 44px 0;
+        .content{
+          justify-content: space-between;
+          padding: 0 50px;
+          .footnote{
+            max-width: 317px;
+          }
+          .pick{
+            margin: 0;
+          }
+        }
+      }
+      .back-responsive{
+        display: block;
+        position: absolute;
+        top: 115px;
+        left: 0;
+        z-index: 0;
+      }
+      .rect{
+        margin-left: 44px;
+      }
+      .rectTitle{
+        position: relative;
+        z-index: 1;
+        margin-left: 44px;
+      }
+    }
+    .how{
+      .wrapper{
+        max-width: 100%;
+        padding: 0 44px;
+      }
+    }
+    .specialists{
+      max-width: 100%;
+      width: auto;
+      padding: 0 44px;
+      .specialTitle,.controls,.cards{
+        position: relative;
+        z-index: 1;
+      }
+      .controls{
+        .navigation{
+          display: none;
+        }
+        .tabs{
+          overflow-x: scroll;
+          width: auto;
+          .item{
+            margin-right: 25px;
+          }
+        }
+      }
+      .cards{
+        .specialistsSlider{
+          max-width: 600px;
+        }
+        .item{
+          width: 260px;
+          .stats{
+            .state{
+              padding: 7px 16px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .reviews{
+      max-width: 100%;
+      .navigation{
+        max-width: 680px;
+        left: 44px;
+      }
+      .reviewSlider{
+        max-width: 100%;
+        width: auto;
+        .item{
+          margin: 0 auto;
+        }
+      }
+      .send{
+        max-width: 680px;
+        width: 100%;
+        margin: 0px;
+        bottom: -195px;
+        .content{
+          justify-content: space-between;
+          padding: 0 50px;
+          .footnote{
+            max-width: 329px;
+          }
+          .pick{
+            margin: 0;
+          }
+        }
+      }
+    }
+    .faq{
+      .consult{
+        top: 130px;
+        right: 44px;
+      }
+      .faqTitle{
+        margin-bottom: 300px;
+        margin-left: 44px;
+      }
+      .rect{
+        margin-left: 44px;
+      }
+      .faqBlock{
+        padding: 48px 44px;
+        .bandAid{
+          left: 119px;
+          top: -241px;
+        }
+      }
+      .send{
+        max-width: 100%;
+        width: auto;
+        margin: 63px 44px 0;
+        .content{
+          display: none;
+        }
+        .mobContent{
+          display: flex;
+          flex-direction: column;
+          padding: 0 48px;
+          .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title{
+              font-family: 'Gilroy', serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 30px;
+              line-height: 36px;
+              color: #FFFFFF;
+              max-width: 302px;
+            }
+          }
+          .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .pick{
+              background: #FFFFFF;
+              font-family: 'Gilroy', serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: #3F85EF;
+            }
+            .subtitle{
+              font-family: 'Gilroy', serif;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              text-align: center;
+              color: #FFFFFF;
+              max-width: 329px;
+            }
+          }
+        }
+      }
+    }
+    .useful{
+      .rect,.usefulTitle{
+        margin-left: 44px;
+      }
+      .articles{
+        padding: 0 44px;
+        .item{
+          width: 330px;
+          height: 517px;
+          img{
+            width: 100%;
+          }
+          .title{
+            max-width: 270px;
+          }
+          .subtitle{
+            max-width: 270px;
+          }
+        }
+      }
+      .useful-pagination{
+        position: relative;
+        margin-top: 66px;
+        .swiper-pagination-bullet{
+          width: 10px;
+          height: 10px;
+          border: 2px solid #3F85EF;
+          margin-right: 15px;
+          transition: all 0.4s;
+          &:last-of-type{
+            margin-right: unset;
+          }
+        }
+        .swiper-pagination-bullet-active{
+          width: 15px;
+          height: 15px;
+          background: #3F85EF;
+        }
+      }
+    }
+  }
+  footer{
+    .footerWrapper{
+      padding: 60px 44px 124px;
+      max-width: 100%;
+      position: relative;
+      .content{
+        flex-direction: column;
+        .info{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 53px;
+          .copyright{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        .menu{
+          justify-content: space-between;
+          margin-bottom: 61px;
+          .row{
+            .rowTitle{
+              font-size: 25px;
+              line-height: 24px;
+            }
+            .item{
+              font-size: 20px;
+              line-height: 24px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .contacts{
+          margin: 0;
+          .contactContent{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline;
+            .box{
+              width: 68%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

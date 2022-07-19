@@ -19,6 +19,16 @@ const swiper1 = new Swiper('.specialistsSlider', {
         nextEl: '.spec-next',
         prevEl: '.spec-prev',
     },
+
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 23,
+        },
+        1250: {
+            slidesPerView: 4,
+        }
+    }
 });
 
 const swiper2 = new Swiper('.reviewSlider', {
@@ -33,8 +43,39 @@ const swiper2 = new Swiper('.reviewSlider', {
         prevEl: '.review-prev',
     },
     pagination: {
-        el: '.swiper-pagination',
+        el: '.review-pagination',
         clickable: 'true'
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+        },
+        1250: {
+            slidesPerView: 2,
+        }
+    }
+});
+
+const swiper3 = new Swiper('.usefulSlider', {
+    direction: 'horizontal',
+    loop: true,
+
+    pagination: {
+        el: '.useful-pagination',
+        clickable: 'true'
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        767: {
+          slidesPerView: 2,
+        },
+        1250: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+        }
     }
 });
 

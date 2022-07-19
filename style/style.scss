@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   overflow-x: hidden;
@@ -107,6 +109,9 @@ header {
         line-height: 20px;
         color: #FFFFFF;
       }
+      .burger{
+        display: none;
+      }
     }
   }
 }
@@ -192,6 +197,10 @@ main {
       z-index: 0;
       top: 8px;
       right: 371px;
+    }
+
+    .nurse-responsive{
+      display: none;
     }
 
     .ellipse {
@@ -327,6 +336,9 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
+      .servicePic-responsive{
+        display: none;
+      }
       .slider{
         margin-top: 25px;
         max-width: 605px;
@@ -435,6 +447,9 @@ main {
       top: 110px;
       z-index: 0;
     }
+    .back-responsive{
+      display: none;
+    }
     .items{
       display: flex;
       flex-direction: column;
@@ -502,6 +517,7 @@ main {
       z-index: 1;
       .content{
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         .title{
@@ -956,6 +972,7 @@ main {
       transform: translateX(-50%);
       .content{
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         .title{
@@ -1143,6 +1160,7 @@ main {
       z-index: 1;
       .content{
         display: flex;
+        flex-flow: row wrap;
         align-items: center;
         justify-content: center;
         .title{
@@ -1171,6 +1189,9 @@ main {
           line-height: 20px;
           color: #3F85EF;
         }
+      }
+      .mobContent{
+        display: none;
       }
     }
   }
@@ -1250,50 +1271,59 @@ main {
   }
 }
 
-footer{
+footer {
   width: 100vw;
   position: relative;
-  .footerCircle{
+
+  .footerCircle {
     position: absolute;
     top: -159px;
     right: 0;
     z-index: 0;
   }
-  .footerWrapper{
+
+  .footerWrapper {
     margin-top: 159px;
     padding: 68px 0 62px;
     background: #EDF4FE;
     border-radius: 25px 25px 0px 0px;
     position: relative;
     z-index: 1;
-    .content{
+
+    .content {
       max-width: 1190px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
     }
-    .info{
-      .logo{
+
+    .info {
+      .logo {
         margin-bottom: 20px;
       }
-      p{
+
+      p {
         font-family: 'Gilroy', serif;
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 24px;
         color: #283848;
-        &:first-of-type{
+
+        &:first-of-type {
           margin-bottom: 6px;
         }
       }
-      .copyright{
+
+      .copyright {
         margin-top: 88px;
       }
     }
-    .menu{
+
+    .menu {
       display: flex;
-      .rowTitle{
+
+      .rowTitle {
         font-family: 'Gilroy', serif;
         font-style: normal;
         font-weight: 600;
@@ -1302,13 +1332,16 @@ footer{
         color: #283848;
         margin-bottom: 27px;
       }
-      .row{
+
+      .row {
         display: flex;
         flex-direction: column;
-        &:first-of-type{
+
+        &:first-of-type {
           margin-right: 83px;
         }
-        .item{
+
+        .item {
           font-family: 'Gilroy', serif;
           font-style: normal;
           font-weight: 500;
@@ -1316,15 +1349,18 @@ footer{
           line-height: 24px;
           color: #283848;
           margin-bottom: 10px;
-          &:last-of-type{
+
+          &:last-of-type {
             margin-bottom: unset;
           }
         }
       }
     }
-    .contacts{
+
+    .contacts {
       margin-left: 131px;
-      .contactsTitle{
+
+      .contactsTitle {
         font-family: 'Gilroy', serif;
         font-style: normal;
         font-weight: 600;
@@ -1333,14 +1369,17 @@ footer{
         color: #283848;
         margin-bottom: 27px;
       }
-      .item{
+
+      .item {
         display: flex;
         align-items: center;
         margin-bottom: 15px;
-        img{
+
+        img {
           width: 19px;
         }
-        a{
+
+        a {
           font-family: 'Gilroy', serif;
           font-style: normal;
           font-weight: 500;
@@ -1349,14 +1388,17 @@ footer{
           color: #283848;
           margin-left: 19px;
         }
-        .phone{
+
+        .phone {
           font-weight: 700;
         }
       }
-      .socials{
+
+      .socials {
         margin-top: 37px;
-        a{
-          &:first-child{
+
+        a {
+          &:first-child {
             margin-right: 35px;
           }
         }
