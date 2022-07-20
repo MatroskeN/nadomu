@@ -543,11 +543,20 @@ main {
       justify-content: center;
       position: relative;
       z-index: 1;
+      overflow: hidden;
+      .sendBack{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
       .content{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
         .title{
           font-family: 'Gilroy', serif;
           font-style: normal;
@@ -577,6 +586,8 @@ main {
         }
       }
       .footnote{
+        position: relative;
+        z-index: 1;
         margin-top: 16px;
         font-family: 'Gilroy', serif;
         font-style: normal;
@@ -640,6 +651,21 @@ main {
           }
           &:nth-child(2n){
             margin-bottom: 50px;
+            .circle{
+              left: unset;
+              top: 90px;
+              right: 30px;
+            }
+          }
+          .circle{
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background: #59B4FB;
+            top: 0;
+            left: 30px;
+            z-index: 0;
+            border-radius: 50px;
           }
           .number{
             position: absolute;
@@ -1069,11 +1095,20 @@ main {
       bottom: -138px;
       left: 50%;
       transform: translateX(-50%);
+      overflow: hidden;
+      .sendBack{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
       .content{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
         .title{
           font-family: 'Gilroy', serif;
           font-style: normal;
@@ -1103,6 +1138,8 @@ main {
         }
       }
       .footnote{
+        position: relative;
+        z-index: 1;
         margin-top: 16px;
         font-family: 'Gilroy', serif;
         font-style: normal;
@@ -1266,11 +1303,20 @@ main {
       justify-content: center;
       position: relative;
       z-index: 1;
+      overflow: hidden;
+      .sendBack{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+      }
       .content{
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-content: center;
+        position: relative;
+        z-index: 1;
         .title{
           font-family: 'Gilroy', serif;
           font-style: normal;
@@ -1307,6 +1353,8 @@ main {
       }
       .mobContent{
         display: none;
+        position: relative;
+        z-index: 1;
       }
     }
   }
@@ -1372,6 +1420,9 @@ main {
           color: #FFFFFF;
         }
       }
+    }
+    .useful-pagination{
+      display: none;
     }
     .allArticles{
       background: #3F85EF;

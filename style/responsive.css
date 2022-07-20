@@ -300,6 +300,7 @@
     max-width: 270px;
   }
   main .useful .useful-pagination {
+    display: block;
     position: relative;
     margin-top: 66px;
   }
@@ -514,6 +515,21 @@
   }
   main .how .wrapper .items .howSlider, main .how .wrapper .items .how-pagination {
     display: block;
+  }
+  main .how .wrapper .items .howSlider .item:nth-child(2n) .circle {
+    left: unset;
+    top: 90px;
+    right: 30px;
+  }
+  main .how .wrapper .items .howSlider .item .circle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: #59B4FB;
+    top: 0;
+    left: 30px;
+    z-index: 0;
+    border-radius: 50px;
   }
   main .how .wrapper .items .howSlider .item .number {
     top: 0;
