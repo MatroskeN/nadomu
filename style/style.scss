@@ -717,11 +717,15 @@ main {
       line-height: 24px;
       color: #151E29;
       margin-top: 29px;
+      position: relative;
+      z-index: 1;
       span{
         color: #3F85EF;
       }
     }
     .controls{
+      position: relative;
+      z-index: 1;
       margin-top: 90px;
       margin-bottom: 57px;
       display: flex;
@@ -790,6 +794,8 @@ main {
       }
     }
     .cards{
+      position: relative;
+      z-index: 1;
       display: flex;
       .item{
         display: flex;
@@ -874,9 +880,76 @@ main {
     }
     .round{
       position: absolute;
-      right: 0;
+      right: -66px;
       top: -101px;
       z-index: 0;
+      width: 483px;
+      height: 483px;
+      background: linear-gradient(210.96deg, #EDF4FE 37.05%, rgba(237, 244, 254, 0) 101.85%);
+      border: 1px solid #FFFFFF;
+      border-radius: 350px;
+      display: flex;
+      align-items: baseline;
+      .white{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #FFFFFF;
+        width: 351px;
+        height: 351px;
+        border-radius: 350px;
+        z-index: 0;
+      }
+      .stars{
+        position: absolute;
+        top: 26px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+      }
+      .content{
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        margin-top: 101px;
+        svg{
+          margin-right: 25px;
+        }
+        .countReviews{
+          position: relative;
+          z-index: 2;
+          display: flex;
+          align-items: flex-end;
+          .text{
+            p{
+              font-family: 'Gilroy', serif;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              color: #87B1CA;
+              strong{
+                font-weight: 400;
+                font-size: 64px;
+                line-height: 74px;
+              }
+            }
+          }
+          a{
+            margin-top: auto;
+            font-family: 'Gilroy', serif;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration-line: underline;
+            color: #3F85EF;
+            margin-left: 14px;
+          }
+        }
+      }
     }
     .moreSpec{
       margin: 60px auto 0;

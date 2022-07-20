@@ -204,6 +204,27 @@
           }
         }
       }
+      .round{
+        justify-content: center;
+        .content{
+          .countReviews{
+            flex-direction: column;
+            .text{
+              p{
+                strong{
+                  font-size: 36px;
+                  line-height: 42px;
+                }
+              }
+              br{
+                &:first-of-type{
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
     }
     .reviews{
       max-width: 100%;
@@ -611,16 +632,24 @@
           }
         }
       }
-    }
     .specialists{
       padding: 0 24px;
       margin-bottom: 132px;
       .round{
-        display: none;
+        top: 95px;
+        right: unset;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .content{
+          margin: 0;
+        }
       }
       .specialTitle{
         font-size: 28px;
         line-height: 24px;
+      }
+      .controls{
+        margin-top: 175px;
       }
       .cards{
         .item{
@@ -796,4 +825,4 @@
       }
     }
   }
-}
+  }
