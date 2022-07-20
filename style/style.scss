@@ -12,6 +12,7 @@ button, select, input {
   padding: 13px 24px;
   border-radius: 45px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 select {
@@ -108,6 +109,9 @@ header {
         font-size: 14px;
         line-height: 20px;
         color: #FFFFFF;
+        &:hover{
+          background: linear-gradient(84.59deg, #59B4FB 2.25%, #3F85EF 97.14%);
+        }
       }
       .burger{
         display: none;
@@ -188,6 +192,12 @@ main {
           font-size: 14px;
           line-height: 20px;
           color: #FFFFFF;
+          border: 2px solid transparent;
+          &:hover{
+            color: #3F85EF;
+            border-color: #3F85EF;
+            background: #FFFFFF;
+          }
         }
       }
     }
@@ -419,6 +429,16 @@ main {
           align-items: center;
           justify-content: center;
           cursor: pointer;
+          transition: all 0.4s;
+          &:hover{
+            background: #3F85EF;
+            border-color: #3F85EF;
+            svg{
+              path{
+                stroke:#FFFFFF;
+              }
+            }
+          }
         }
         .button-next{
           right: 0;
@@ -547,6 +567,13 @@ main {
           font-size: 14px;
           line-height: 20px;
           color: #3F85EF;
+          transition: all 0.4s;
+          border: 2px solid transparent;
+          &:hover{
+            color: #FFFFFF;
+            background: transparent;
+            border-color: #FFFFFF;
+          }
         }
       }
       .footnote{
@@ -689,11 +716,18 @@ main {
           font-size: 14px;
           line-height: 20px;
           color: #3F85EF;
+          &:hover{
+            color: #FFFFFF;
+            background:#3F85EF;
+          }
         }
         .active{
           background: linear-gradient(84.59deg, #3F85EF 2.25%, #59B4FB 97.14%);
           color: #FFFFFF;
           border-color: transparent;
+          &:hover{
+            background: linear-gradient(84.59deg, #59B4FB 2.25%, #3F85EF 97.14%);
+          }
         }
       }
       .navigation{
@@ -710,6 +744,16 @@ main {
           display: flex;
           align-items: center;
           justify-content: center;
+          transition: all 0.4s;
+          &:hover{
+            background: #3F85EF;
+            border-color: #3F85EF;
+            svg{
+              path{
+                stroke:#FFFFFF;
+              }
+            }
+          }
           &:first-child{
             margin-right: 27px;
             svg{
@@ -734,6 +778,28 @@ main {
           align-items: flex-end;
           position: relative;
           margin-bottom: 23px;
+          transition: all 0.4s;
+          img{
+            position: relative;
+            z-index: 1;
+          }
+          .mask{
+            position: absolute;
+            z-index: 0;
+            top: 43px;
+            right: 27px;
+            width: 198px;
+            height: 198px;
+            background: #FFFFFF;
+            filter: blur(50px);
+            opacity: 0;
+          }
+          &:hover{
+            background: #59B4FB;
+            .mask{
+              opacity: 1;
+            }
+          }
           .icon{
             position: absolute;
             top: 14px;
@@ -795,6 +861,13 @@ main {
       font-size: 14px;
       line-height: 20px;
       color: #FFFFFF;
+      border: 2px solid transparent;
+      transition: all 0.4s;
+      &:hover{
+        color: #3F85EF;
+        background: #FFFFFF;
+        border-color: #3F85EF;
+      }
     }
   }
   .reviews{
@@ -945,6 +1018,16 @@ main {
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.4s;
+        &:hover{
+          background: #3F85EF;
+          border-color: #3F85EF;
+          svg{
+            path{
+              stroke:#FFFFFF;
+            }
+          }
+        }
       }
       .review-prev{
         svg{
@@ -1010,6 +1093,13 @@ main {
           font-size: 14px;
           line-height: 20px;
           color: #3F85EF;
+          transition: all 0.4s;
+          border: 2px solid transparent;
+          &:hover{
+            color: #FFFFFF;
+            background: transparent;
+            border-color: #FFFFFF;
+          }
         }
       }
       .footnote{
@@ -1052,6 +1142,7 @@ main {
         top: 113px;
         right: -81px;
         z-index: 0;
+        filter: drop-shadow(35px 40px 40px rgba(21, 30, 41, 0.07));
       }
       .circle{
         position: absolute;
@@ -1065,6 +1156,7 @@ main {
         margin-bottom: 34px;
         position: relative;
         z-index: 1;
+        cursor: pointer;
         &:last-of-type{
           margin-bottom: unset;
         }
@@ -1204,6 +1296,13 @@ main {
           font-size: 14px;
           line-height: 20px;
           color: #3F85EF;
+          transition: all 0.4s;
+          border: 2px solid transparent;
+          &:hover{
+            color: #FFFFFF;
+            background: transparent;
+            border-color: #FFFFFF;
+          }
         }
       }
       .mobContent{

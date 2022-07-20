@@ -10,6 +10,7 @@ button, select, input {
   padding: 13px 24px;
   border-radius: 45px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 
 select {
@@ -102,6 +103,9 @@ header .headerWrapper .headerControls .signIn {
   line-height: 20px;
   color: #FFFFFF;
 }
+header .headerWrapper .headerControls .signIn:hover {
+  background: linear-gradient(84.59deg, #59B4FB 2.25%, #3F85EF 97.14%);
+}
 header .headerWrapper .headerControls .burger {
   display: none;
 }
@@ -175,6 +179,12 @@ main .banner .content .specialist .choose {
   font-size: 14px;
   line-height: 20px;
   color: #FFFFFF;
+  border: 2px solid transparent;
+}
+main .banner .content .specialist .choose:hover {
+  color: #3F85EF;
+  border-color: #3F85EF;
+  background: #FFFFFF;
 }
 main .banner .nurse {
   position: absolute;
@@ -391,6 +401,14 @@ main .about .gallery .slider .navigation {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: all 0.4s;
+}
+main .about .gallery .slider .navigation:hover {
+  background: #3F85EF;
+  border-color: #3F85EF;
+}
+main .about .gallery .slider .navigation:hover svg path {
+  stroke: #FFFFFF;
 }
 main .about .gallery .slider .button-next {
   right: 0;
@@ -518,6 +536,13 @@ main .perks .send .content .pick {
   font-size: 14px;
   line-height: 20px;
   color: #3F85EF;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+}
+main .perks .send .content .pick:hover {
+  color: #FFFFFF;
+  background: transparent;
+  border-color: #FFFFFF;
 }
 main .perks .send .footnote {
   margin-top: 16px;
@@ -658,10 +683,17 @@ main .specialists .controls .tabs .item {
   line-height: 20px;
   color: #3F85EF;
 }
+main .specialists .controls .tabs .item:hover {
+  color: #FFFFFF;
+  background: #3F85EF;
+}
 main .specialists .controls .tabs .active {
   background: linear-gradient(84.59deg, #3F85EF 2.25%, #59B4FB 97.14%);
   color: #FFFFFF;
   border-color: transparent;
+}
+main .specialists .controls .tabs .active:hover {
+  background: linear-gradient(84.59deg, #59B4FB 2.25%, #3F85EF 97.14%);
 }
 main .specialists .controls .navigation {
   display: flex;
@@ -678,6 +710,14 @@ main .specialists .controls .navigation .spec-arrow {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s;
+}
+main .specialists .controls .navigation .spec-arrow:hover {
+  background: #3F85EF;
+  border-color: #3F85EF;
+}
+main .specialists .controls .navigation .spec-arrow:hover svg path {
+  stroke: #FFFFFF;
 }
 main .specialists .controls .navigation .spec-arrow:first-child {
   margin-right: 27px;
@@ -702,6 +742,28 @@ main .specialists .cards .item .pic {
   align-items: flex-end;
   position: relative;
   margin-bottom: 23px;
+  transition: all 0.4s;
+}
+main .specialists .cards .item .pic img {
+  position: relative;
+  z-index: 1;
+}
+main .specialists .cards .item .pic .mask {
+  position: absolute;
+  z-index: 0;
+  top: 43px;
+  right: 27px;
+  width: 198px;
+  height: 198px;
+  background: #FFFFFF;
+  filter: blur(50px);
+  opacity: 0;
+}
+main .specialists .cards .item .pic:hover {
+  background: #59B4FB;
+}
+main .specialists .cards .item .pic:hover .mask {
+  opacity: 1;
 }
 main .specialists .cards .item .pic .icon {
   position: absolute;
@@ -761,6 +823,13 @@ main .specialists .moreSpec {
   font-size: 14px;
   line-height: 20px;
   color: #FFFFFF;
+  border: 2px solid transparent;
+  transition: all 0.4s;
+}
+main .specialists .moreSpec:hover {
+  color: #3F85EF;
+  background: #FFFFFF;
+  border-color: #3F85EF;
 }
 main .reviews {
   background: linear-gradient(270deg, #EDF4FE 53.47%, #FFFFFF 95.83%);
@@ -904,6 +973,14 @@ main .reviews .navigation .arrow {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.4s;
+}
+main .reviews .navigation .arrow:hover {
+  background: #3F85EF;
+  border-color: #3F85EF;
+}
+main .reviews .navigation .arrow:hover svg path {
+  stroke: #FFFFFF;
 }
 main .reviews .navigation .review-prev svg {
   transform: rotateZ(180deg);
@@ -968,6 +1045,13 @@ main .reviews .send .content .pick {
   font-size: 14px;
   line-height: 20px;
   color: #3F85EF;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+}
+main .reviews .send .content .pick:hover {
+  color: #FFFFFF;
+  background: transparent;
+  border-color: #FFFFFF;
 }
 main .reviews .send .footnote {
   margin-top: 16px;
@@ -1009,6 +1093,7 @@ main .faq .faqBlock .bandAid {
   top: 113px;
   right: -81px;
   z-index: 0;
+  filter: drop-shadow(35px 40px 40px rgba(21, 30, 41, 0.07));
 }
 main .faq .faqBlock .circle {
   position: absolute;
@@ -1022,6 +1107,7 @@ main .faq .faqBlock .faqItem {
   margin-bottom: 34px;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 main .faq .faqBlock .faqItem:last-of-type {
   margin-bottom: unset;
@@ -1152,6 +1238,13 @@ main .faq .send .content .pick {
   font-size: 14px;
   line-height: 20px;
   color: #3F85EF;
+  transition: all 0.4s;
+  border: 2px solid transparent;
+}
+main .faq .send .content .pick:hover {
+  color: #FFFFFF;
+  background: transparent;
+  border-color: #FFFFFF;
 }
 main .faq .send .mobContent {
   display: none;
