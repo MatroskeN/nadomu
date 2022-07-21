@@ -1,3 +1,11 @@
+document.querySelector('.burger').onclick = function () {
+    document.querySelector('.burgerMenu').classList.add('activeBurger');
+}
+
+document.querySelector('.close').onclick = function () {
+    document.querySelector('.burgerMenu').classList.remove('activeBurger');
+}
+
 const swiper = new Swiper('.serviceSlider', {
     direction: 'horizontal',
     loop: true,

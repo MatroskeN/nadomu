@@ -23,6 +23,9 @@ select {
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 5px;
+  option{
+    padding: 5px;
+  }
 }
 
 h1, p {
@@ -98,6 +101,95 @@ header {
           background-position-y: 17px;
           background-position-x: 98%;
         }
+        .selector{
+          $select-color: #283848;
+          $select-background: #ffffff;
+          $select-width: 252px;
+          $select-height: 30px;
+          font-family: "Gilroy", serif;
+          p {
+            margin-top: 200px;
+            a {
+              text-transform: uppercase;
+              text-decoration: none;
+              display: inline-block;
+              color: #fff;
+              padding: 5px 10px;
+              margin: 0 5px;
+              background-color: #87B1CA;
+              &:hover {
+                background-color:  #87B1CA;
+              }
+            }
+          }
+          .select-hidden {
+            display: none;
+            visibility: hidden;
+            padding-right: 10px;
+          }
+          .select {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            font-size: 16px;
+            color: $select-color;
+            width: $select-width;
+            height: $select-height;
+          }
+          .select-styled {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: $select-background;
+            padding: 8px 15px;
+            font-size: 14px;
+            &:after {
+              content:"";
+              width: 0;
+              height: 0;
+              border: 7px solid transparent;
+              border-color: $select-color transparent transparent transparent;
+              position: absolute;
+              top: 16px;
+              right: 10px;
+            }
+            &:active, &.active {
+              &:after {
+                top: 9px;
+                border-color: transparent transparent $select-color transparent;
+              }
+            }
+          }
+
+          .select-options {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            left: 0;
+            z-index: 999;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            background-color: #FFFFFF;
+            li {
+              margin: 0;
+              padding: 12px 0;
+              text-indent: 15px;
+              border-top: 1px solid #FFFFFF;
+              &:hover,
+              &.is-selected {
+                color: $select-background;
+                background: #abc6e5;
+              }
+              &[rel="hide"] {
+                display: none;
+              }
+            }
+          }
+        }
       }
 
       .signIn {
@@ -169,18 +261,95 @@ main {
         align-items: center;
         justify-content: center;
 
-        select {
-          padding: 0 0 6px 0;
-          border-bottom: 1px solid #C4C4C4;
-          width: 276px;
-          border-radius: unset;
-          margin-right: 50px;
-          font-family: 'Gilroy', serif;
-          font-style: normal;
-          font-weight: 500;
+        $select-color: #283848;
+        $select-background: #ffffff;
+        $select-width: 276px;
+        $select-height: 30px;
+        font-family: "Gilroy", serif;
+        p {
+          margin-top: 200px;
+          a {
+            text-transform: uppercase;
+            text-decoration: none;
+            display: inline-block;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #87B1CA;
+            &:hover {
+              background-color:  #87B1CA;
+            }
+          }
+        }
+        .select-hidden {
+          display: none;
+          visibility: hidden;
+          padding-right: 10px;
+        }
+        .select {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
           font-size: 16px;
-          line-height: 24px;
-          color: #283848;
+          color: $select-color;
+          width: $select-width;
+          height: $select-height;
+          margin-right: 50px;
+          border-bottom: 1px solid #C4C4C4;
+          padding-bottom: 5px;
+        }
+        .select-styled {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: $select-background;
+          padding: 8px 15px 0 0;
+          font-size: 14px;
+          &:after {
+            content:"";
+            width: 0;
+            height: 0;
+            border: 7px solid transparent;
+            border-color: $select-color transparent transparent transparent;
+            position: absolute;
+            top: 16px;
+            right: 10px;
+          }
+          &:active, &.active {
+            &:after {
+              top: 9px;
+              border-color: transparent transparent $select-color transparent;
+            }
+          }
+        }
+
+        .select-options {
+          display: none;
+          position: absolute;
+          top: 100%;
+          right: 0;
+          left: 0;
+          z-index: 999;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          background-color: #FFFFFF;
+          li {
+            margin: 0;
+            padding: 12px 0;
+            text-indent: 5px;
+            border-top: 1px solid #FFFFFF;
+            &:hover,
+            &.is-selected {
+              color: $select-background;
+              background: #abc6e5;
+            }
+            &[rel="hide"] {
+              display: none;
+            }
+          }
         }
 
         .choose {
@@ -208,16 +377,19 @@ main {
       top: 8px;
       right: 371px;
     }
-
-    .nurse-responsive{
+    .plus{
       display: none;
     }
-
     .ellipse {
       position: absolute;
       z-index: 0;
-      left: -26px;
+      left: 3px;
       bottom: 151px;
+      width: 70px;
+      height: 70px;
+      background: #F0F1F8;
+      box-shadow: 35px 20px 40px rgba(21, 30, 41, 0.1);
+      border-radius: 50px;
     }
 
     .nurses {
@@ -346,11 +518,19 @@ main {
       display: flex;
       flex-direction: column;
       align-items: center;
-      .servicePic-responsive{
-        display: none;
-      }
-      .servicePic-mobile{
-        display: none;
+      .servicePic{
+        position: relative;
+        margin-left: 107px;
+        svg{
+          position: absolute;
+          top: -44px;
+          left: -44px;
+          z-index: 0;
+        }
+        img{
+          position: relative;
+          z-index: 1;
+        }
       }
       .slider{
         margin-top: 25px;
@@ -454,7 +634,7 @@ main {
 
     .rectTitle{
       margin-top: 29px;
-      font-family: 'Gilroy';
+      font-family: 'Gilroy', serif;
       font-style: normal;
       font-weight: 500;
       font-size: 40px;
@@ -464,28 +644,22 @@ main {
         color: #3F85EF;
       }
     }
-    .back{
-      position: absolute;
-      left: -36px;
-      top: 110px;
-      z-index: 0;
-    }
-    .back-responsive{
-      display: none;
-    }
     .items{
+      background: linear-gradient(90deg, #E6F7F6 53.47%, #FFFFFF 95.83%);
+      border-radius: 40px 0px 0px 40px;
+      padding-bottom: 125px;
+      margin-top: 101px;
       .desktop{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
       }
-      .perksSlider{
+      .perksSlider,.perks-pagination{
         display: none;
       }
       width: 100%;
       position: relative;
       z-index: 1;
-      margin-top: 27px;
       .item{
         background: #FFFFFF;
         box-shadow: 0px 20px 35px rgba(21, 30, 41, 0.1);
@@ -496,6 +670,11 @@ main {
         align-items: center;
         justify-content: center;
         padding: 27px 0 34px;
+        position: relative;
+        z-index: 1;
+        &:first-of-type{
+          margin-top: -74px;
+        }
         &:nth-child(2n){
           margin: 30px 80px 30px 0;
         }
@@ -530,11 +709,34 @@ main {
           }
         }
       }
+      .perksNurse{
+        position: absolute;
+        z-index: 0;
+        bottom: 28px;
+        left: 17px;
+      }
+      .back-circles{
+        position: absolute;
+        z-index: 0;
+        left: 543px;
+        top: -50px;
+      }
+      .ellipse{
+        position: absolute;
+        width: 106px;
+        height: 106px;
+        left: -36px;
+        top: 69px;
+        z-index: 0;
+        background: #F0F1F8;
+        box-shadow: 35px 20px 40px rgba(21, 30, 41, 0.07);
+        border-radius: 50px;
+      }
     }
     .send{
       max-width: 1025px;
       width: 100%;
-      margin: 63px auto 0;
+      margin: -92px auto 0;
       background: #3F85EF;
       border-radius: 25px;
       padding: 30px 0 44px;
@@ -1437,6 +1639,13 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    position: relative;
+    .medPic{
+      position: absolute;
+      right: 50px;
+      top: -50px;
+      z-index: 0;
+    }
     .usefulTitle{
       font-family: 'Gilroy', serif;
       font-style: normal;
@@ -1644,4 +1853,8 @@ footer {
       }
     }
   }
+}
+
+.burgerMenu{
+  display: none;
 }

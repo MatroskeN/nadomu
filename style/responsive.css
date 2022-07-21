@@ -39,7 +39,7 @@
     flex-direction: column;
     max-width: 580px;
   }
-  main .banner .content .specialist select {
+  main .banner .content .specialist .select {
     width: 440px;
     margin-bottom: 25px;
     margin-right: unset;
@@ -52,9 +52,6 @@
     display: none;
   }
   main .banner .nurse {
-    display: none;
-  }
-  main .banner .nurse-responsive {
     position: absolute;
     display: block;
     top: 0;
@@ -95,11 +92,14 @@
   main .about .info .tab {
     width: fit-content;
   }
-  main .about .gallery .servicePic-responsive {
-    display: flex;
-  }
   main .about .gallery .servicePic {
-    display: none;
+    margin-left: unset;
+    margin-top: 76px;
+  }
+  main .about .gallery .servicePic svg {
+    top: -57px;
+    left: unset;
+    right: -43px;
   }
   main .about .gallery .slider {
     max-width: 580px;
@@ -108,20 +108,25 @@
   main .perks {
     max-width: 100%;
     width: auto;
-    height: 1263px;
     display: flex;
     flex-direction: column;
   }
-  main .perks .back {
-    display: none;
-  }
   main .perks .items {
-    margin-top: auto;
+    margin-top: 91px;
+    padding-top: 322px;
+    padding-bottom: 206px;
+  }
+  main .perks .items .perksNurse {
+    top: -33px;
+    bottom: unset;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 508px;
   }
   main .perks .send {
     max-width: 100%;
     width: auto;
-    margin: 63px 44px 0;
+    margin: -130px 44px 0;
   }
   main .perks .send .content {
     justify-content: space-between;
@@ -132,13 +137,6 @@
   }
   main .perks .send .content .pick {
     margin: 0;
-  }
-  main .perks .back-responsive {
-    display: block;
-    position: absolute;
-    top: 115px;
-    left: 0;
-    z-index: 0;
   }
   main .perks .rect {
     margin-left: 44px;
@@ -293,6 +291,10 @@
     color: #FFFFFF;
     max-width: 329px;
   }
+  main .useful .medPic {
+    right: 24px;
+    top: 0;
+  }
   main .useful .rect, main .useful .usefulTitle {
     margin-left: 44px;
   }
@@ -376,6 +378,203 @@
   footer .footerWrapper .content .contacts .contactContent .box {
     width: 68%;
   }
+
+  .burgerMenu {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    z-index: 1000;
+  }
+  .burgerMenu .close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    cursor: pointer;
+  }
+  .burgerMenu .content {
+    height: 100vh;
+    background: #3F85EF;
+    border-radius: 0px 40px 40px 0px;
+    width: 489px;
+    position: relative;
+    overflow: hidden;
+  }
+  .burgerMenu .content .mask {
+    position: absolute;
+    background: #59B4FB;
+    filter: blur(74px);
+    border-radius: 40px;
+    width: 295.07px;
+    height: 1120.55px;
+    z-index: 0;
+    top: -100px;
+    right: 0;
+  }
+  .burgerMenu .content .menu {
+    position: relative;
+    z-index: 1;
+    padding: 35px 44px;
+  }
+  .burgerMenu .content .menu .geo {
+    display: flex;
+    align-items: center;
+    margin-top: 54px;
+    margin-bottom: 45px;
+  }
+  .burgerMenu .content .menu .geo svg {
+    margin-right: 17px;
+  }
+  .burgerMenu .content .menu .geo select {
+    font-family: "Gilroy", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding: 8px 22px 8px 8px;
+    background-position-y: 17px;
+    background-position-x: 98%;
+    background-image: url("../images/white-selector.svg");
+  }
+  .burgerMenu .content .menu .geo .selector {
+    font-family: "Gilroy", serif;
+  }
+  .burgerMenu .content .menu .geo .selector p {
+    margin-top: 200px;
+  }
+  .burgerMenu .content .menu .geo .selector p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #87B1CA;
+  }
+  .burgerMenu .content .menu .geo .selector p a:hover {
+    background-color: #87B1CA;
+  }
+  .burgerMenu .content .menu .geo .selector .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .burgerMenu .content .menu .geo .selector .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #ffffff;
+    width: 288px;
+    height: 30px;
+  }
+  .burgerMenu .content .menu .geo .selector .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 8px 15px;
+    font-size: 16px;
+  }
+  .burgerMenu .content .menu .geo .selector .select-styled:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-color: #ffffff transparent transparent transparent;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+  }
+  .burgerMenu .content .menu .geo .selector .select-styled:active:after, .burgerMenu .content .menu .geo .selector .select-styled.active:after {
+    top: 9px;
+    border-color: transparent transparent #ffffff transparent;
+  }
+  .burgerMenu .content .menu .geo .selector .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #283848;
+  }
+  .burgerMenu .content .menu .geo .selector .select-options li {
+    margin: 0;
+    padding: 12px 0;
+    text-indent: 15px;
+    border-top: 1px solid #FFFFFF;
+    background-color: #283848;
+  }
+  .burgerMenu .content .menu .geo .selector .select-options li:hover, .burgerMenu .content .menu .geo .selector .select-options li.is-selected {
+    color: #283848;
+    background: #abc6e5;
+  }
+  .burgerMenu .content .menu .geo .selector .select-options li[rel=hide] {
+    display: none;
+  }
+  .burgerMenu .content .menu .links {
+    display: flex;
+    flex-direction: column;
+  }
+  .burgerMenu .content .menu .links a {
+    font-family: "Gilroy", serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 25px;
+    color: #FFFFFF;
+    margin-bottom: 30px;
+  }
+  .burgerMenu .content .menu .links a:first-of-type {
+    font-weight: 600;
+  }
+  .burgerMenu .content .cabinet {
+    position: relative;
+    z-index: 1;
+    border-top: 2px solid rgba(240, 241, 248, 0.45);
+    border-bottom: 2px solid rgba(240, 241, 248, 0.45);
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .burgerMenu .content .cabinet a {
+    font-family: "Gilroy", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 24px;
+    color: #FBFBFB;
+  }
+  .burgerMenu .content .cabinet button {
+    background: #3F85EF;
+    font-family: "Gilroy", serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFFFFF;
+    transition: all 0.4s;
+    border: 1px solid #3F85EF;
+  }
+  .burgerMenu .content .cabinet button:hover {
+    background: #FFFFFF;
+    color: #3F85EF;
+  }
+
+  .activeBurger {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   header .headerWrapper {
@@ -391,8 +590,15 @@
   main .banner {
     margin-bottom: 80px;
   }
-  main .banner .nurse-responsive {
+  main .banner .nurse {
     display: none;
+  }
+  main .banner .plus {
+    display: block;
+    position: absolute;
+    top: 82px;
+    right: 5px;
+    z-index: 0;
   }
   main .banner .content {
     padding: 48px 24px 0 24px;
@@ -410,7 +616,7 @@
     width: auto;
     padding: 0 39px;
   }
-  main .banner .content .specialist select {
+  main .banner .content .specialist .select {
     width: -webkit-fill-available;
   }
   main .banner .kit {
@@ -449,29 +655,32 @@
   main .about .gallery {
     margin-top: 30px;
   }
-  main .about .gallery .servicePic-responsive {
-    display: none;
+  main .about .gallery .servicePic img {
+    width: 327px;
   }
-  main .about .gallery .servicePic-mobile {
-    display: block;
+  main .about .gallery .servicePic svg {
+    width: 117px;
+    top: -77px;
+    right: 0;
   }
   main .about .gallery .slider .swiper {
     max-width: 200px;
   }
   main .perks {
-    margin-bottom: 0;
+    margin-bottom: 80px;
+  }
+  main .perks .rect {
+    margin-left: 24px;
   }
   main .perks .rectTitle {
     font-size: 28px;
     line-height: 24px;
-  }
-  main .perks .back-responsive {
-    width: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: 24px;
   }
   main .perks .items {
-    margin-top: 320px;
+    margin-top: 61px;
+    padding-top: 247px;
+    padding-bottom: 217px;
   }
   main .perks .items .desktop {
     display: none;
@@ -481,10 +690,9 @@
   }
   main .perks .items .perksSlider .item {
     padding: 27px 15px;
-    max-width: 100%;
+    max-width: 327px;
     width: auto;
     margin: 0 17px;
-    height: 259px;
     align-items: flex-start;
   }
   main .perks .items .perksSlider .item .text .title {
@@ -493,8 +701,38 @@
   main .perks .items .perksSlider .item .text .subtitle {
     max-width: 194px;
   }
+  main .perks .items .perks-pagination {
+    display: block;
+    position: relative;
+    margin-top: 40px;
+  }
+  main .perks .items .perks-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border: 2px solid #3F85EF;
+    transition: all 0.4s;
+  }
+  main .perks .items .perks-pagination .swiper-pagination-bullet-active {
+    width: 15px;
+    height: 15px;
+    background: #3F85EF;
+    border: none;
+  }
+  main .perks .items .perksNurse {
+    width: 361px;
+  }
+  main .perks .items .back-circles {
+    right: 31px;
+    left: unset;
+    width: 50px;
+  }
+  main .perks .items .ellipse {
+    width: 70px;
+    height: 70px;
+  }
   main .perks .send {
-    margin: 63px 24px 0;
+    margin: -154px 24px 0;
   }
   main .perks .send .content {
     padding: 0 39px;
@@ -698,6 +936,11 @@
     margin-bottom: 24px;
     width: 100%;
   }
+  main .useful .medPic {
+    right: 0;
+    top: -70px;
+    width: 98px;
+  }
   main .useful .usefulTitle {
     font-size: 28px;
     line-height: 24px;
@@ -741,6 +984,34 @@
   footer .footerWrapper .content .contacts .item a {
     font-size: 18px;
     line-height: 24px;
+  }
+
+  .burgerMenu .content {
+    width: 80%;
+  }
+  .burgerMenu .content .menu {
+    padding: 24px;
+  }
+  .burgerMenu .content .menu img {
+    max-width: 200px;
+  }
+  .burgerMenu .content .menu .geo .selector .select {
+    width: 180px;
+  }
+  .burgerMenu .content .menu .geo .selector .select-styled {
+    font-size: 12px;
+  }
+  .burgerMenu .content .menu .geo .selector .select-options li {
+    font-size: 10px;
+  }
+  .burgerMenu .content .menu .links a {
+    font-size: 14px;
+  }
+  .burgerMenu .content .cabinet {
+    padding: 24px;
+  }
+  .burgerMenu .content .cabinet a {
+    font-size: 14px;
   }
 }
 
