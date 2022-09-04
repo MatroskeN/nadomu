@@ -1,0 +1,11 @@
+<h1>Зарегистрировался новый пользователь</h1>
+
+{% set role_value = '' %}
+{% if role == 'specialist' %}
+    {% set role_value = 'Специалист' %}
+{% elseif role == 'user' %}
+    {% set role_value = 'Пользователь' %}
+{% endif %}
+
+<div>Телефон: {{ service.phone(phone) }}</div>
+<div>Роль: {{ role_value }}</div>

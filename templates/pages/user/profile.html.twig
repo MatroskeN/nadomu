@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/user_profile.css') }}?{{ service.getVersionDeploy() }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div id="UserProfile"></div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/user_profile.js') }}?{{ service.getVersionDeploy() }}"></script>
+{% endblock %}

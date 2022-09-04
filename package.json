@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "@symfony/webpack-encore": "3.0.0",
+    "@vueform/slider": "^2.1.2",
+    "@vuepic/vue-datepicker": "^3.4.0",
+    "croppr": "^2.3.1",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.2",
+    "vue": "^3.2.37",
+    "vue-jquery-mask": "^2.0.0",
+    "vue-loader": "^17.0.0",
+    "vue-template-compiler": "^2.7.7",
+    "vuex": "^4.0.2"
+  },
+  "scripts": {
+    "dev-server": "encore dev-server --hot",
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "build": "encore production"
+  },
+  "devDependencies": {
+    "webpack-notifier": "^1.15.0"
+  }
+}

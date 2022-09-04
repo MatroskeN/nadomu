@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/search.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/filter.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/favourite.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/sorting.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/navigation.css') }}?{{ service.getVersionDeploy() }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="catalogPage">
+            <nav aria-label="Breadcrumb" class="breadcrumb">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                        d="M17.5165 7.82913C17.5161 7.82872 17.5157 7.82831 17.5152 7.8279L10.1719 0.485596C9.85892 0.172485 9.44277 0 9.00011 0C8.55746 0 8.14131 0.172348 7.82816 0.485458L0.488685 7.82405C0.486213 7.82652 0.483741 7.82913 0.481269 7.8316C-0.161497 8.47801 -0.160398 9.52679 0.484428 10.1716C0.779029 10.4663 1.16812 10.637 1.58413 10.6548C1.60103 10.6565 1.61806 10.6573 1.63523 10.6573H1.9279V16.0608C1.9279 17.13 2.79797 18 3.8676 18H6.74054C7.03171 18 7.26794 17.7639 7.26794 17.4727V13.2363C7.26794 12.7484 7.66486 12.3515 8.15284 12.3515H9.84738C10.3354 12.3515 10.7323 12.7484 10.7323 13.2363V17.4727C10.7323 17.7639 10.9684 18 11.2597 18H14.1326C15.2023 18 16.0723 17.13 16.0723 16.0608V10.6573H16.3437C16.7862 10.6573 17.2024 10.4849 17.5157 10.1718C18.1612 9.52597 18.1614 8.4754 17.5165 7.82913Z"
+                                        fill="#3F85EF"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            Каталог специалистов
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div id="Search"></div>
+            <div class="catalogWrapper">
+                <div id="Filter"></div>
+                <div class="content">
+                    <div class="contentHeader">
+                        <div class="sort">
+                            <p>Сортировать по:</p>
+                            <div id="Sorting"></div>
+                        </div>
+
+                    </div>
+
+                    <div id="search-results">
+{#                        {{ service.print_r(items) }}#}
+
+                        {% for specialist in items.result %}
+                            {% set gender_rus = '' %}
+                            {% if specialist.userinfo.gender == 'male' %}
+                                {% set gender_rus = 'Медбрат / Мужчина' %}
+                            {% elseif specialist.userinfo.gender == 'female' %}
+                                {% set gender_rus = 'Медсестра / Женщина' %}
+                            {% endif %}
+
+                            {% set gender_pic = '' %}
+                            {% if specialist.userinfo.gender == 'male' %}
+                                {% set gender_pic = 'images/default_man.png' %}
+                            {% elseif specialist.userinfo.gender == 'female' %}
+                                {% set gender_pic = 'images/default_woman.png' %}
+                            {% endif %}
+
+                            {% set comment_count = '' %}
+                            {% if specialist.comments|length == 0 %}
+                                {% set comment_count = 0 %}
+                            {% elseif specialist.comments|length > 0 %}
+                                {% set comment_count = specialist.comments|length %}
+                            {% endif %}
+
+                            {% set location_array = [] %}
+                            {% for item in specialist.location.metro %}
+                                {% set location_array = location_array|merge(['м. ' ~ item.name]) %}
+                            {% endfor %}
+
+                            {% set service_array = [] %}
+                            {% for item in specialist.services %}
+                                {% set service_array = service_array|merge([item.service.name]) %}
+                            {% endfor %}
+                            {% for item in specialist.location.cities %}
+                                {% set location_array = location_array|merge(['г. ' ~ item.name]) %}
+                            {% endfor %}
+
+                            {% set specialist_data = {
+                                'first_name': specialist.userinfo.first_name,
+                                'last_name': specialist.userinfo.last_name,
+                                'patronymic_name': specialist.userinfo.patronymic_name,
+                                'gender': specialist.userinfo.gender,
+                                'slug': specialist.userinfo.slug,
+                                'rating': specialist.userinfo.rating,
+                                'location': specialist.location,
+                                'services': specialist.services,
+                                'worktime': specialist.worktime,
+                                'experience': specialist.experience,
+                                'images': specialist.images,
+                                'metro': specialist.location.metro,
+                                'cities': specialist.location.cities,
+                                'services': specialist.services,
+                                'last_visit_time': specialist.userinfo.last_visit_time,
+
+                                'service_array': service_array,
+                                'location_array': location_array,
+                                'favorites_count': specialist.favorites_count,
+                                'favorite_added': specialist.favorite_added,
+                                'schedule': specialist.schedule,
+                                'id': specialist.id,
+                                'SHOW_ONLY_TWIG': true
+                               }
+                            %}
+                            {% include '/pages/catalog/card.html.twig' with specialist_data %}
+                        {% endfor %}
+                    </div>
+                    <div id="Navigation"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <template id="specialist_item">
+        {{ source_template | raw }}
+    </template>
+{% endblock %}
+
+{% block javascripts %}
+    <script>
+        window.catalog_count_specialists = {{ items.resultTotalCount ?? 0 }};
+    </script>
+
+    <script src="{{ asset('build/search.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('build/filter.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('build/favourite.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('build/sorting.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('build/navigation.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('js/select.js') }}?{{ service.getVersionDeploy() }}"></script>
+{% endblock %}

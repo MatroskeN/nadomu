@@ -1,0 +1,120 @@
+.specialist {
+  height: 100px;
+  max-width: 1025px;
+  width: 100%;
+  background: $white;
+  box-shadow: 0px 0px 35px rgba(255, 255, 255, 0.25);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  $select-color: #283848;
+  $select-background: $white;
+  $select-width: 276px;
+  $select-height: 30px;
+  font-family: $base-font;
+  p {
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      display: inline-block;
+      color: #fff;
+      padding: 5px 10px;
+      margin: 0 5px;
+      background-color: #87B1CA;
+      &:hover {
+        background-color:  #87B1CA;
+      }
+    }
+  }
+  .select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: $select-color;
+    width: $select-width;
+    height: $select-height;
+    margin-right: 50px;
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: 5px;
+  }
+  .select-styled {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $select-background;
+    padding: 8px 15px 0 0;
+    font-size: 14px;
+    &:after {
+      content:"";
+      width: 0;
+      height: 0;
+      border: 7px solid transparent;
+      border-color: $select-color transparent transparent transparent;
+      position: absolute;
+      top: 16px;
+      right: 10px;
+    }
+    &:active, &.active {
+      &:after {
+        top: 9px;
+        border-color: transparent transparent $select-color transparent;
+      }
+    }
+  }
+
+  .select-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: $white;
+    border-radius: 15px;
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 5px;
+      border-top: 1px solid $white;
+      border-radius: 0 0 15px 15px;
+      &:hover,
+      &.is-selected {
+        color: $select-background;
+        background: #abc6e5;
+      }
+      &[rel="hide"] {
+        display: none;
+      }
+    }
+  }
+
+  .choose {
+    background: $base-blue;
+    border-radius: 45px;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: $white;
+    border: 2px solid transparent;
+    &:hover{
+      color: $base-blue;
+      border-color: $base-blue;
+      background: $white;
+    }
+  }
+}

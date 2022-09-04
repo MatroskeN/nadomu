@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% if title is defined %}{{ title }} - НАДОМУ.РФ{% else %}НАДОМУ.РФ{% endif %}</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/header_auth.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/header_auth_mobile.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('style/swiper-bundle.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('style/main.css') }}?{{ service.getVersionDeploy() }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('fonts/stylesheet.css') }}?{{ service.getVersionDeploy() }}">
+
+    {% block stylesheets %}
+        {# {{ encore_entry_link_tags('app') }} #}
+    {% endblock %}
+</head>
+<body>
+{% include('header.html.twig') %}
+{% block body %}{% endblock %}
+{% include('footer.html.twig') %}
+
+<script src="{{ asset('build/runtime.js') }}?{{ service.getVersionDeploy() }}"></script>
+<script src="{{ asset('build/header_auth.js') }}?{{ service.getVersionDeploy() }}"></script>
+<script src="{{ asset('build/header_auth_mobile.js') }}?{{ service.getVersionDeploy() }}"></script>
+<script src="{{ asset('js/jquery.min.js') }}"></script>
+<script src="{{ asset('js/main.js') }}?{{ service.getVersionDeploy() }}"></script>
+<script src="{{ asset('js/select.js') }}?{{ service.getVersionDeploy() }}"></script>
+
+{% block javascripts %}
+    {# {{ encore_entry_script_tags('app') }} #}
+{% endblock %}
+
+</body>
+</html>

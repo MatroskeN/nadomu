@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/change_number.css') }}?{{ service.getVersionDeploy() }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div id="ChangeNumber"></div>
+    </main>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('build/change_number.js') }}?{{ service.getVersionDeploy() }}"></script>
+{% endblock %}

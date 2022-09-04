@@ -1,0 +1,16 @@
+button{
+  background: $base-blue;
+  font-family: $base-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  transition: all 0.4s;
+  border: 1px solid $base-blue;
+
+  &:hover {
+    background: $white;
+    color: $base-blue;
+  }
+}

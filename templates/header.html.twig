@@ -1,0 +1,74 @@
+{% block header %}
+<header>
+    <div class="headerWrapper">
+        <a href="/">
+            <img src="/images/logo.svg" alt="logo">
+        </a>
+        <div class="headerMenu">
+            <a href="/catalog" class="item item-active">
+                Каталог специалистов
+            </a>
+            <a href="#" class="item">
+                Медицинским работникам
+            </a>
+            <a href="#" class="item">
+                Блог
+            </a>
+        </div>
+        <div class="headerControls">
+            <div class="geo">
+                <img src="/images/geo.svg" alt="geo">
+                <div class="city">
+                    <p>Москва и Московская область</p>
+                </div>
+            </div>
+            <div id="HeaderAuth"></div>
+            <div class="burger">
+                <svg width="32" height="23" viewBox="0 0 32 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30.5 11.5H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M30.5 2H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M30.5 21H2" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div class="burgerMenu">
+        <div class="close" id="close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.5 2L2 22.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2 2L22.5 22.5" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <div class="content">
+            <div class="mask">
+            </div>
+            <div class="menu">
+                <img src="/images/burger-logo.svg" alt="logo">
+                <div class="geo">
+                    <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 10C19 17 10 23 10 23C10 23 1 17 1 10C1 7.61305 1.94821 5.32387 3.63604 3.63604C5.32387 1.94821 7.61305 1 10 1C12.3869 1 14.6761 1.94821 16.364 3.63604C18.0518 5.32387 19 7.61305 19 10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M10.0027 12.999C11.6595 12.999 13.0027 11.6559 13.0027 9.99902C13.0027 8.34217 11.6595 6.99902 10.0027 6.99902C8.34583 6.99902 7.00269 8.34217 7.00269 9.99902C7.00269 11.6559 8.34583 12.999 10.0027 12.999Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="selector">
+                        <p>Москва и Московская область</p>
+                    </div>
+                </div>
+                <div class="links">
+                    <a href="/catalog/">Каталог специалистов</a>
+                    <a href="#">Медицинским работникам</a>
+                    <a href="#">Блог</a>
+                </div>
+            </div>
+            <div class="cabinet">
+                <div id="HeaderAuthMobile"></div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+{% endblock %}

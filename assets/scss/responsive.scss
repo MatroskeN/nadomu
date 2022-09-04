@@ -1,0 +1,1393 @@
+@import "default.scss";
+
+@media(max-width: 1250px){
+  header{
+    .headerWrapper{
+      max-width: 100%;
+      padding: 0 44px;
+      .headerMenu{
+        display: none;
+      }
+      .headerControls{
+        .signIn{
+          .enter{
+            display: none;
+          }
+        }
+        .burger{
+          display: flex;
+          margin-left: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  main{
+    .banner{
+      padding: 0;
+      border-radius: 25px;
+      max-width: 680px;
+      background-size: cover;
+      .content{
+        padding: 118px 50px 0 50px;
+        h1{
+          font-size: 40px;
+          line-height: 45px;
+          max-width: 328px;
+        }
+        .description{
+          max-width: 252px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .specialist{
+          height: 227px;
+          flex-direction: column;
+          max-width: unset;
+          width: auto;
+          padding: 0 70px;
+          .select{
+            width: -webkit-fill-available;
+            width: -moz-available;
+            margin-bottom: 25px;
+            margin-right: unset;
+          }
+          .choose{
+            width: -webkit-fill-available;
+            width: -moz-available;
+          }
+        }
+      }
+      .kit{
+        right: unset;
+        bottom: 247px;
+      }
+      .ellipse{
+        display: none;
+      }
+      .nurse{
+        position: absolute;
+        display: block;
+        top: 0;
+        right: -45px;
+        z-index: 0;
+      }
+      .tabs{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 18px 50px 50px;
+        .nurses,.catalog{
+          position: relative;
+          top: unset;
+          right: unset;
+        }
+        .nurses{
+          img{
+            box-shadow: 0px 0px 35px rgb(241 247 255 / 40%);
+            border-radius: 50px;
+          }
+          .text{
+            p{
+              span{
+                font-size: 36px;
+                line-height: 36px;
+              }
+            }
+            br{
+              &:first-of-type{
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .about{
+      flex-direction: column;
+      padding: 0 44px;
+      max-width: 100%;
+      width: auto;
+      .info{
+        .title{
+          margin-bottom: 40px;
+        }
+        .subtitle{
+          max-width: unset;
+        }
+        .description{
+          max-width: 100%;
+          margin-bottom: 33px;
+        }
+        .tab{
+          width: auto;
+          p{
+            max-width: unset;
+          }
+        }
+      }
+      .gallery{
+        .servicePic{
+          margin-left: unset;
+          margin-top: 76px;
+          svg{
+            top: -57px;
+            left: unset;
+            right: -43px;
+          }
+        }
+        .slider{
+          max-width: 580px;
+          margin-left: unset;
+        }
+      }
+    }
+    .perks{
+      max-width: 100%;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      .items{
+        margin-top: 91px;
+        padding-top: 322px;
+        padding-bottom: 206px;
+        .perksNurse{
+          top: -33px;
+          bottom: unset;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 508px;
+        }
+        .item{
+          max-width: 625px;
+          justify-content: flex-start;
+          padding: 27px 25px 34px;
+          .text{
+            max-width: 528px;
+          }
+        }
+      }
+      .send{
+        max-width: 100%;
+        width: auto;
+        margin: -130px 44px 0;
+        .content{
+          justify-content: space-between;
+          padding: 0 50px;
+          .footnote{
+            max-width: 316px;
+          }
+          .pick{
+            margin: 0;
+          }
+        }
+      }
+      .rect{
+        margin-left: 44px;
+      }
+      .rectTitle{
+        position: relative;
+        z-index: 1;
+        margin-left: 44px;
+      }
+    }
+    .how{
+      .wrapper{
+        max-width: 100%;
+        padding: 0 44px;
+        .items{
+          .item{
+            margin-right: 72px;
+            &:nth-child(3n){
+              .circle{
+                right: 10px;
+              }
+            }
+            &:nth-child(2n){
+              .circle{
+                right: 10px;
+              }
+            }
+            .circle{
+              top: -10px;
+              left: 10px;
+            }
+          }
+        }
+      }
+    }
+    .specialists{
+      max-width: 100%;
+      width: auto;
+      padding: 0 44px;
+      .specialTitle,.controls,.cards{
+        position: relative;
+        z-index: 1;
+      }
+      .controls{
+        .tabs{
+          overflow-x: scroll;
+          width: auto;
+          height: 80px;
+          .item{
+            margin-right: 25px;
+          }
+        }
+      }
+      .cards{
+        .item{
+          width: 260px;
+          .pic{
+            width: 260px;
+          }
+          .stats{
+            .state{
+              padding: 7px 16px;
+              text-align: center;
+              width: 120px;
+              br{
+                display: block;
+              }
+            }
+          }
+        }
+      }
+      .round{
+        justify-content: center;
+        .content{
+          .countReviews{
+            flex-direction: column;
+            align-items: flex-start;
+            .text{
+              p{
+                strong{
+                  font-size: 36px;
+                  line-height: 42px;
+                }
+              }
+              br{
+                &:first-of-type{
+                  display: none;
+                }
+              }
+            }
+            a{
+              margin-left: 0;
+              margin-top: 11px;
+            }
+          }
+        }
+      }
+    }
+    .reviews{
+      max-width: 100%;
+      width: auto;
+      padding: 95px 24px 158px;
+      .navigation{
+        max-width: 980px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .reviewSlider{
+        max-width: 100%;
+        width: auto;
+        .item{
+          margin: 0 auto;
+          max-width: 614px;
+        }
+      }
+      .send{
+        max-width: 768px;
+        width: 100%;
+        margin: 0px;
+        bottom: -195px;
+        .content{
+          justify-content: space-between;
+          padding: 0 50px;
+          .footnote{
+            max-width: 329px;
+          }
+          .pick{
+            margin: 0;
+          }
+        }
+      }
+    }
+    .faq{
+      .consult{
+        top: 130px;
+        right: 44px;
+      }
+      .faqTitle{
+        margin-bottom: 300px;
+        margin-left: 44px;
+      }
+      .rect{
+        margin-left: 44px;
+      }
+      .faqBlock{
+        padding: 48px 50px;
+        margin: 0 44px;
+        .bandAid{
+          left: 119px;
+          top: -241px;
+        }
+      }
+      .send{
+        max-width: 100%;
+        width: auto;
+        margin: 63px 44px 0;
+        .content{
+          display: none;
+        }
+        .mobContent{
+          display: flex;
+          flex-direction: column;
+          padding: 0 48px;
+          .top{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .title{
+              font-family: $base-font;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 30px;
+              line-height: 36px;
+              color: $white;
+              max-width: 80%;
+            }
+          }
+          .bottom{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .pick{
+              background: $white;
+              font-family: $base-font;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              color: $base-blue;
+              border: 1px solid transparent;
+              transition: all 0.4s;
+              &:hover{
+                background: #3f85ef;
+                color: $white;
+                border: 1px solid #3f85ef;
+              }
+            }
+            .subtitle{
+              font-family: $base-font;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 20px;
+              text-align: center;
+              color: $white;
+              max-width: 60%;
+              margin-top: 10px;
+            }
+          }
+        }
+      }
+    }
+    .useful{
+      .medPic{
+        right: 24px;
+        top: 0;
+      }
+      .rect,.usefulTitle{
+        margin-left: 44px;
+      }
+      .articles{
+        padding: 0 44px;
+        .item{
+          width: 330px;
+          height: 517px;
+          img{
+            width: 100%;
+          }
+          .title{
+            max-width: 270px;
+          }
+          .subtitle{
+            max-width: 270px;
+          }
+        }
+      }
+      .useful-pagination{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 66px;
+        .swiper-pagination-bullet{
+          width: 10px;
+          height: 10px;
+          border: 2px solid $base-blue;
+          margin-right: 15px;
+          opacity: 1;
+          background: transparent;
+          &:last-of-type{
+            margin-right: unset;
+          }
+        }
+        .swiper-pagination-bullet-active{
+          width: 15px;
+          height: 15px;
+          background: $base-blue;
+        }
+      }
+    }
+  }
+  footer{
+    .footerWrapper{
+      padding: 60px 44px 124px;
+      max-width: 100%;
+      position: relative;
+      .content{
+        flex-direction: column;
+        .info{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 53px;
+          .copyright{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+        }
+        .menu{
+          justify-content: space-between;
+          margin-bottom: 61px;
+          .row{
+            .rowTitle{
+              font-size: 25px;
+              line-height: 24px;
+            }
+            .item{
+              font-size: 20px;
+              line-height: 24px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+        .contacts{
+          margin: 0;
+          .contactContent{
+            display: flex;
+            flex-flow: row wrap;
+            align-items: baseline;
+            .box{
+              width: 71%;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .burgerMenu{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $white;
+    z-index: 1000;
+    .close{
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      cursor: pointer;
+      z-index: 10;
+    }
+    .content{
+      height: 100vh;
+      background: $base-blue;
+      width: 100vw;
+      position: relative;
+      overflow: hidden;
+      .mask{
+        position: absolute;
+        background: #59B4FB;
+        filter: blur(124px);
+        border-radius: 40px;
+        width: 295.07px;
+        height: 1120.55px;
+        z-index: 0;
+        top: -100px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .menu{
+        position: relative;
+        z-index: 1;
+        padding: 35px 44px;
+        .geo {
+          display: flex;
+          align-items: center;
+          margin-top: 54px;
+          margin-bottom: 45px;
+          svg{
+            margin-right: 17px;
+          }
+          select {
+            font-family: $base-font;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: $white;
+            padding: 8px 22px 8px 8px;
+            background-position-y: 17px;
+            background-position-x: 98%;
+            background-image: url("../images/white-selector.svg");
+          }
+          .selector{
+            p{
+              font-family: $base-font;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 20px;
+              line-height: 24px;
+              margin: 0;
+              color: $white;
+            }
+          }
+        }
+        .links{
+          display: flex;
+          flex-direction: column;
+          a{
+            font-family: $base-font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 28px;
+            line-height: 25px;
+            color: $white;
+            margin-bottom: 30px;
+            &:first-of-type{
+              font-weight: 600;
+            }
+          }
+        }
+      }
+      .cabinet{
+        position: relative;
+        z-index: 1;
+        border-top: 2px solid rgba(240, 241, 248, 0.45);
+        border-bottom: 2px solid rgba(240, 241, 248, 0.45);
+        padding: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+          font-family: $base-font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 28px;
+          line-height: 24px;
+          color: #FBFBFB;
+        }
+        button{
+          background: transparent;
+        }
+      }
+    }
+  }
+  .activeBurger{
+    display: block;
+  }
+}
+@media(max-width: 1050px){
+  main{
+    .specialists{
+      .controls{
+        .navigation{
+          display: none;
+        }
+      }
+      .cards{
+        .navigation{
+          display: flex;
+          position: absolute;
+          width: 106%;
+          z-index: 10;
+          justify-content: space-between;
+          top: 50%;
+          left: 48%;
+          transform: translate(-50%,-50%);
+          .spec-arrow{
+            border: 2px solid #59B4FB;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            transition: all 0.4s;
+            &:hover{
+              background: $base-blue;
+              border-color: $base-blue;
+              svg{
+                path{
+                  stroke:$white;
+                }
+              }
+            }
+          }
+          .spec-prev{
+            transform: rotateZ(180deg);
+          }
+        }
+        .specialistsSlider{
+          max-width: 600px;
+        }
+        .stats{
+          .state{
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .useful{
+      .articles{
+        .usefulSlider{
+          max-width: 768px;
+        }
+      }
+    }
+  }
+  footer{
+    .footerWrapper{
+      .content{
+        .contacts{
+          .contactsTitle{
+            font-weight: 600;
+            font-size: 25px;
+            line-height: 24px;
+          }
+          .item{
+            align-items: flex-start;
+            a{
+              font-size: 20px;
+              line-height: 24px;
+            }
+          }
+          .socials{
+            margin-top: 15px;
+          }
+          .contactContent{
+            .box{
+              width: 65%;
+            }
+          }
+        }
+      }
+      .info{
+        .copyright{
+          p{
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 830px){
+  main{
+    .reviews{
+      .reviewSlider{
+        .item{
+          max-width: 500px;
+        }
+      }
+    }
+  }
+  footer{
+    .footerWrapper{
+      .content{
+        .contacts{
+          .contactContent{
+            .box{
+              width: 60%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media(max-width: 767px){
+  header{
+    .headerWrapper{
+      padding: 0 24px;
+      a{
+        img{
+          width: 195px;
+        }
+      }
+      .headerControls{
+        //.geo,.signIn{
+        .geo {
+          display: none;
+        }
+      }
+    }
+  }
+  main{
+    .banner{
+      margin-bottom: 80px;
+      .nurse{
+        display: none;
+      }
+      .plus{
+        display: block;
+        position: absolute;
+        top: 82px;
+        right: 5px;
+        z-index: 0;
+      }
+      .content{
+        padding: 48px 24px 0 24px;
+        h1{
+          font-size: 32px;
+          line-height: 35px;
+          max-width: 85%;
+        }
+        .description{
+          margin-bottom: 24px;
+          max-width: 100%;
+        }
+        .specialist{
+          max-width: 100%;
+          width: auto;
+          padding: 0 39px;
+          .select{
+            width: -webkit-fill-available;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+      }
+      .kit{
+        display: none;
+      }
+      .tabs{
+        .nurses{
+          display: none;
+        }
+        .catalog{
+          margin: 0 auto;
+          img{
+            box-shadow: 0px 0px 35px rgba(241, 247, 255, 0.4);
+            border-radius: 50px;
+          }
+        }
+      }
+    }
+    .about{
+      padding: 0 24px;
+      margin-bottom: 80px;
+      .info{
+        .title{
+          font-size: 28px;
+          line-height: 24px;
+          margin-bottom: 38px;
+        }
+        .subtitle{
+          font-size: 18px;
+          line-height: 27px;
+          margin-bottom: 24px;
+          max-width: unset;
+        }
+        .tab{
+          padding: 20px 17px 28px;
+          flex-direction: column;
+          img{
+            width: 76px;
+            margin-bottom: 15px;
+          }
+          p{
+            margin: 0 auto;
+            text-align: center;
+            max-width: 100%;
+          }
+        }
+      }
+      .gallery{
+        margin-top: 30px;
+        .servicePic{
+          img{
+            width: 327px;
+          }
+          svg{
+            width: 117px;
+            top: -77px;
+            right: 0;
+          }
+        }
+        .slider{
+          .navigation{
+            width: 41px;
+            height: 41px;
+            bottom: 50px;
+          }
+          .swiper{
+            max-width: 450px;
+          }
+        }
+      }
+    }
+    .perks{
+      margin-bottom: 80px;
+      .rect{
+        margin-left: 24px;
+      }
+      .rectTitle{
+        font-size: 28px;
+        line-height: 24px;
+        margin-left: 24px;
+      }
+      .items{
+        margin-top: 61px;
+        padding-top: 247px;
+        padding-bottom: 217px;
+        .desktop{
+          display: none;
+        }
+        .perksSlider{
+          display: block;
+          .item{
+            padding: 27px 15px;
+            width: auto;
+            margin: 0 17px;
+            align-items: flex-start;
+            .pic{
+              margin-right: 13px;
+              height: 50px;
+            }
+            .text{
+              max-width: 80%;
+              }
+            }
+          }
+        .perks-pagination{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          margin-top: 40px;
+          .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border: 2px solid $base-blue;
+            opacity: 1;
+          }
+          .swiper-pagination-bullet-active{
+            width: 15px;
+            height: 15px;
+            background: $base-blue;
+            border: none;
+          }
+        }
+        .perksNurse{
+          width: 361px;
+        }
+        .back-circles{
+          right: 31px;
+          left: unset;
+          width: 50px;
+        }
+        .ellipse{
+          width: 70px;
+          height: 70px;
+        }
+        }
+      .send{
+        margin: -154px 24px 0;
+        .content{
+          padding: 0 39px;
+          .title{
+            font-size: 20px;
+            line-height: 27px;
+            max-width: 60%;
+          }
+          img{
+            width: 78px;
+          }
+          .pick{
+            margin-top: 20px;
+            width: 100%;
+          }
+          .footnote{
+            max-width: unset;
+            margin: 16px auto 0;
+          }
+        }
+      }
+      }
+    .how{
+      .wrapper{
+        padding: 0 24px;
+        margin-bottom: 132px;
+        .howTitle{
+          font-size: 28px;
+          line-height: 24px;
+        }
+        .items{
+          max-width: 100%;
+          margin-top: 68px;
+          .desktop{
+            display: none;
+          }
+          .howSlider{
+            display: block;
+          }
+          .how-pagination{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .swiper-pagination-bullet{
+              opacity: 1;
+              background: transparent;
+            }
+            .swiper-pagination-bullet-active{
+              background: #3f85ef;
+            }
+          }
+          .howSlider{
+            .circle{
+              position: absolute;
+              width: 18px;
+              height: 18px;
+              background: #59B4FB;
+              top: 17px;
+              left: 92px;
+              z-index: 0;
+              border-radius: 50px;
+            }
+            .number{
+              top: 0;
+              right: 59px;
+            }
+            .step{
+              margin-top: 30px;
+            }
+            .title{
+              max-width: unset;
+            }
+            .description{
+              max-width: unset;
+            }
+          }
+        }
+        .how-pagination{
+          position: relative;
+          margin-top: 38px;
+          .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+            border: 2px solid $base-blue;
+            margin-right: 15px;
+            &:last-of-type{
+              margin-right: unset;
+            }
+          }
+          .swiper-pagination-bullet-active{
+            width: 15px;
+            height: 15px;
+            background: $base-blue;
+          }
+        }
+      }
+    }
+    .specialists{
+      padding: 0 24px;
+      margin-bottom: 132px;
+      .cards{
+        .item{
+          .stats{
+            .state{
+              padding: 7px 14px;
+              line-height: 17px;
+            }
+          }
+        }
+        .navigation{
+          .spec-arrow{
+            width: 41px;
+            height: 41px;
+          }
+        }
+      }
+      .round{
+        top: 95px;
+        right: unset;
+        justify-content: flex-start;
+        align-items: flex-start;
+        .content{
+          margin: 0;
+        }
+      }
+      .specialTitle{
+        font-size: 28px;
+        line-height: 24px;
+      }
+      .controls{
+        margin-top: 175px;
+      }
+      .cards{
+        .item{
+          margin: 0 auto;
+        }
+      }
+    }
+    .reviews{
+      padding-top: 67px;
+      padding-left: unset;
+      padding-right: unset;
+      .navigation{
+        transform: translate(-50%, 50%);
+        left: 50%;
+        top: unset;
+        bottom: 177px;
+        max-width: 260px;
+      }
+      .circle{
+        display: none;
+      }
+      .syringe{
+        top: -54px;
+        right: -61px;
+        width: 200px;
+      }
+      .rect{
+        margin-left: 24px;
+      }
+      .reviewTitle{
+        font-size: 28px;
+        line-height: 33px;
+        margin-left: 24px;
+        margin-bottom: 38px;
+        max-width: 195px;
+      }
+      .send{
+        margin: 0;
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        .sendBack{
+          width: 100%;
+        }
+        .content{
+          padding: 0 39px;
+          .title{
+            font-size: 20px;
+            line-height: 27px;
+            max-width: 80%;
+          }
+          img{
+            width: 78px;
+          }
+          .pick{
+            margin-top: 20px;
+            width: 100%;
+          }
+          .footnote{
+            max-width: unset;
+          }
+        }
+      }
+      .reviewSlider{
+        .item{
+          padding: 29px 30px;
+          max-width: 100%;
+          width: auto;
+          margin: 0 29px;
+          .itemHeader{
+            flex-direction: column;
+            align-items: flex-start;
+            .title{
+              font-size: 18px;
+              line-height: 27px;
+            }
+          }
+        }
+      }
+    }
+    .faq{
+      .faqTitle{
+        font-size: 28px;
+        line-height: 33px;
+      }
+      .consult{
+        max-width: 100%;
+        width: -webkit-fill-available;
+        margin: 0 24px;
+        right: unset;
+        z-index: 10;
+        p{
+          max-width: unset;
+        }
+        img{
+          width: 141px;
+        }
+      }
+      .faqBlock{
+        margin: 0 24px;
+        padding: 50px 18px 50px 28px;
+        .bandAid{
+          width: 70px;
+          left: unset;
+          right: 10px;
+          top: -50px;
+        }
+      }
+      .send{
+        margin: 63px 24px 0;
+        .mobContent{
+          padding: 0 39px;
+          .top{
+            .title{
+              font-size: 20px;
+              line-height: 27px;
+            }
+            img{
+              height: 91px;
+            }
+          }
+          .bottom{
+            flex-direction: column;
+            margin-top: 29px;
+            .subtitle{
+              max-width: 100%;
+            }
+            .pick{
+              margin-bottom: 24px;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .useful{
+      .medPic{
+        right: 0;
+        top: -70px;
+        width: 98px;
+      }
+      .usefulTitle{
+        font-size: 28px;
+        line-height: 24px;
+      }
+      .articles{
+        margin-top: 40px;
+        padding: 0 24px;
+        .item{
+          width: 96%;
+          height: auto;
+          padding-bottom: 20px;
+          margin: 0 auto;
+        }
+      }
+    }
+    }
+
+  footer{
+    .footerWrapper{
+      .content{
+        .info{
+          flex-direction: column;
+          align-items: center;
+          p{
+            text-align: center;
+          }
+        }
+        .menu{
+          flex-direction: column;
+          align-items: center;
+          justify-content: unset;
+          margin-bottom: 45px;
+          .row{
+            margin: 0;
+            align-items: center;
+            .rowTitle{
+              font-size: 22px;
+              margin-bottom: 21px;
+            }
+            .item{
+              text-align: center;
+              font-size: 18px;
+            }
+          }
+          .services{
+            margin-top: 45px;
+          }
+        }
+        .contacts{
+          margin: 0 auto;
+          max-width: 293px;
+          .contactsTitle{
+            text-align: center;
+            font-size: 22px;
+            line-height: 24px;
+          }
+          .contactContent{
+            flex-flow: column;
+            align-items: flex-start;
+            .box{
+              width: auto;
+            }
+          }
+          .item{
+            a{
+              font-size: 18px;
+              line-height: 24px;
+            }
+          }
+          .socials{
+            margin: 15px auto 0;
+          }
+        }
+      }
+    }
+  }
+  .burgerMenu{
+    .content{
+      .menu{
+        padding: 24px;
+        img{
+          max-width: 200px;
+        }
+        .geo{
+          .selector{
+            .select{
+              width: 180px;
+            }
+            .select-styled{
+              font-size: 12px;
+            }
+            .select-options{
+              li{
+                font-size: 10px;
+              }
+            }
+          }
+        }
+        .links{
+          a{
+            font-size: 14px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+      .cabinet{
+        padding: 24px;
+        a{
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  }
+
+
+@media(max-width: 525px) {
+  main{
+    .about{
+      .gallery{
+        .slider{
+          .swiper{
+            max-width: 200px;
+          }
+        }
+      }
+    }
+    .specialists{
+      .cards{
+        .item{
+          width: 249px;
+          .pic{
+            width: 249px;
+          }
+        }
+        .navigation{
+          width: 106%;
+          top: 35%;
+          left: 50%;
+          .spec-arrow{
+            width: 45px;
+            height: 45px;
+          }
+        }
+      }
+    }
+    .reviews{
+      .reviewSlider{
+        .item{
+          .info{
+            .service{
+              margin-right: 0px;
+            }
+          }
+        }
+      }
+      .send{
+        .content{
+          .title{
+            max-width: 60%;
+          }
+        }
+      }
+      .navigation{
+        .arrow{
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    .faq{
+      .faqBlock{
+        .circle{
+          top: -115px;
+        }
+        .faqItem{
+          .faqHeader{
+            .title{
+              max-width: 234px;
+            }
+          }
+        }
+      }
+      .consult{
+        p{
+          max-width: 160px;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 400px){
+  main{
+    .specialists{
+      .cards{
+        .navigation{
+          width: 110%;
+        }
+      }
+    }
+  }
+}

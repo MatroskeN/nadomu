@@ -1,0 +1,1232 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/head_catalog_search.css') }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="banner">
+            <div class="content">
+                <h1>Поиск медсестер для оказания услуг на дому</h1>
+                <div class="description">
+                    Наша система автоматически подберет наиболее подходящих специалистов исходя из Ваших критериев и
+                    предложит список профилей вам на рассмотрение
+                </div>
+                <div class="specialist">
+                    <select name="metro" id="metro" class="custom_select">
+                        <option value="default">Станция метро</option>
+                        <option value="no-default">Станция метро</option>
+                    </select>
+                    <select name="specialty" id="specialty" class="custom_select">
+                        <option value="default">Специализация</option>
+                    </select>
+                    <button class="choose">
+                        Подобрать специалиста
+                    </button>
+                </div>
+
+            </div>
+            <img src="images/nurse.png" alt="nurse" class="nurse">
+            <div class="ellipse"></div>
+            <img src="images/plus.png" alt="plus" class="plus">
+            <div class="tabs">
+                <div class="nurses">
+                    <img src="images/nurses.png" alt="nurses">
+                    <div class="text">
+                        <p>
+                            более <br> <span>50</span> <br> квалифицированных <br> медсестер
+                        </p>
+                    </div>
+                </div>
+                <div class="catalog">
+                    <img src="images/catalog.png" alt="catalog">
+                    <a href="/catalog/" target="_blank">
+                        <div class="text">
+                            <p>Для самостоятельного <br> выбора воспользуйтесь <br> нашим <strong>каталогом</strong></p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <img src="images/box.png" alt="box" class="kit">
+        </div>
+
+{#        <div id="HeaderCatalogSearch"></div>#}
+
+        <div class="about">
+            <div class="info">
+                <div class="rect"></div>
+                <div class="title">
+                    О нашем <span>сервисе</span>
+                </div>
+                <div class="subtitle">
+                    Мы — сервис по подбору медицинских специалистов, которые оказывают услуги на дому.
+                </div>
+                <div class="description">
+                    Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению, необходимой услуге,
+                    времени, когда Вам удобно, и другим параметрам.
+                    <br><br>
+                    Все наши специалисты проходят проверку на наличие профильного образования и необходимых медицинских
+                    сертификатов для выполнения заявленных услуг.
+                </div>
+                <div class="tab">
+                    <img src="images/cardboard.png" alt="cardboard">
+                    <p>
+                        Вы можете быть уверены в качестве получаемых услуг от специалистов, размещенных в нашем каталоге!
+                    </p>
+                </div>
+            </div>
+            <div class="gallery">
+                <div class="servicePic">
+                    <svg width="160" height="127" viewBox="0 0 160 127" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="53" cy="74" r="53" fill="#F0F1F8"/>
+                        <circle cx="142" cy="18" r="18" fill="#3F85EF"/>
+                    </svg>
+                    <img src="images/img-bandages.png" alt="service">
+                </div>
+                <div class="slider">
+                    <div class="sliderTitle">
+                        В список наших услуг входят:
+                    </div>
+                    <div class="swiper serviceSlider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="slideItem">
+                                    <div class="pic">
+                                        <svg width="24" height="42" viewBox="0 0 24 42" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M23.0005 34C23.0005 32.3 21.7005 31 20.0005 31C18.3005 31 17.0005 32.3 17.0005 34C17.0005 35.3 17.8005 36.3 18.9005 36.8C18.5005 38.1 17.4005 39 16.0005 39C14.3005 39 13.0005 37.7 13.0005 36V31C13.1005 28.4 14.7005 25.9 16.3005 23.7C16.4005 23.7 16.4005 23.8 16.5005 23.8C18.2005 24.7 20.0005 26.5 21.1005 28.4C21.3005 28.7 21.6005 28.9 22.0005 28.9C22.2005 28.9 22.3005 28.9 22.5005 28.8C23.0005 28.5 23.2005 27.9 22.9005 27.4C21.6005 25.2 19.6005 23.1 17.6005 22.1C18.1005 21.5 18.5005 21 18.8005 20.5C20.2005 18.5 20.9005 16.7 21.0005 15C21.1005 12.5 20.2005 10.9 19.9005 10.5C20.0005 10 20.0005 9.5 20.0005 9C20.0005 4.1 16.1005 0 11.5005 0C6.90048 0 3.00048 4.1 3.00048 9C3.00048 9.5 3.00048 10 3.10048 10.5C2.80048 10.9 1.90048 12.5 2.00048 15C2.10048 16.7 2.80048 18.6 4.20048 20.5C4.50048 21 5.00048 21.5 5.50048 22.1C3.50048 23.2 1.40048 25.2 0.100481 27.5C-0.0995192 28 0.000480801 28.6 0.500481 28.9C0.700481 29 0.800481 29 1.00048 29C1.30048 29 1.70048 28.8 1.90048 28.5C3.00048 26.6 4.80048 24.8 6.50048 23.9C6.60048 23.8 6.80048 23.7 6.90048 23.7C8.80048 25.8 11.0005 28.5 11.0005 31.1V36.1C11.0005 38.9 13.2005 41.1 16.0005 41.1C18.5005 41.1 20.5005 39.3 20.9005 36.9C22.1005 36.5 23.0005 35.3 23.0005 34ZM9.00048 20V18.5C9.80048 18.8 10.6005 19 11.5005 19C12.4005 19 13.2005 18.8 14.0005 18.5V20C14.0005 21 14.3005 21.8 14.8005 22.5C13.8005 23.9 12.7005 25.5 11.9005 27.2C11.0005 25.4 9.60048 23.7 8.30048 22.3C8.80048 21.6 9.00048 20.9 9.00048 20ZM19.0005 15C19.0005 16.3 18.3005 17.8 17.2005 19.5C16.9005 19.9 16.6005 20.4 16.2005 20.9C16.1005 20.5 16.0005 20.3 16.0005 20V17.3C17.2005 16.3 18.2005 15 18.9005 13.6C19.0005 14 19.0005 14.5 19.0005 15ZM18.0005 9C18.0005 12.6 15.1005 17 11.5005 17C8.50048 17 6.10048 14 5.30048 11C5.80048 10.9 10.5005 9.7 13.6005 6.4C14.5005 8 15.3005 8.7 15.4005 8.8C15.5005 8.9 15.8005 9 16.0005 9C16.3005 9 16.5005 8.9 16.7005 8.7C17.1005 8.3 17.0005 7.7 16.6005 7.3C16.6005 7.3 15.8005 6.5 14.9005 4.6C15.1005 4.3 15.3005 3.9 15.5005 3.5C17.0005 4.8 18.0005 6.8 18.0005 9ZM11.5005 2C12.3005 2 13.1005 2.2 13.8005 2.5C11.9005 6.9 6.20048 8.7 5.00048 9C5.00048 5.2 8.00048 2 11.5005 2ZM4.00048 15C4.00048 14.5 4.00048 14 4.10048 13.6C4.80048 15.1 5.80048 16.4 7.00048 17.3V20C7.00048 20.3 7.00048 20.5 6.90048 20.7C6.50048 20.2 6.10048 19.8 5.80048 19.4C4.70048 17.8 4.00048 16.3 4.00048 15ZM20.0005 35C19.4005 35 19.0005 34.6 19.0005 34C19.0005 33.4 19.4005 33 20.0005 33C20.6005 33 21.0005 33.4 21.0005 34C21.0005 34.6 20.6005 35 20.0005 35Z"
+                                                  fill="#3F85EF"/>
+                                            <path d="M8 31H6V29C6 28.4 5.6 28 5 28C4.4 28 4 28.4 4 29V31H2C1.4 31 1 31.4 1 32C1 32.6 1.4 33 2 33H4V35C4 35.6 4.4 36 5 36C5.6 36 6 35.6 6 35V33H8C8.6 33 9 32.6 9 32C9 31.4 8.6 31 8 31Z"
+                                                  fill="#3F85EF"/>
+                                        </svg>
+                                    </div>
+                                    <p>Сиделки</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideItem">
+                                    <div class="pic">
+                                        <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_641)">
+                                                <path d="M34.8 22.4L31.9 18.5L28 9.7L27 5.8C27 5.7 26.9 5.7 26.9 5.7C26.9 5.6 26.8 5.6 26.8 5.5C26.8 5.4 26.7 5.4 26.6 5.4L26.5 5.3C26.4 5.3 26.4 5.3 26.3 5.2C26.2 5.2 26.2 5.2 26.1 5.2C26 5.2 26 5.2 25.9 5.2C25.8 5.2 25.8 5.2 25.7 5.2L24.7 5.5L24 3.9V3.8C23 2.1 21.4 1.6 19.7 2.4C19.3 2.6 18.7 3.1 18.3 3.9L17.7 3.3C17.5 3.1 17.3 3 17 3C16.7 3 16.5 3.1 16.3 3.3L15.3 4.4L11.3 0.9C10.1 -0.3 8.1 -0.3 6.9 0.9C6.5 1.3 6.3 1.7 6.1 2.2C5.1 1.8 3.8 2 2.9 2.9C2 3.8 1.8 5.1 2.2 6.2C1.7 6.3 1.3 6.5 0.9 6.9C-0.3 8.1 -0.3 10.1 0.9 11.3L1.9 12.3C1.6 12.5 1.2 12.7 0.9 12.9C-0.3 14.1 -0.3 16.1 0.9 17.3L2.1 18.5L1.3 19.4C1.3 19.4 1.2 19.5 1.2 19.6C1.2 19.7 1.1 19.7 1.1 19.8C1.1 19.9 1.1 19.9 1.1 20C1 19.9 1 20 1 20C1 20.1 1 20.1 1 20.2C1 20.3 1 20.3 1 20.4C1 20.5 1.1 20.5 1.1 20.6C1.1 20.7 1.2 20.7 1.2 20.8L4.1 23.7L4.2 23.8C4.5 24.1 11.3 30.2 17.4 32L21.3 34.9C21.5 35 21.7 35.1 21.9 35.1C22.2 35.1 22.5 35 22.7 34.7C23 34.3 22.9 33.6 22.5 33.3L19.7 31L32.1 22.1L33.2 23.6C33.4 23.9 33.7 24 34 24C34.2 24 34.4 23.9 34.6 23.8C35 23.5 35.1 22.8 34.8 22.4ZM15 28.8C12.4 27.5 9.8 25.7 8 24.3L19 9.7L19.9 13.2C20 13.7 20.4 14 20.9 14C21 14 21.1 14 21.1 14C21.6 13.9 22 13.3 21.8 12.8L20.8 8.8L25.3 7.3L26 10.3V10.4V10.5L26.3 11.3C26.2 11.4 26.1 11.5 26 11.6L15 28.6C15.1 28.6 15.1 28.7 15 28.8ZM20.6 4.2C21.1 3.9 21.7 3.8 22.2 4.7L22.7 6L20.3 6.8L20.1 6C19.8 4.6 20.3 4.3 20.6 4.2ZM17 5.4L18.2 6.6L18.4 7.3L18.3 7.4L6.5 23C6.2 22.7 5.9 22.5 5.8 22.4C5.8 22.4 5.8 22.3 5.7 22.3L3.4 20L7.1 16.1L10 13L17 5.4ZM8.3 2.3C8.7 1.9 9.4 1.9 9.9 2.3L13.9 5.8L12.2 7.6L8.3 3.9C8.1 3.7 8 3.4 8 3.1C8 2.8 8.1 2.5 8.3 2.3ZM4.3 4.3C4.7 3.9 5.4 3.9 5.9 4.3L10.8 9.2L9.3 10.8L4.3 5.9C3.9 5.4 3.9 4.8 4.3 4.3ZM2.3 8.3C2.7 7.9 3.4 7.9 3.9 8.3L7.9 12.3L6.4 13.9L2.4 9.9C1.9 9.5 1.9 8.8 2.3 8.3ZM2.3 15.9C1.9 15.5 1.9 14.8 2.3 14.4C2.7 14 3.4 14 3.8 14.4L4.9 15.5L3.4 17L2.3 15.9ZM17.8 29.9C17.5 29.8 17.1 29.7 16.8 29.6L27.3 13.3L30 19.4C30 19.5 30.1 19.5 30.1 19.5C30.1 19.5 30.1 19.5 30.1 19.6L30.8 20.5L17.8 29.9Z"
+                                                      fill="white"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_641">
+                                                    <rect width="35" height="35" fill="white"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <p>Перевязки</p>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slideItem">
+                                    <div class="pic">
+                                        <svg width="20" height="37" viewBox="0 0 20 37" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 0H1C0.4 0 0 0.4 0 1V17C0 18.5 0.2 19.5 1.2 20.7C2.1 21.8 3.5 22.7 4.6 23.4C5.1 23.7 5.6 24.1 5.9 24.3V26C5.9 28.2 7 29.6 8.9 29.9C9.1 32.7 10.4 36 13.6 36.9C13.7 36.9 13.8 36.9 13.9 36.9C14.3 36.9 14.7 36.6 14.9 36.2C15.1 35.7 14.8 35.1 14.2 35C11.7 34.3 11.1 31.4 11 29.8C12.9 29.4 13.9 28 13.9 25.9V24.2C14.2 24 14.8 23.6 15.2 23.3C16.3 22.6 17.7 21.6 18.6 20.6C19.7 19.4 19.8 18.4 19.8 16.9V1C20 0.4 19.6 0 19 0ZM18 17C18 18.1 17.9 18.6 17.2 19.3C16.4 20.2 15.2 21 14.2 21.7C12.8 22.6 12.1 23.1 12 23.9V24V26C12 27.4 11.4 28 10 28C8.6 28 8 27.4 8 26V24V23.9C7.9 23.1 7.2 22.6 5.8 21.7C4.8 21 3.5 20.2 2.8 19.3C2.1 18.6 2 18.1 2 17V6.5C3.5 5.5 5.5 5.6 7.5 6.8C8.8 7.7 10.2 8 11.6 8C13.5 8 15.1 7.4 15.8 6.7C16.2 6.3 16.1 5.7 15.7 5.3C15.3 4.9 14.7 4.9 14.3 5.3C13.9 5.7 10.9 6.6 8.5 5.1C6.3 3.8 3.9 3.5 2 4.3V2H18V17Z"
+                                                  fill="#3F85EF"/>
+                                        </svg>
+                                    </div>
+                                    <p>Капельницы</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="navigation button-prev">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 13L1 7L7 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="navigation button-next">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="perks">
+            <div class="rect"></div>
+            <div class="rectTitle">
+                <span>Преимущества</span> сервиса
+            </div>
+            <div class="items">
+                <svg class="back-circles" width="76" height="71" viewBox="0 0 76 71" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="18" cy="53" r="18" fill="#3F85EF"/>
+                    <circle cx="64" cy="12" r="8.5" stroke="#F0F1F8" stroke-width="7"/>
+                </svg>
+                <div class="ellipse"></div>
+                <img src="images/perks.png" alt="perks" class="perksNurse">
+                <div class="desktop">
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/home.svg" alt="home">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                Оказание услуги на дому
+                            </div>
+                            <div class="subtitle">
+                                Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению, необходимой
+                                услуге, времени, когда Вам удобно и другим параметрам.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/certificate.svg" alt="home">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                Сертифицированные специалисты
+                            </div>
+                            <div class="subtitle">
+                                Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению, необходимой
+                                услуге, времени, когда Вам удобно и другим параметрам.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="pic">
+                            <img src="images/percent.svg" alt="home">
+                        </div>
+                        <div class="text">
+                            <div class="title">
+                                Выгодные предложения
+                            </div>
+                            <div class="subtitle">
+                                Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению, необходимой
+                                услуге, времени, когда Вам удобно и другим параметрам.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper perksSlider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/home.svg" alt="home">
+                                </div>
+                                <div class="text">
+                                    <div class="title">
+                                        Оказание услуги на дому
+                                    </div>
+                                    <div class="subtitle">
+                                        Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению,
+                                        необходимой услуге, времени, когда Вам удобно и другим параметрам.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/certificate.svg" alt="home">
+                                </div>
+                                <div class="text">
+                                    <div class="title">
+                                        Сертифицированные специалисты
+                                    </div>
+                                    <div class="subtitle">
+                                        Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению,
+                                        необходимой услуге, времени, когда Вам удобно и другим параметрам.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/percent.svg" alt="home">
+                                </div>
+                                <div class="text">
+                                    <div class="title">
+                                        Выгодные предложения
+                                    </div>
+                                    <div class="subtitle">
+                                        Мы подбираем наиболее подходящих для вас специалистов по Вашему расположению,
+                                        необходимой услуге, времени, когда Вам удобно и другим параметрам.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination perks-pagination"></div>
+            </div>
+            <div class="send">
+                <img src="images/send-back.png" alt="send-back" class="sendBack">
+                <div class="content">
+                    <div class="title">
+                        Отправим Ваш запрос всем подходящим специалистам!
+                    </div>
+                    <img src="images/necklace.png" alt="necklace">
+                    <button class="pick">
+                        Подобрать специалиста
+                    </button>
+                    <div class="footnote">
+                        А Вы уже сможете выбрать наиболее выгодное и подходящее для Вас предложение.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="how">
+            <img src="images/how-bg.png" alt="bg" class="howBg">
+            <div class="wrapper">
+                <div class="rect"></div>
+                <div class="howTitle">
+                    <span>Как</span> это <span>работает?</span>
+                </div>
+                <div class="items">
+                    <div class="desktop">
+                        <div class="item">
+                            <div class="circle"></div>
+                            <img src="images/01.png" alt="number" class="number">
+                            <img src="images/step1.png" alt="step" class="step">
+                            <div class="title">
+                                Заполняете заявку
+                            </div>
+                            <div class="description">
+                                Заполняете форму подбора специалиста или выбираете нужного специалиста вручную
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="circle"></div>
+                            <img src="images/02.png" alt="number" class="number">
+                            <img src="images/step2.png" alt="step" class="step">
+                            <div class="title">
+                                Рассматриваете отклики
+                            </div>
+                            <div class="description">
+                                Обрабатываете полученные ответы от специалистов
+                                и выбираете лучшее предложение
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="circle"></div>
+                            <img src="images/03.png" alt="number" class="number">
+                            <img src="images/step3.png" alt="step" class="step">
+                            <div class="title">
+                                Получаете услугу!
+                            </div>
+                            <div class="description">
+                                Договариваетесь
+                                со специалистом
+                                и подстверждаете встречу
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper howSlider">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="circle"></div>
+                                    <img src="images/01.png" alt="number" class="number">
+                                    <img src="images/step1.png" alt="step" class="step">
+                                    <div class="title">
+                                        Заполняете заявку
+                                    </div>
+                                    <div class="description">
+                                        Заполняете форму подбора специалиста или выбираете нужного специалиста вручную
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="circle"></div>
+                                    <img src="images/02.png" alt="number" class="number">
+                                    <img src="images/step2.png" alt="step" class="step">
+                                    <div class="title">
+                                        Рассматриваете отклики
+                                    </div>
+                                    <div class="description">
+                                        Обрабатываете полученные ответы от специалистов
+                                        и выбираете лучшее предложение
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="item">
+                                    <div class="circle"></div>
+                                    <img src="images/03.png" alt="number" class="number">
+                                    <img src="images/step3.png" alt="step" class="step">
+                                    <div class="title">
+                                        Получаете услугу!
+                                    </div>
+                                    <div class="description">
+                                        Договариваетесь
+                                        со специалистом
+                                        и подстверждаете встречу
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination how-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="specialists">
+            <div class="round">
+                <img src="images/stars.png" alt="stars" class="stars">
+                <div class="white"></div>
+                <div class="content">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="24" cy="24" r="24" fill="#3F85EF"/>
+                        <path d="M19.7453 32.9812H16.8981C16.3947 32.9812 15.9119 32.7812 15.5559 32.4252C15.2 32.0693 15 31.5865 15 31.0831V24.4397C15 23.9362 15.2 23.4534 15.5559 23.0975C15.9119 22.7415 16.3947 22.5415 16.8981 22.5415H19.7453M26.3887 20.6434V16.8472C26.3887 16.0921 26.0887 15.3679 25.5548 14.8339C25.0208 14.3 24.2967 14 23.5415 14L19.7453 22.5415V32.9812H30.4507C30.9084 32.9864 31.3527 32.8259 31.7015 32.5294C32.0503 32.233 32.2802 31.8204 32.3488 31.3678L33.6585 22.8263C33.6998 22.5542 33.6814 22.2764 33.6047 22.0122C33.528 21.748 33.3948 21.5035 33.2142 21.2959C33.0337 21.0883 32.8101 20.9224 32.5591 20.8097C32.3081 20.697 32.0355 20.6403 31.7604 20.6434H26.3887Z"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div class="countReviews">
+                        <div class="text">
+                            <p>
+                                более<br>
+                                <strong>98</strong> <br>
+                                положительных <br> отзывов
+                            </p>
+                        </div>
+                        <a href="#">Читать</a>
+                    </div>
+                </div>
+            </div>
+            <div class="rect"></div>
+            <div class="specialTitle">
+                <span>Лучшие</span> специалисты
+            </div>
+            <div class="controls">
+                <div class="tabs">
+                    <button class="item active">
+                        Все
+                    </button>
+                    <button class="item">
+                        Перевязки
+                    </button>
+                    <button class="item">
+                        Капельницы
+                    </button>
+                    <button class="item">
+                        Сиделки
+                    </button>
+                    <button class="item">
+                        Клизмы
+                    </button>
+                    <button class="item">
+                        Уколы
+                    </button>
+                </div>
+                <div class="navigation">
+                    <div class="spec-arrow spec-prev">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="spec-arrow spec-next">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <div class="cards">
+                <div class="swiper specialistsSlider">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse1.png" alt="nurse">
+                                    <img src="images/icon-bandages.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Павлова Мария
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span> <br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse2.png" alt="nurse">
+                                    <img src="images/icon-droppers.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Котова Надежда
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse3.png" alt="nurse">
+                                    <img src="images/icon-bandages.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Мироненко Дарья
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse4.png" alt="nurse">
+                                    <img src="images/icon-droppers.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Бондарь Светлана
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse1.png" alt="nurse">
+                                    <img src="images/icon-bandages.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Павлова Мария
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span> <br>4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse2.png" alt="nurse">
+                                    <img src="images/icon-droppers.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Котова Надежда
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse3.png" alt="nurse">
+                                    <img src="images/icon-bandages.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Мироненко Дарья
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <div class="pic">
+                                    <img src="images/img-nurse4.png" alt="nurse">
+                                    <img src="images/icon-droppers.svg" alt="icon" class="icon">
+                                    <div class="mask"></div>
+                                </div>
+                                <div class="title">
+                                    Бондарь Светлана
+                                </div>
+                                <div class="subtitle">
+                                    Старшая медсестра
+                                </div>
+                                <div class="stats">
+                                    <div class="state rate">Рейтинг <span>/</span><br> 4.98</div>
+                                    <div class="state exp">Опыт работы <span>-</span><br> 5 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="spec-arrow spec-prev">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="spec-arrow spec-next">
+                        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+            <button class="moreSpec">
+                Все специалисты
+            </button>
+        </div>
+        <div class="reviews">
+            <img src="images/review-circles.png" alt="circles" class="circle">
+            <img src="images/syringe.png" alt="syringe" class="syringe">
+            <div class="rect">
+            </div>
+            <div class="reviewTitle">
+                <span>Отзывы</span> наших пациентов
+            </div>
+            <div class="navigation">
+                <div class="arrow review-prev">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="arrow review-next">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 13L7 7L1 1" stroke="#59B4FB" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper reviewSlider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="itemHeader">
+                                <div class="title">
+                                    Елизавета Макарова, 49 лет
+                                </div>
+                                <div class="rate">
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.73639 0.988606L8.33737 3.71937L8.44795 3.90798L8.66149 3.95486L11.7533 4.63363L9.65095 7.00011L9.50575 7.16355L9.52715 7.38114L9.83704 10.5314L6.93671 9.2632L6.73639 9.17561L6.53607 9.2632L3.63575 10.5314L3.94563 7.38114L3.96704 7.16355L3.82183 7.00011L1.71945 4.63363L4.81129 3.95486L5.02484 3.90798L5.13541 3.71937L6.73639 0.988606Z"
+                                              stroke="#3F85EF"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="description">
+                                Прекрасный специалист. Чуткая и заботливая.
+                                Сразу видно доброй души человек. Помогла с перевязкой и капельницами.моей маме.
+                                Рекомендую довериться этому специалисту.
+                            </div>
+                            <div class="more">
+                                <a href="#">Читать полностью</a>
+                            </div>
+                            <div class="info">
+                                <div class="person">
+                                    <p>
+                                        <span>Специалист:</span>
+                                    </p>
+                                    <p>Котова Надежда</p>
+                                    <a href="#">Читать о специалисте</a>
+                                </div>
+                                <div class="service">
+                                    <div class="serviceTitle">Услуга:</div>
+                                    <div class="icons">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_375)">
+                                                <path d="M19.8857 13.0861L18.2286 10.8576L16 5.82899L15.4286 3.60042C15.4286 3.54328 15.3714 3.54328 15.3714 3.54328C15.3714 3.48613 15.3143 3.48613 15.3143 3.42899C15.3143 3.37185 15.2571 3.37185 15.2 3.37185L15.1429 3.3147C15.0857 3.3147 15.0857 3.3147 15.0286 3.25756C14.9714 3.25756 14.9714 3.25756 14.9143 3.25756C14.8571 3.25756 14.8571 3.25756 14.8 3.25756C14.7429 3.25756 14.7429 3.25756 14.6857 3.25756L14.1143 3.42899L13.7143 2.5147V2.45756C13.1429 1.48613 12.2286 1.20042 11.2571 1.65756C11.0286 1.77185 10.6857 2.05756 10.4571 2.5147L10.1143 2.17185C10 2.05756 9.88571 2.00042 9.71428 2.00042C9.54286 2.00042 9.42857 2.05756 9.31428 2.17185L8.74286 2.80042L6.45714 0.800419C5.77143 0.114704 4.62857 0.114704 3.94286 0.800419C3.71429 1.02899 3.6 1.25756 3.48571 1.54328C2.91429 1.3147 2.17143 1.42899 1.65714 1.94328C1.14286 2.45756 1.02857 3.20042 1.25714 3.82899C0.971429 3.88613 0.742857 4.00042 0.514286 4.22899C-0.171429 4.9147 -0.171429 6.05756 0.514286 6.74328L1.08571 7.3147C0.914286 7.42899 0.685714 7.54328 0.514286 7.65756C-0.171429 8.34328 -0.171429 9.48613 0.514286 10.1718L1.2 10.8576L0.742857 11.3718C0.742857 11.3718 0.685714 11.429 0.685714 11.4861C0.685714 11.5433 0.628571 11.5433 0.628571 11.6004C0.628571 11.6576 0.628571 11.6576 0.628571 11.7147C0.571429 11.6576 0.571429 11.7147 0.571429 11.7147C0.571429 11.7718 0.571429 11.7718 0.571429 11.829C0.571429 11.8861 0.571429 11.8861 0.571429 11.9433C0.571429 12.0004 0.628571 12.0004 0.628571 12.0576C0.628571 12.1147 0.685714 12.1147 0.685714 12.1718L2.34286 13.829L2.4 13.8861C2.57143 14.0576 6.45714 17.5433 9.94286 18.5718L12.1714 20.229C12.2857 20.2861 12.4 20.3433 12.5143 20.3433C12.6857 20.3433 12.8571 20.2861 12.9714 20.1147C13.1429 19.8861 13.0857 19.4861 12.8571 19.3147L11.2571 18.0004L18.3429 12.9147L18.9714 13.7718C19.0857 13.9433 19.2571 14.0004 19.4286 14.0004C19.5429 14.0004 19.6571 13.9433 19.7714 13.8861C20 13.7147 20.0571 13.3147 19.8857 13.0861ZM8.57143 16.7433C7.08571 16.0004 5.6 14.9718 4.57143 14.1718L10.8571 5.82899L11.3714 7.82899C11.4286 8.1147 11.6571 8.28613 11.9429 8.28613C12 8.28613 12.0571 8.28613 12.0571 8.28613C12.3429 8.22899 12.5714 7.88613 12.4571 7.60042L11.8857 5.3147L14.4571 4.45756L14.8571 6.17185V6.22899V6.28613L15.0286 6.74328C14.9714 6.80042 14.9143 6.85756 14.8571 6.9147L8.57143 16.629C8.62857 16.629 8.62857 16.6861 8.57143 16.7433ZM11.7714 2.68613C12.0571 2.5147 12.4 2.45756 12.6857 2.97185L12.9714 3.7147L11.6 4.17185L11.4857 3.7147C11.3143 2.9147 11.6 2.74328 11.7714 2.68613ZM9.71428 3.37185L10.4 4.05756L10.5143 4.45756L10.4571 4.5147L3.71429 13.429C3.54286 13.2576 3.37143 13.1433 3.31429 13.0861C3.31429 13.0861 3.31429 13.029 3.25714 13.029L1.94286 11.7147L4.05714 9.48613L5.71429 7.7147L9.71428 3.37185ZM4.74286 1.60042C4.97143 1.37185 5.37143 1.37185 5.65714 1.60042L7.94286 3.60042L6.97143 4.62899L4.74286 2.5147C4.62857 2.40042 4.57143 2.22899 4.57143 2.05756C4.57143 1.88613 4.62857 1.7147 4.74286 1.60042ZM2.45714 2.74328C2.68571 2.5147 3.08571 2.5147 3.37143 2.74328L6.17143 5.54328L5.31429 6.45756L2.45714 3.65756C2.22857 3.37185 2.22857 3.02899 2.45714 2.74328ZM1.31429 5.02899C1.54286 4.80042 1.94286 4.80042 2.22857 5.02899L4.51429 7.3147L3.65714 8.22899L1.37143 5.94328C1.08571 5.7147 1.08571 5.3147 1.31429 5.02899ZM1.31429 9.37185C1.08571 9.14328 1.08571 8.74328 1.31429 8.5147C1.54286 8.28613 1.94286 8.28613 2.17143 8.5147L2.8 9.14328L1.94286 10.0004L1.31429 9.37185ZM10.1714 17.3718C10 17.3147 9.77143 17.2576 9.6 17.2004L15.6 7.88613L17.1429 11.3718C17.1429 11.429 17.2 11.429 17.2 11.429C17.2 11.429 17.2 11.429 17.2 11.4861L17.6 12.0004L10.1714 17.3718Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_375">
+                                                    <rect width="20" height="20" fill="white"
+                                                          transform="translate(0 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_379)">
+                                                <path d="M11.4704 0.286133H1.18471C0.841853 0.286133 0.613281 0.514704 0.613281 0.857561V10.0004C0.613281 10.8576 0.727567 11.429 1.299 12.1147C1.81328 12.7433 2.61328 13.2576 3.24185 13.6576C3.52757 13.829 3.81328 14.0576 3.98471 14.1718V15.1433C3.98471 16.4004 4.61328 17.2004 5.699 17.3718C5.81328 18.9718 6.55614 20.8576 8.38471 21.3718C8.44185 21.3718 8.499 21.3718 8.55614 21.3718C8.78471 21.3718 9.01328 21.2004 9.12757 20.9718C9.24185 20.6861 9.07042 20.3433 8.72757 20.2861C7.299 19.8861 6.95614 18.229 6.899 17.3147C7.98471 17.0861 8.55614 16.2861 8.55614 15.0861V14.1147C8.72757 14.0004 9.07042 13.7718 9.299 13.6004C9.92757 13.2004 10.7276 12.629 11.2419 12.0576C11.8704 11.3718 11.9276 10.8004 11.9276 9.94328V0.857561C12.0419 0.514704 11.8133 0.286133 11.4704 0.286133ZM10.899 10.0004C10.899 10.629 10.8419 10.9147 10.4419 11.3147C9.98471 11.829 9.299 12.2861 8.72757 12.6861C7.92757 13.2004 7.52757 13.4861 7.47042 13.9433V14.0004V15.1433C7.47042 15.9433 7.12757 16.2861 6.32757 16.2861C5.52757 16.2861 5.18471 15.9433 5.18471 15.1433V14.0004V13.9433C5.12757 13.4861 4.72757 13.2004 3.92757 12.6861C3.35614 12.2861 2.61328 11.829 2.21328 11.3147C1.81328 10.9147 1.75614 10.629 1.75614 10.0004V4.00042C2.61328 3.42899 3.75614 3.48613 4.899 4.17185C5.64185 4.68613 6.44185 4.85756 7.24185 4.85756C8.32757 4.85756 9.24185 4.5147 9.64185 4.1147C9.87042 3.88613 9.81328 3.54328 9.58471 3.3147C9.35614 3.08613 9.01328 3.08613 8.78471 3.3147C8.55614 3.54328 6.84185 4.05756 5.47042 3.20042C4.21328 2.45756 2.84185 2.28613 1.75614 2.74328V1.42899H10.899V10.0004Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_379">
+                                                    <rect width="11.4286" height="21.1429" fill="white"
+                                                          transform="translate(0.613281 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="itemHeader">
+                                <div class="title">
+                                    Елизавета Макарова, 49 лет
+                                </div>
+                                <div class="rate">
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.73639 0.988606L8.33737 3.71937L8.44795 3.90798L8.66149 3.95486L11.7533 4.63363L9.65095 7.00011L9.50575 7.16355L9.52715 7.38114L9.83704 10.5314L6.93671 9.2632L6.73639 9.17561L6.53607 9.2632L3.63575 10.5314L3.94563 7.38114L3.96704 7.16355L3.82183 7.00011L1.71945 4.63363L4.81129 3.95486L5.02484 3.90798L5.13541 3.71937L6.73639 0.988606Z"
+                                              stroke="#3F85EF"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="description">
+                                Прекрасный специалист. Чуткая и заботливая.
+                                Сразу видно доброй души человек. Помогла с перевязкой и капельницами.моей маме.
+                                Рекомендую довериться этому специалисту.
+                            </div>
+                            <div class="more">
+                                <a href="#">Читать полностью</a>
+                            </div>
+                            <div class="info">
+                                <div class="person">
+                                    <p>
+                                        <span>Специалист:</span>
+                                    </p>
+                                    <p>Котова Надежда</p>
+                                    <a href="#">Читать о специалисте</a>
+                                </div>
+                                <div class="service">
+                                    <div class="serviceTitle">Услуга:</div>
+                                    <div class="icons">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_375)">
+                                                <path d="M19.8857 13.0861L18.2286 10.8576L16 5.82899L15.4286 3.60042C15.4286 3.54328 15.3714 3.54328 15.3714 3.54328C15.3714 3.48613 15.3143 3.48613 15.3143 3.42899C15.3143 3.37185 15.2571 3.37185 15.2 3.37185L15.1429 3.3147C15.0857 3.3147 15.0857 3.3147 15.0286 3.25756C14.9714 3.25756 14.9714 3.25756 14.9143 3.25756C14.8571 3.25756 14.8571 3.25756 14.8 3.25756C14.7429 3.25756 14.7429 3.25756 14.6857 3.25756L14.1143 3.42899L13.7143 2.5147V2.45756C13.1429 1.48613 12.2286 1.20042 11.2571 1.65756C11.0286 1.77185 10.6857 2.05756 10.4571 2.5147L10.1143 2.17185C10 2.05756 9.88571 2.00042 9.71428 2.00042C9.54286 2.00042 9.42857 2.05756 9.31428 2.17185L8.74286 2.80042L6.45714 0.800419C5.77143 0.114704 4.62857 0.114704 3.94286 0.800419C3.71429 1.02899 3.6 1.25756 3.48571 1.54328C2.91429 1.3147 2.17143 1.42899 1.65714 1.94328C1.14286 2.45756 1.02857 3.20042 1.25714 3.82899C0.971429 3.88613 0.742857 4.00042 0.514286 4.22899C-0.171429 4.9147 -0.171429 6.05756 0.514286 6.74328L1.08571 7.3147C0.914286 7.42899 0.685714 7.54328 0.514286 7.65756C-0.171429 8.34328 -0.171429 9.48613 0.514286 10.1718L1.2 10.8576L0.742857 11.3718C0.742857 11.3718 0.685714 11.429 0.685714 11.4861C0.685714 11.5433 0.628571 11.5433 0.628571 11.6004C0.628571 11.6576 0.628571 11.6576 0.628571 11.7147C0.571429 11.6576 0.571429 11.7147 0.571429 11.7147C0.571429 11.7718 0.571429 11.7718 0.571429 11.829C0.571429 11.8861 0.571429 11.8861 0.571429 11.9433C0.571429 12.0004 0.628571 12.0004 0.628571 12.0576C0.628571 12.1147 0.685714 12.1147 0.685714 12.1718L2.34286 13.829L2.4 13.8861C2.57143 14.0576 6.45714 17.5433 9.94286 18.5718L12.1714 20.229C12.2857 20.2861 12.4 20.3433 12.5143 20.3433C12.6857 20.3433 12.8571 20.2861 12.9714 20.1147C13.1429 19.8861 13.0857 19.4861 12.8571 19.3147L11.2571 18.0004L18.3429 12.9147L18.9714 13.7718C19.0857 13.9433 19.2571 14.0004 19.4286 14.0004C19.5429 14.0004 19.6571 13.9433 19.7714 13.8861C20 13.7147 20.0571 13.3147 19.8857 13.0861ZM8.57143 16.7433C7.08571 16.0004 5.6 14.9718 4.57143 14.1718L10.8571 5.82899L11.3714 7.82899C11.4286 8.1147 11.6571 8.28613 11.9429 8.28613C12 8.28613 12.0571 8.28613 12.0571 8.28613C12.3429 8.22899 12.5714 7.88613 12.4571 7.60042L11.8857 5.3147L14.4571 4.45756L14.8571 6.17185V6.22899V6.28613L15.0286 6.74328C14.9714 6.80042 14.9143 6.85756 14.8571 6.9147L8.57143 16.629C8.62857 16.629 8.62857 16.6861 8.57143 16.7433ZM11.7714 2.68613C12.0571 2.5147 12.4 2.45756 12.6857 2.97185L12.9714 3.7147L11.6 4.17185L11.4857 3.7147C11.3143 2.9147 11.6 2.74328 11.7714 2.68613ZM9.71428 3.37185L10.4 4.05756L10.5143 4.45756L10.4571 4.5147L3.71429 13.429C3.54286 13.2576 3.37143 13.1433 3.31429 13.0861C3.31429 13.0861 3.31429 13.029 3.25714 13.029L1.94286 11.7147L4.05714 9.48613L5.71429 7.7147L9.71428 3.37185ZM4.74286 1.60042C4.97143 1.37185 5.37143 1.37185 5.65714 1.60042L7.94286 3.60042L6.97143 4.62899L4.74286 2.5147C4.62857 2.40042 4.57143 2.22899 4.57143 2.05756C4.57143 1.88613 4.62857 1.7147 4.74286 1.60042ZM2.45714 2.74328C2.68571 2.5147 3.08571 2.5147 3.37143 2.74328L6.17143 5.54328L5.31429 6.45756L2.45714 3.65756C2.22857 3.37185 2.22857 3.02899 2.45714 2.74328ZM1.31429 5.02899C1.54286 4.80042 1.94286 4.80042 2.22857 5.02899L4.51429 7.3147L3.65714 8.22899L1.37143 5.94328C1.08571 5.7147 1.08571 5.3147 1.31429 5.02899ZM1.31429 9.37185C1.08571 9.14328 1.08571 8.74328 1.31429 8.5147C1.54286 8.28613 1.94286 8.28613 2.17143 8.5147L2.8 9.14328L1.94286 10.0004L1.31429 9.37185ZM10.1714 17.3718C10 17.3147 9.77143 17.2576 9.6 17.2004L15.6 7.88613L17.1429 11.3718C17.1429 11.429 17.2 11.429 17.2 11.429C17.2 11.429 17.2 11.429 17.2 11.4861L17.6 12.0004L10.1714 17.3718Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_375">
+                                                    <rect width="20" height="20" fill="white"
+                                                          transform="translate(0 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_379)">
+                                                <path d="M11.4704 0.286133H1.18471C0.841853 0.286133 0.613281 0.514704 0.613281 0.857561V10.0004C0.613281 10.8576 0.727567 11.429 1.299 12.1147C1.81328 12.7433 2.61328 13.2576 3.24185 13.6576C3.52757 13.829 3.81328 14.0576 3.98471 14.1718V15.1433C3.98471 16.4004 4.61328 17.2004 5.699 17.3718C5.81328 18.9718 6.55614 20.8576 8.38471 21.3718C8.44185 21.3718 8.499 21.3718 8.55614 21.3718C8.78471 21.3718 9.01328 21.2004 9.12757 20.9718C9.24185 20.6861 9.07042 20.3433 8.72757 20.2861C7.299 19.8861 6.95614 18.229 6.899 17.3147C7.98471 17.0861 8.55614 16.2861 8.55614 15.0861V14.1147C8.72757 14.0004 9.07042 13.7718 9.299 13.6004C9.92757 13.2004 10.7276 12.629 11.2419 12.0576C11.8704 11.3718 11.9276 10.8004 11.9276 9.94328V0.857561C12.0419 0.514704 11.8133 0.286133 11.4704 0.286133ZM10.899 10.0004C10.899 10.629 10.8419 10.9147 10.4419 11.3147C9.98471 11.829 9.299 12.2861 8.72757 12.6861C7.92757 13.2004 7.52757 13.4861 7.47042 13.9433V14.0004V15.1433C7.47042 15.9433 7.12757 16.2861 6.32757 16.2861C5.52757 16.2861 5.18471 15.9433 5.18471 15.1433V14.0004V13.9433C5.12757 13.4861 4.72757 13.2004 3.92757 12.6861C3.35614 12.2861 2.61328 11.829 2.21328 11.3147C1.81328 10.9147 1.75614 10.629 1.75614 10.0004V4.00042C2.61328 3.42899 3.75614 3.48613 4.899 4.17185C5.64185 4.68613 6.44185 4.85756 7.24185 4.85756C8.32757 4.85756 9.24185 4.5147 9.64185 4.1147C9.87042 3.88613 9.81328 3.54328 9.58471 3.3147C9.35614 3.08613 9.01328 3.08613 8.78471 3.3147C8.55614 3.54328 6.84185 4.05756 5.47042 3.20042C4.21328 2.45756 2.84185 2.28613 1.75614 2.74328V1.42899H10.899V10.0004Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_379">
+                                                    <rect width="11.4286" height="21.1429" fill="white"
+                                                          transform="translate(0.613281 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="itemHeader">
+                                <div class="title">
+                                    Елизавета Макарова, 49 лет
+                                </div>
+                                <div class="rate">
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.73639 0.988606L8.33737 3.71937L8.44795 3.90798L8.66149 3.95486L11.7533 4.63363L9.65095 7.00011L9.50575 7.16355L9.52715 7.38114L9.83704 10.5314L6.93671 9.2632L6.73639 9.17561L6.53607 9.2632L3.63575 10.5314L3.94563 7.38114L3.96704 7.16355L3.82183 7.00011L1.71945 4.63363L4.81129 3.95486L5.02484 3.90798L5.13541 3.71937L6.73639 0.988606Z"
+                                              stroke="#3F85EF"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="description">
+                                Прекрасный специалист. Чуткая и заботливая.
+                                Сразу видно доброй души человек. Помогла с перевязкой и капельницами.моей маме.
+                                Рекомендую довериться этому специалисту.
+                            </div>
+                            <div class="more">
+                                <a href="#">Читать полностью</a>
+                            </div>
+                            <div class="info">
+                                <div class="person">
+                                    <p>
+                                        <span>Специалист:</span>
+                                    </p>
+                                    <p>Котова Надежда</p>
+                                    <a href="#">Читать о специалисте</a>
+                                </div>
+                                <div class="service">
+                                    <div class="serviceTitle">Услуга:</div>
+                                    <div class="icons">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_375)">
+                                                <path d="M19.8857 13.0861L18.2286 10.8576L16 5.82899L15.4286 3.60042C15.4286 3.54328 15.3714 3.54328 15.3714 3.54328C15.3714 3.48613 15.3143 3.48613 15.3143 3.42899C15.3143 3.37185 15.2571 3.37185 15.2 3.37185L15.1429 3.3147C15.0857 3.3147 15.0857 3.3147 15.0286 3.25756C14.9714 3.25756 14.9714 3.25756 14.9143 3.25756C14.8571 3.25756 14.8571 3.25756 14.8 3.25756C14.7429 3.25756 14.7429 3.25756 14.6857 3.25756L14.1143 3.42899L13.7143 2.5147V2.45756C13.1429 1.48613 12.2286 1.20042 11.2571 1.65756C11.0286 1.77185 10.6857 2.05756 10.4571 2.5147L10.1143 2.17185C10 2.05756 9.88571 2.00042 9.71428 2.00042C9.54286 2.00042 9.42857 2.05756 9.31428 2.17185L8.74286 2.80042L6.45714 0.800419C5.77143 0.114704 4.62857 0.114704 3.94286 0.800419C3.71429 1.02899 3.6 1.25756 3.48571 1.54328C2.91429 1.3147 2.17143 1.42899 1.65714 1.94328C1.14286 2.45756 1.02857 3.20042 1.25714 3.82899C0.971429 3.88613 0.742857 4.00042 0.514286 4.22899C-0.171429 4.9147 -0.171429 6.05756 0.514286 6.74328L1.08571 7.3147C0.914286 7.42899 0.685714 7.54328 0.514286 7.65756C-0.171429 8.34328 -0.171429 9.48613 0.514286 10.1718L1.2 10.8576L0.742857 11.3718C0.742857 11.3718 0.685714 11.429 0.685714 11.4861C0.685714 11.5433 0.628571 11.5433 0.628571 11.6004C0.628571 11.6576 0.628571 11.6576 0.628571 11.7147C0.571429 11.6576 0.571429 11.7147 0.571429 11.7147C0.571429 11.7718 0.571429 11.7718 0.571429 11.829C0.571429 11.8861 0.571429 11.8861 0.571429 11.9433C0.571429 12.0004 0.628571 12.0004 0.628571 12.0576C0.628571 12.1147 0.685714 12.1147 0.685714 12.1718L2.34286 13.829L2.4 13.8861C2.57143 14.0576 6.45714 17.5433 9.94286 18.5718L12.1714 20.229C12.2857 20.2861 12.4 20.3433 12.5143 20.3433C12.6857 20.3433 12.8571 20.2861 12.9714 20.1147C13.1429 19.8861 13.0857 19.4861 12.8571 19.3147L11.2571 18.0004L18.3429 12.9147L18.9714 13.7718C19.0857 13.9433 19.2571 14.0004 19.4286 14.0004C19.5429 14.0004 19.6571 13.9433 19.7714 13.8861C20 13.7147 20.0571 13.3147 19.8857 13.0861ZM8.57143 16.7433C7.08571 16.0004 5.6 14.9718 4.57143 14.1718L10.8571 5.82899L11.3714 7.82899C11.4286 8.1147 11.6571 8.28613 11.9429 8.28613C12 8.28613 12.0571 8.28613 12.0571 8.28613C12.3429 8.22899 12.5714 7.88613 12.4571 7.60042L11.8857 5.3147L14.4571 4.45756L14.8571 6.17185V6.22899V6.28613L15.0286 6.74328C14.9714 6.80042 14.9143 6.85756 14.8571 6.9147L8.57143 16.629C8.62857 16.629 8.62857 16.6861 8.57143 16.7433ZM11.7714 2.68613C12.0571 2.5147 12.4 2.45756 12.6857 2.97185L12.9714 3.7147L11.6 4.17185L11.4857 3.7147C11.3143 2.9147 11.6 2.74328 11.7714 2.68613ZM9.71428 3.37185L10.4 4.05756L10.5143 4.45756L10.4571 4.5147L3.71429 13.429C3.54286 13.2576 3.37143 13.1433 3.31429 13.0861C3.31429 13.0861 3.31429 13.029 3.25714 13.029L1.94286 11.7147L4.05714 9.48613L5.71429 7.7147L9.71428 3.37185ZM4.74286 1.60042C4.97143 1.37185 5.37143 1.37185 5.65714 1.60042L7.94286 3.60042L6.97143 4.62899L4.74286 2.5147C4.62857 2.40042 4.57143 2.22899 4.57143 2.05756C4.57143 1.88613 4.62857 1.7147 4.74286 1.60042ZM2.45714 2.74328C2.68571 2.5147 3.08571 2.5147 3.37143 2.74328L6.17143 5.54328L5.31429 6.45756L2.45714 3.65756C2.22857 3.37185 2.22857 3.02899 2.45714 2.74328ZM1.31429 5.02899C1.54286 4.80042 1.94286 4.80042 2.22857 5.02899L4.51429 7.3147L3.65714 8.22899L1.37143 5.94328C1.08571 5.7147 1.08571 5.3147 1.31429 5.02899ZM1.31429 9.37185C1.08571 9.14328 1.08571 8.74328 1.31429 8.5147C1.54286 8.28613 1.94286 8.28613 2.17143 8.5147L2.8 9.14328L1.94286 10.0004L1.31429 9.37185ZM10.1714 17.3718C10 17.3147 9.77143 17.2576 9.6 17.2004L15.6 7.88613L17.1429 11.3718C17.1429 11.429 17.2 11.429 17.2 11.429C17.2 11.429 17.2 11.429 17.2 11.4861L17.6 12.0004L10.1714 17.3718Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_375">
+                                                    <rect width="20" height="20" fill="white"
+                                                          transform="translate(0 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_379)">
+                                                <path d="M11.4704 0.286133H1.18471C0.841853 0.286133 0.613281 0.514704 0.613281 0.857561V10.0004C0.613281 10.8576 0.727567 11.429 1.299 12.1147C1.81328 12.7433 2.61328 13.2576 3.24185 13.6576C3.52757 13.829 3.81328 14.0576 3.98471 14.1718V15.1433C3.98471 16.4004 4.61328 17.2004 5.699 17.3718C5.81328 18.9718 6.55614 20.8576 8.38471 21.3718C8.44185 21.3718 8.499 21.3718 8.55614 21.3718C8.78471 21.3718 9.01328 21.2004 9.12757 20.9718C9.24185 20.6861 9.07042 20.3433 8.72757 20.2861C7.299 19.8861 6.95614 18.229 6.899 17.3147C7.98471 17.0861 8.55614 16.2861 8.55614 15.0861V14.1147C8.72757 14.0004 9.07042 13.7718 9.299 13.6004C9.92757 13.2004 10.7276 12.629 11.2419 12.0576C11.8704 11.3718 11.9276 10.8004 11.9276 9.94328V0.857561C12.0419 0.514704 11.8133 0.286133 11.4704 0.286133ZM10.899 10.0004C10.899 10.629 10.8419 10.9147 10.4419 11.3147C9.98471 11.829 9.299 12.2861 8.72757 12.6861C7.92757 13.2004 7.52757 13.4861 7.47042 13.9433V14.0004V15.1433C7.47042 15.9433 7.12757 16.2861 6.32757 16.2861C5.52757 16.2861 5.18471 15.9433 5.18471 15.1433V14.0004V13.9433C5.12757 13.4861 4.72757 13.2004 3.92757 12.6861C3.35614 12.2861 2.61328 11.829 2.21328 11.3147C1.81328 10.9147 1.75614 10.629 1.75614 10.0004V4.00042C2.61328 3.42899 3.75614 3.48613 4.899 4.17185C5.64185 4.68613 6.44185 4.85756 7.24185 4.85756C8.32757 4.85756 9.24185 4.5147 9.64185 4.1147C9.87042 3.88613 9.81328 3.54328 9.58471 3.3147C9.35614 3.08613 9.01328 3.08613 8.78471 3.3147C8.55614 3.54328 6.84185 4.05756 5.47042 3.20042C4.21328 2.45756 2.84185 2.28613 1.75614 2.74328V1.42899H10.899V10.0004Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_379">
+                                                    <rect width="11.4286" height="21.1429" fill="white"
+                                                          transform="translate(0.613281 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="item">
+                            <div class="itemHeader">
+                                <div class="title">
+                                    Елизавета Макарова, 49 лет
+                                </div>
+                                <div class="rate">
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.26374 0L8.29605 3.46649L12.2209 4.32814L9.55209 7.33219L9.94547 11.3312L6.26374 9.72132L2.582 11.3312L2.97538 7.33219L0.306569 4.32814L4.23142 3.46649L6.26374 0Z"
+                                              fill="#3F85EF"/>
+                                    </svg>
+                                    <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                         xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6.73639 0.988606L8.33737 3.71937L8.44795 3.90798L8.66149 3.95486L11.7533 4.63363L9.65095 7.00011L9.50575 7.16355L9.52715 7.38114L9.83704 10.5314L6.93671 9.2632L6.73639 9.17561L6.53607 9.2632L3.63575 10.5314L3.94563 7.38114L3.96704 7.16355L3.82183 7.00011L1.71945 4.63363L4.81129 3.95486L5.02484 3.90798L5.13541 3.71937L6.73639 0.988606Z"
+                                              stroke="#3F85EF"/>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="description">
+                                Прекрасный специалист. Чуткая и заботливая.
+                                Сразу видно доброй души человек. Помогла с перевязкой и капельницами.моей маме.
+                                Рекомендую довериться этому специалисту.
+                            </div>
+                            <div class="more">
+                                <a href="#">Читать полностью</a>
+                            </div>
+                            <div class="info">
+                                <div class="person">
+                                    <p>
+                                        <span>Специалист:</span>
+                                    </p>
+                                    <p>Котова Надежда</p>
+                                    <a href="#">Читать о специалисте</a>
+                                </div>
+                                <div class="service">
+                                    <div class="serviceTitle">Услуга:</div>
+                                    <div class="icons">
+                                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_375)">
+                                                <path d="M19.8857 13.0861L18.2286 10.8576L16 5.82899L15.4286 3.60042C15.4286 3.54328 15.3714 3.54328 15.3714 3.54328C15.3714 3.48613 15.3143 3.48613 15.3143 3.42899C15.3143 3.37185 15.2571 3.37185 15.2 3.37185L15.1429 3.3147C15.0857 3.3147 15.0857 3.3147 15.0286 3.25756C14.9714 3.25756 14.9714 3.25756 14.9143 3.25756C14.8571 3.25756 14.8571 3.25756 14.8 3.25756C14.7429 3.25756 14.7429 3.25756 14.6857 3.25756L14.1143 3.42899L13.7143 2.5147V2.45756C13.1429 1.48613 12.2286 1.20042 11.2571 1.65756C11.0286 1.77185 10.6857 2.05756 10.4571 2.5147L10.1143 2.17185C10 2.05756 9.88571 2.00042 9.71428 2.00042C9.54286 2.00042 9.42857 2.05756 9.31428 2.17185L8.74286 2.80042L6.45714 0.800419C5.77143 0.114704 4.62857 0.114704 3.94286 0.800419C3.71429 1.02899 3.6 1.25756 3.48571 1.54328C2.91429 1.3147 2.17143 1.42899 1.65714 1.94328C1.14286 2.45756 1.02857 3.20042 1.25714 3.82899C0.971429 3.88613 0.742857 4.00042 0.514286 4.22899C-0.171429 4.9147 -0.171429 6.05756 0.514286 6.74328L1.08571 7.3147C0.914286 7.42899 0.685714 7.54328 0.514286 7.65756C-0.171429 8.34328 -0.171429 9.48613 0.514286 10.1718L1.2 10.8576L0.742857 11.3718C0.742857 11.3718 0.685714 11.429 0.685714 11.4861C0.685714 11.5433 0.628571 11.5433 0.628571 11.6004C0.628571 11.6576 0.628571 11.6576 0.628571 11.7147C0.571429 11.6576 0.571429 11.7147 0.571429 11.7147C0.571429 11.7718 0.571429 11.7718 0.571429 11.829C0.571429 11.8861 0.571429 11.8861 0.571429 11.9433C0.571429 12.0004 0.628571 12.0004 0.628571 12.0576C0.628571 12.1147 0.685714 12.1147 0.685714 12.1718L2.34286 13.829L2.4 13.8861C2.57143 14.0576 6.45714 17.5433 9.94286 18.5718L12.1714 20.229C12.2857 20.2861 12.4 20.3433 12.5143 20.3433C12.6857 20.3433 12.8571 20.2861 12.9714 20.1147C13.1429 19.8861 13.0857 19.4861 12.8571 19.3147L11.2571 18.0004L18.3429 12.9147L18.9714 13.7718C19.0857 13.9433 19.2571 14.0004 19.4286 14.0004C19.5429 14.0004 19.6571 13.9433 19.7714 13.8861C20 13.7147 20.0571 13.3147 19.8857 13.0861ZM8.57143 16.7433C7.08571 16.0004 5.6 14.9718 4.57143 14.1718L10.8571 5.82899L11.3714 7.82899C11.4286 8.1147 11.6571 8.28613 11.9429 8.28613C12 8.28613 12.0571 8.28613 12.0571 8.28613C12.3429 8.22899 12.5714 7.88613 12.4571 7.60042L11.8857 5.3147L14.4571 4.45756L14.8571 6.17185V6.22899V6.28613L15.0286 6.74328C14.9714 6.80042 14.9143 6.85756 14.8571 6.9147L8.57143 16.629C8.62857 16.629 8.62857 16.6861 8.57143 16.7433ZM11.7714 2.68613C12.0571 2.5147 12.4 2.45756 12.6857 2.97185L12.9714 3.7147L11.6 4.17185L11.4857 3.7147C11.3143 2.9147 11.6 2.74328 11.7714 2.68613ZM9.71428 3.37185L10.4 4.05756L10.5143 4.45756L10.4571 4.5147L3.71429 13.429C3.54286 13.2576 3.37143 13.1433 3.31429 13.0861C3.31429 13.0861 3.31429 13.029 3.25714 13.029L1.94286 11.7147L4.05714 9.48613L5.71429 7.7147L9.71428 3.37185ZM4.74286 1.60042C4.97143 1.37185 5.37143 1.37185 5.65714 1.60042L7.94286 3.60042L6.97143 4.62899L4.74286 2.5147C4.62857 2.40042 4.57143 2.22899 4.57143 2.05756C4.57143 1.88613 4.62857 1.7147 4.74286 1.60042ZM2.45714 2.74328C2.68571 2.5147 3.08571 2.5147 3.37143 2.74328L6.17143 5.54328L5.31429 6.45756L2.45714 3.65756C2.22857 3.37185 2.22857 3.02899 2.45714 2.74328ZM1.31429 5.02899C1.54286 4.80042 1.94286 4.80042 2.22857 5.02899L4.51429 7.3147L3.65714 8.22899L1.37143 5.94328C1.08571 5.7147 1.08571 5.3147 1.31429 5.02899ZM1.31429 9.37185C1.08571 9.14328 1.08571 8.74328 1.31429 8.5147C1.54286 8.28613 1.94286 8.28613 2.17143 8.5147L2.8 9.14328L1.94286 10.0004L1.31429 9.37185ZM10.1714 17.3718C10 17.3147 9.77143 17.2576 9.6 17.2004L15.6 7.88613L17.1429 11.3718C17.1429 11.429 17.2 11.429 17.2 11.429C17.2 11.429 17.2 11.429 17.2 11.4861L17.6 12.0004L10.1714 17.3718Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_375">
+                                                    <rect width="20" height="20" fill="white"
+                                                          transform="translate(0 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_207_379)">
+                                                <path d="M11.4704 0.286133H1.18471C0.841853 0.286133 0.613281 0.514704 0.613281 0.857561V10.0004C0.613281 10.8576 0.727567 11.429 1.299 12.1147C1.81328 12.7433 2.61328 13.2576 3.24185 13.6576C3.52757 13.829 3.81328 14.0576 3.98471 14.1718V15.1433C3.98471 16.4004 4.61328 17.2004 5.699 17.3718C5.81328 18.9718 6.55614 20.8576 8.38471 21.3718C8.44185 21.3718 8.499 21.3718 8.55614 21.3718C8.78471 21.3718 9.01328 21.2004 9.12757 20.9718C9.24185 20.6861 9.07042 20.3433 8.72757 20.2861C7.299 19.8861 6.95614 18.229 6.899 17.3147C7.98471 17.0861 8.55614 16.2861 8.55614 15.0861V14.1147C8.72757 14.0004 9.07042 13.7718 9.299 13.6004C9.92757 13.2004 10.7276 12.629 11.2419 12.0576C11.8704 11.3718 11.9276 10.8004 11.9276 9.94328V0.857561C12.0419 0.514704 11.8133 0.286133 11.4704 0.286133ZM10.899 10.0004C10.899 10.629 10.8419 10.9147 10.4419 11.3147C9.98471 11.829 9.299 12.2861 8.72757 12.6861C7.92757 13.2004 7.52757 13.4861 7.47042 13.9433V14.0004V15.1433C7.47042 15.9433 7.12757 16.2861 6.32757 16.2861C5.52757 16.2861 5.18471 15.9433 5.18471 15.1433V14.0004V13.9433C5.12757 13.4861 4.72757 13.2004 3.92757 12.6861C3.35614 12.2861 2.61328 11.829 2.21328 11.3147C1.81328 10.9147 1.75614 10.629 1.75614 10.0004V4.00042C2.61328 3.42899 3.75614 3.48613 4.899 4.17185C5.64185 4.68613 6.44185 4.85756 7.24185 4.85756C8.32757 4.85756 9.24185 4.5147 9.64185 4.1147C9.87042 3.88613 9.81328 3.54328 9.58471 3.3147C9.35614 3.08613 9.01328 3.08613 8.78471 3.3147C8.55614 3.54328 6.84185 4.05756 5.47042 3.20042C4.21328 2.45756 2.84185 2.28613 1.75614 2.74328V1.42899H10.899V10.0004Z"
+                                                      fill="#3F85EF"/>
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_207_379">
+                                                    <rect width="11.4286" height="21.1429" fill="white"
+                                                          transform="translate(0.613281 0.286133)"/>
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination review-pagination"></div>
+            <div class="send">
+                <img src="images/send-back.png" alt="send-back" class="sendBack">
+                <div class="content">
+                    <div class="title">
+                        Хотите выбрать специалиста самостоятельно?
+                    </div>
+                    <img src="images/necklace.png" alt="necklace">
+                    <button class="pick">
+                        Каталог специалистов
+                    </button>
+                    <div class="footnote">
+                        Перейдите в каталог наших специалистов и выберите нужного специалиста самостоятельно
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="consult">
+                <img src="images/consult.png" alt="consult" class="picConsult">
+                <div class="phone">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8887 2V8H20.8887" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M21.8887 1L14.8887 8" stroke="white" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                        <path d="M20.8881 16.9201V19.9201C20.8892 20.1986 20.8322 20.4743 20.7206 20.7294C20.6091 20.9846 20.4454 21.2137 20.2402 21.402C20.035 21.5902 19.7927 21.7336 19.5289 21.8228C19.265 21.912 18.9855 21.9452 18.7081 21.9201C15.631 21.5857 12.6751 20.5342 10.0781 18.8501C7.66194 17.3148 5.61345 15.2663 4.07812 12.8501C2.38809 10.2413 1.33636 7.27109 1.00812 4.1801C0.983127 3.90356 1.01599 3.62486 1.10462 3.36172C1.19324 3.09859 1.33569 2.85679 1.52288 2.65172C1.71008 2.44665 1.93792 2.28281 2.19191 2.17062C2.44589 2.05843 2.72046 2.00036 2.99812 2.0001H5.99812C6.48342 1.99532 6.95391 2.16718 7.32188 2.48363C7.68985 2.80008 7.93019 3.23954 7.99812 3.7201C8.12474 4.68016 8.35957 5.62282 8.69812 6.5301C8.83266 6.88802 8.86178 7.27701 8.78202 7.65098C8.70227 8.02494 8.51698 8.36821 8.24812 8.6401L6.97812 9.9101C8.40167 12.4136 10.4746 14.4865 12.9781 15.9101L14.2481 14.6401C14.52 14.3712 14.8633 14.1859 15.2372 14.1062C15.6112 14.0264 16.0002 14.0556 16.3581 14.1901C17.2654 14.5286 18.2081 14.7635 19.1681 14.8901C19.6539 14.9586 20.0975 15.2033 20.4146 15.5776C20.7318 15.9519 20.9003 16.4297 20.8881 16.9201Z"
+                              stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <p>
+                    <span>Остались вопросы?</span> <br>
+                    Получите консультацию у специалиста
+                </p>
+            </div>
+            <div class="rect"></div>
+            <div class="faqTitle">
+                Часто задаваемые <span>вопросы</span>
+            </div>
+            <div class="faqBlock">
+                <img src="images/band-aid.png" alt="band-aid" class="bandAid">
+                <img src="images/detal-circle.svg" alt="faq-circle" class="circle">
+                <div class="faqItem">
+                    <div class="faqHeader">
+                        <div class="title">
+                            Есть ли у вас поддержка пользователей?
+                        </div>
+                        <div class="open">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00076 1.78049V16.2195" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M1.78125 9H16.2203" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga
+                        bloppis lartad i kina. Or mms:a.
+                        Cli-fi tidebesm, polyling. Ting airbaghjälm. Kapura poktig videosamtal tukatt inte daren. Vande
+                        pande till lesserwisser. Begisk.
+                        Krokönera reditt fastän angen, askbränd den rulig. Epition exorade. Antena vulkanresa, egock, i
+                        brony. Multir hackathon infrajyskapet sapugt medan pålig. Kravallturism demiosmos hexal osamma yv.
+                        Engar nyfriskjobb tetraktig samt megana del. Kapupp äpust. Ruhet bullerbysyndromet. Dede ar men
+                        trasade nongar syjude. Plateren tende, gådänar.
+                    </div>
+                </div>
+                <div class="faqItem">
+                    <div class="faqHeader">
+                        <div class="title">
+                            Есть ли у вас поддержка пользователей?
+                        </div>
+                        <div class="open">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00076 1.78049V16.2195" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M1.78125 9H16.2203" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga
+                        bloppis lartad i kina. Or mms:a.
+                        Cli-fi tidebesm, polyling. Ting airbaghjälm. Kapura poktig videosamtal tukatt inte daren. Vande
+                        pande till lesserwisser. Begisk.
+                        Krokönera reditt fastän angen, askbränd den rulig. Epition exorade. Antena vulkanresa, egock, i
+                        brony. Multir hackathon infrajyskapet sapugt medan pålig. Kravallturism demiosmos hexal osamma yv.
+                        Engar nyfriskjobb tetraktig samt megana del. Kapupp äpust. Ruhet bullerbysyndromet. Dede ar men
+                        trasade nongar syjude. Plateren tende, gådänar.
+                    </div>
+                </div>
+                <div class="faqItem">
+                    <div class="faqHeader">
+                        <div class="title">
+                            Есть ли у вас поддержка пользователей?
+                        </div>
+                        <div class="open">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00076 1.78049V16.2195" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M1.78125 9H16.2203" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga
+                        bloppis lartad i kina. Or mms:a.
+                        Cli-fi tidebesm, polyling. Ting airbaghjälm. Kapura poktig videosamtal tukatt inte daren. Vande
+                        pande till lesserwisser. Begisk.
+                        Krokönera reditt fastän angen, askbränd den rulig. Epition exorade. Antena vulkanresa, egock, i
+                        brony. Multir hackathon infrajyskapet sapugt medan pålig. Kravallturism demiosmos hexal osamma yv.
+                        Engar nyfriskjobb tetraktig samt megana del. Kapupp äpust. Ruhet bullerbysyndromet. Dede ar men
+                        trasade nongar syjude. Plateren tende, gådänar.
+                    </div>
+                </div>
+                <div class="faqItem">
+                    <div class="faqHeader">
+                        <div class="title">
+                            Есть ли у вас поддержка пользователей?
+                        </div>
+                        <div class="open">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.00076 1.78049V16.2195" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                                <path d="M1.78125 9H16.2203" stroke="#3F85EF" stroke-width="3" stroke-linecap="round"
+                                      stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus sediligt. Ultraliga
+                        bloppis lartad i kina. Or mms:a.
+                        Cli-fi tidebesm, polyling. Ting airbaghjälm. Kapura poktig videosamtal tukatt inte daren. Vande
+                        pande till lesserwisser. Begisk.
+                        Krokönera reditt fastän angen, askbränd den rulig. Epition exorade. Antena vulkanresa, egock, i
+                        brony. Multir hackathon infrajyskapet sapugt medan pålig. Kravallturism demiosmos hexal osamma yv.
+                        Engar nyfriskjobb tetraktig samt megana del. Kapupp äpust. Ruhet bullerbysyndromet. Dede ar men
+                        trasade nongar syjude. Plateren tende, gådänar.
+                    </div>
+                </div>
+            </div>
+            <div class="send">
+                <img src="images/send-back.png" alt="send-back" class="sendBack">
+                <div class="content">
+                    <div class="title">
+                        Вы — медицинский специалист?
+                        <p>
+                            Подключайтесь к нашей системе и зарабатывайте вместе с нами!
+                        </p>
+                    </div>
+                    <img src="images/scope.png" alt="necklace">
+                    <button class="pick">
+                        Зарегистрироваться
+                    </button>
+                </div>
+                <div class="mobContent">
+                    <div class="top">
+                        <div class="title">Вы — медицинский специалист?</div>
+                        <img src="images/scope.png" alt="necklace">
+                    </div>
+                    <div class="bottom">
+                        <button class="pick">
+                            Зарегистрироваться
+                        </button>
+                        <div class="subtitle">
+                            Подключайтесь к нашей системе и зарабатывайте вместе с нами!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="useful">
+            <img src="images/med.png" alt="med" class="medPic">
+            <div class="rect"></div>
+            <div class="usefulTitle">
+                <span>Полезная</span> информация
+            </div>
+            <div class="articles">
+                <div class="swiper usefulSlider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/article1.png" alt="article">
+                                <div class="title">
+                                    Инструкция: Как наложить гипс самостоятельно?
+                                </div>
+                                <div class="subtitle">
+                                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus
+                                    sediligt. Ultraliga bloppis lartad i kina.
+                                </div>
+                                <button class="read">
+                                    Читать статью
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/article2.png" alt="article">
+                                <div class="title">
+                                    Почему не стоит ставить уколы самостоятельно?
+                                </div>
+                                <div class="subtitle">
+                                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus
+                                    sediligt. Ultraliga bloppis lartad i kina.
+                                </div>
+                                <button class="read">
+                                    Читать статью
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="item">
+                                <img src="images/article3.png" alt="article">
+                                <div class="title">
+                                    Инструкция: Как наложить гипс самостоятельно?
+                                </div>
+                                <div class="subtitle">
+                                    Lörem ipsum otören paravalens som bekera. Påtåsm nygisk diatyp, i heterora. Pus
+                                    sediligt. Ultraliga bloppis lartad i kina.
+                                </div>
+                                <button class="read">
+                                    Читать статью
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination useful-pagination"></div>
+            <button class="allArticles">
+                Все статьи
+            </button>
+        </div>
+    </main>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('js/index.js') }}?{{ service.getVersionDeploy() }}"></script>
+    <script src="{{ asset('js/swiper-bundle.js') }}"></script>
+    <script src="{{ asset('js/swiper.js') }}"></script>
+
+    <script src="{{ asset('build/head_catalog_search.js') }}"></script>
+{% endblock %}
+

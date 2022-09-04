@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('build/specialist_profile.css') }}?{{ service.getVersionDeploy() }}">
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div id="SpecialistProfile"></div>
+    </main>
+{% endblock %}
+
+
+{% block javascripts %}
+    <script src="{{ asset('build/specialist_profile.js') }}?{{ service.getVersionDeploy() }}"></script>
+{% endblock %}

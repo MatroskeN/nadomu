@@ -1,0 +1,55 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:latest-$CI_COMMIT_BRANCH
+  DOCKER_HOST: "tcp://docker:2375"
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+  SMSAERO_LOGIN: ${SMSAERO_LOGIN}
+  SMSAERO_API_KEY: ${SMSAERO_API_KEY}
+  SMSAERO_SIGN: ${SMSAERO_SIGN}
+  DATABASE_URL: ${DATABASE_URL}
+  MAILER_DSN: ${MAILER_DSN}
+  MAIL_FROM_EMAIL: ${MAIL_FROM_EMAIL}
+  MAIL_FROM_NAME: ${MAIL_FROM_NAME}
+  MAIL_NOTIFICATIONS: ${MAIL_NOTIFICATIONS}
+  PULLER_HOST: ${PULLER_HOST}
+  PULLER_TOKEN: ${PULLER_TOKEN}
+
+docker-build:
+  image: docker:20-dind
+  stage: build
+  only:
+    - development
+#    - master
+  services:
+      - name: docker:20-dind
+        alias: docker
+        command: ["--tls=false"]
+  before_script:
+      - mv .env.source .env
+      - echo SMSAERO_LOGIN=$SMSAERO_LOGIN >> .env
+      - echo SMSAERO_API_KEY=$SMSAERO_API_KEY >> .env
+      - echo SMSAERO_SIGN=$SMSAERO_SIGN >> .env
+      - echo DATABASE_URL="$DATABASE_URL" >> .env
+      - echo MAILER_DSN=$MAILER_DSN >> .env
+      - echo MAIL_FROM_EMAIL=$MAIL_FROM_EMAIL >> .env
+      - echo MAIL_FROM_NAME=$MAIL_FROM_NAME >> .env
+      - echo MAIL_NOTIFICATIONS=$MAIL_NOTIFICATIONS >> .env
+      - echo VERSION_DEPLOY=${CI_PIPELINE_ID} >> .env
+      - echo ${CI_REGISTRY_PASSWORD} | docker login ${CI_REGISTRY} -u ${CI_REGISTRY_USER} --password-stdin
+  script:
+      - docker build -t $IMAGE_TAG .
+      - docker push $IMAGE_TAG
+
+deploy-development:
+  image: docker:stable
+  stage: deploy
+  only:
+    - development
+  before_script:
+    - apk add --update curl && rm -rf /var/cache/apk/*
+  script:
+    - curl "$PULLER_HOST/?token=$PULLER_TOKEN&hook=${CI_PROJECT_NAME}-${CI_COMMIT_BRANCH}"

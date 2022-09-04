@@ -1,0 +1,32 @@
+.breadcrumb {
+  padding-top: 1px;
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: none;
+    margin-right: 13px;
+    font-family: $base-font;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+
+    a {
+      color: #283848;
+    }
+
+    &::before {
+      margin-right: 10px;
+      content: url("data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 10.5L6 6L1 1.5' stroke='%23283848' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+
+    &:first-child::before {
+      content: "";
+      margin: 0;
+    }
+  }
+}

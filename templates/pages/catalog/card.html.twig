@@ -1,0 +1,238 @@
+<div class="specialistItem">
+    {% if SHOW_ONLY_TWIG == true %}
+        <div class="favouriteItemsTwig desktop_favourite" id="favouriteItems_{{ id }}" data-specialist-id="{{ id }}"
+             data-count-likes="{{ favorites_count }}" data-is-favourite="{{ favorite_added ? "true" : "false" }}"></div>
+    {% endif %}
+
+    {% if SHOW_ONLY_TWIG == false %}
+        <Favourite :specialist-id="data.id?.toString()" :count-likes="data.favorites_count?.toString()"
+                   :is-favourite="data.favorite_added ? 'true' : 'false'" :is-mobile="false"></Favourite>
+    {% endif %}
+
+    <div class="preview">
+        <div class="pic">
+            {% if SHOW_ONLY_TWIG == true %}
+                <img src="/{{ images.profile.filepath ?? gender_pic }}"
+                     alt="{{ last_name }} {{ first_name }}">
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                <img :src="specialist_image" :alt="data.userinfo.last_name + ' ' + data.userinfo.first_name">
+            {% endif %}
+        </div>
+        <div class="rate previewItem">
+            Рейтинг /
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ rating }}
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                {{ data.userinfo.rating }}
+            {% endif %}
+        </div>
+        <div class="experience previewItem">
+            Опыт работы <span>-</span> <br>
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ service.plural(experience, ['год','года','лет']) }}
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                {{ experience_plural }}
+            {% endif %}
+        </div>
+        <div class="servicesIcons">
+            {% if SHOW_ONLY_TWIG == true %}
+                {% for item in services %}
+                    <div class="icon">
+                        <img src="/images/service-icons/{{ item.service.icon }}.svg" alt="{{ item.service.name }}">
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                <div class="icon" v-for="item in data.services">
+                    <img :src="'/images/service-icons/'+item.service.icon+'.svg'" :alt="item.service.name">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="mainInfo">
+        {% if SHOW_ONLY_TWIG == false %}
+            <div class="name">{{ data.userinfo.last_name }} {{ data.userinfo.first_name }}</div>
+        {% endif %}
+        {% if SHOW_ONLY_TWIG == true %}
+            <div class="name">{{ last_name }} {{ first_name }}</div>
+        {% endif %}
+        <div class="person">
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ gender_rus }}
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                {{ gender_rus }}
+            {% endif %}
+        </div>
+        <div class="online">
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ last_visit_time }}
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                {{ data.userinfo.last_visit_time }}
+            {% endif %}
+        </div>
+        <div class="rating">
+            <div class="stars">
+                {% if SHOW_ONLY_TWIG == false %}
+                    <div v-for=" n in star_count">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                                  fill="#3F85EF"/>
+                        </svg>
+                    </div>
+                    <div v-for="n in left_rating">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                                  stroke="#3F85EF"/>
+                        </svg>
+                    </div>
+                {% endif %}
+
+
+                {% if SHOW_ONLY_TWIG == true %}
+                    {% set fill_stars = (rating)|round(0, 'floor') %}
+                    {% set empty_stars = 5 - fill_stars %}
+
+                    {% for key, star in service.fillArrayByNum(fill_stars) %}
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                                  fill="#3F85EF"/>
+                        </svg>
+                    {% endfor %}
+                    {% for key, star in service.fillArrayByNum(empty_stars) %}
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0L13.2446 5.53423L19.5106 6.90983L15.2498 11.7058L15.8779 18.0902L10 15.52L4.12215 18.0902L4.75017 11.7058L0.489435 6.90983L6.75543 5.53423L10 0Z"
+                                  stroke="#3F85EF"/>
+                        </svg>
+                    {% endfor %}
+                {% endif %}
+
+            </div>
+            <div class="counter">
+                {% if SHOW_ONLY_TWIG == true %}
+                    {{ service.plural(comment_count, ['комментарий', 'комментария', 'комментариев']) }}
+                {% endif %}
+                {% if SHOW_ONLY_TWIG == false %}
+                    {{ comment_plural }}
+                {% endif %}
+            </div>
+        </div>
+        <div class="mobBlock">
+            <div class="mobRating">
+                Рейтинг <br>
+                <span>
+                    {% if SHOW_ONLY_TWIG == true %}
+                        {{ rating }}
+                    {% endif %}
+                    {% if SHOW_ONLY_TWIG == false %}
+                        {{ data.userinfo.rating }}
+                    {% endif %}
+                </span>
+            </div>
+            <div class="mobRating mobExperience">
+                Опыт <br>
+                <span>
+                    {% if SHOW_ONLY_TWIG == true %}
+                        {{ service.plural(experience, ['год','года','лет']) }}
+                    {% endif %}
+                    {% if SHOW_ONLY_TWIG == false %}
+                        {{ experience_plural }}
+                    {% endif %}
+                </span>
+            </div>
+
+
+            {% if SHOW_ONLY_TWIG == true %}
+                <div class="favouriteItemsTwig mobile_favourite" id="favouriteMobileItems_{{ id }}"
+                     data-specialist-id="{{ id }}" data-count-likes="{{ favorites_count }}"
+                     data-is-favourite="{{ favorite_added ? "true" : "false" }}" data-is-mobile="true"></div>
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == false %}
+                <Favourite :specialist-id="data.id?.toString()" :count-likes="data.favorites_count?.toString()"
+                           :is-favourite="data.favorite_added ? 'true' : 'false'" :is-mobile="true"></Favourite>
+            {% endif %}
+
+
+        </div>
+        <div class="infoItem">
+            <b>Услуги: </b>
+
+            {% if SHOW_ONLY_TWIG == false %}
+                <span>
+                    {{ services_list }}
+                </span>
+            {% endif %}
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ service_array|join(', ') }}
+            {% endif %}
+        </div>
+        <div class="infoItem">
+            <b>Районы:</b>
+
+            {% if SHOW_ONLY_TWIG == true %}
+                {{ location_array|join(', ') }}
+            {% endif %}
+
+            {% if SHOW_ONLY_TWIG == false %}
+                {{ metro_string }}
+            {% endif %}
+
+        </div>
+        <div class="numbers">
+            <div class="numColumn">
+                <div class="numTitle">
+                    Стоимость услуг
+                </div>
+                {% if SHOW_ONLY_TWIG == false %}
+                    <div class="numItem" v-for="item in data.services">
+                        <p>{{ item.service.name }}</p>
+                        <div class="price">{{ item.service.price }} руб.</div>
+                    </div>
+                {% endif %}
+                {% if SHOW_ONLY_TWIG == true %}
+                    {% for item in services %}
+                        <div class="numItem">
+                            <p>{{ item.service.name }}</p>
+                            <div class="price">{{ item.service.price }} руб.</div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+            <div class="numColumn">
+                <div class="numTitle">
+                    Время работы
+                </div>
+                {% if SHOW_ONLY_TWIG == false %}
+                    <div class="numItem" v-for="(item, key) in data.schedule">
+                        <p>{{ key }}</p>
+                        <div class="prices">
+                            <div class="price" v-for="el in item">
+                                {{ el }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+                {% if SHOW_ONLY_TWIG == true %}
+                    {% for day,hours in schedule %}
+                        <div class="numItem">
+                            <p>{{ day }}</p>
+                            <div class="prices">
+                                {% for values in hours %}
+                                    <div class="price">
+                                        {{ values }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+</div>
+
